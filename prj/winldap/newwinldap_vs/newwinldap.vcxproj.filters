@@ -31,13 +31,13 @@
     <ClInclude Include="..\..\..\src\winldap\stdafx_new_winldap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\public\include\first_includes\new_winldap_common_include.h">
+    <ClInclude Include="..\..\..\include\first_includes\new_winldap_common_include.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\public\include\lber.h">
+    <ClInclude Include="..\..\..\include\lber.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\public\include\ldap.h">
+    <ClInclude Include="..\..\..\include\ldap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

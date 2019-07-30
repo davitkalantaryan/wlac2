@@ -63,6 +63,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_0B461775FC0F4602B61ACE7537DBC3F1"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_100FF824E617432582A52FB802ACBDA5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -358,12 +364,6 @@
         "Entry"
         {
         "MsmKey" = "8:_492DC14C8A5C4E908F3DF7FFD2D5DEED"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_49D6B381CBF34C5BAA4EBBA2B3C164AB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1812,7 +1812,7 @@
         {
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_007229CCF9CE49A5BDA99BDA4AAA616C"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\impl.std_wlac_fios.hpp"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\impl.std_wlac_fios.hpp"
             "TargetName" = "8:impl.std_wlac_fios.hpp"
             "Tag" = "8:"
             "Folder" = "8:_9A27B1C083EC4A20BF429537A1297F57"
@@ -1852,7 +1852,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0170CBB6C77848B8984B6B006CB9CE51"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\additional\\common_argument_parser.hpp"
+            "SourcePath" = "8:..\\..\\..\\include\\additional\\common_argument_parser.hpp"
             "TargetName" = "8:common_argument_parser.hpp"
             "Tag" = "8:"
             "Folder" = "8:_3C48E799D8534D88B474CBA6364948A1"
@@ -1872,7 +1872,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_01A0BC74AE534000AD8B2E66A57632EB"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\dlfcn.h"
+            "SourcePath" = "8:..\\..\\..\\include\\dlfcn.h"
             "TargetName" = "8:dlfcn.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -1892,7 +1892,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_021AA713A612427D82C835B5FA1BAB39"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\errno.h"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\errno.h"
             "TargetName" = "8:errno.h"
             "Tag" = "8:"
             "Folder" = "8:_9A27B1C083EC4A20BF429537A1297F57"
@@ -1912,7 +1912,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_022B533DDF7341C0AF8A32EEBD578E68"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc_mini\\RPC\\NETDB.H"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc_mini\\RPC\\NETDB.H"
             "TargetName" = "8:NETDB.H"
             "Tag" = "8:"
             "Folder" = "8:_0C167502DE9B4857A2CB20EE12A04BCA"
@@ -1970,9 +1970,29 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0B461775FC0F4602B61ACE7537DBC3F1"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\sys\\win64\\dll\\remote_function_call_false_without_lib.4.0.4.0.dll"
+            "TargetName" = "8:remote_function_call_false_without_lib.4.0.4.0.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_9128AEF1EDC847BD9B0C3A0DCEF55BCA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_100FF824E617432582A52FB802ACBDA5"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\wlac_vector_old_2017.12.24.hpp"
+            "SourcePath" = "8:..\\..\\..\\include\\wlac_vector_old_2017.12.24.hpp"
             "TargetName" = "8:wlac_vector_old_2017.12.24.hpp"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -2032,7 +2052,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_135F82BF040545FB85DEEFB898112B7D"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\alloca.h"
+            "SourcePath" = "8:..\\..\\..\\include\\alloca.h"
             "TargetName" = "8:alloca.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -2052,7 +2072,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_13ED9C087E9F4ECFA7FD6BE720CB0A92"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\stddef.h"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\stddef.h"
             "TargetName" = "8:stddef.h"
             "Tag" = "8:"
             "Folder" = "8:_9A27B1C083EC4A20BF429537A1297F57"
@@ -2092,7 +2112,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_15439F301719424992F17D30BB9AD808"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc_mini\\RPC\\RPC_MSG.H"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc_mini\\RPC\\RPC_MSG.H"
             "TargetName" = "8:RPC_MSG.H"
             "Tag" = "8:"
             "Folder" = "8:_0C167502DE9B4857A2CB20EE12A04BCA"
@@ -2112,7 +2132,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_15965DD41DE34CEDA2BF161B01680E40"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\test\\common_macroses.h"
+            "SourcePath" = "8:..\\..\\..\\include\\test\\common_macroses.h"
             "TargetName" = "8:common_macroses.h"
             "Tag" = "8:"
             "Folder" = "8:_7BAB48AAD52F465AB48B3702EF42BF4F"
@@ -2172,7 +2192,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_181EEEFC26A645A4BC7A9982812DE4E2"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\additional\\common_hashtbl.hpp"
+            "SourcePath" = "8:..\\..\\..\\include\\additional\\common_hashtbl.hpp"
             "TargetName" = "8:common_hashtbl.hpp"
             "Tag" = "8:"
             "Folder" = "8:_3C48E799D8534D88B474CBA6364948A1"
@@ -2252,7 +2272,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1F3A3B26D5A347E7BC5C2499F5EFDE7B"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\.original\\other\\winsock2_locked.h"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\.original\\other\\winsock2_locked.h"
             "TargetName" = "8:winsock2_locked.h"
             "Tag" = "8:"
             "Folder" = "8:_59AB59ADEB9C481098022F79FEE2562B"
@@ -2272,7 +2292,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_20E7A277963F4C0885D88C3932A9E211"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\vfs.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\vfs.h"
             "TargetName" = "8:vfs.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -2332,7 +2352,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_261A5A9AEC684C229EADC98DDA2B7A9A"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc\\wrpc_first_com_include.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc\\wrpc_first_com_include.h"
             "TargetName" = "8:wrpc_first_com_include.h"
             "Tag" = "8:"
             "Folder" = "8:_495142F2981D47C181C31EBE972FD68D"
@@ -2432,7 +2452,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2A54648D5D014010865AAD94BDAE3F86"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\io.h"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\io.h"
             "TargetName" = "8:io.h"
             "Tag" = "8:"
             "Folder" = "8:_9A27B1C083EC4A20BF429537A1297F57"
@@ -2452,7 +2472,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2BB957BE475A4FE89CC2F5C393930D01"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rfc\\functions_libgui_hacker.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rfc\\functions_libgui_hacker.h"
             "TargetName" = "8:functions_libgui_hacker.h"
             "Tag" = "8:"
             "Folder" = "8:_C386515542C145D68740311B18F9C267"
@@ -2512,7 +2532,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_320DE4F2C4754852BF6ED3E5BEDA542C"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\dirent.h"
+            "SourcePath" = "8:..\\..\\..\\include\\dirent.h"
             "TargetName" = "8:dirent.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -2532,7 +2552,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_33CAF3C5D37C4B1CBAC20D1677C12615"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\bits\\semaphore.h"
+            "SourcePath" = "8:..\\..\\..\\include\\bits\\semaphore.h"
             "TargetName" = "8:semaphore.h"
             "Tag" = "8:"
             "Folder" = "8:_923F189E14BA4E43A4685F518A0E1585"
@@ -2552,7 +2572,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_348EC662E44F49B7BE51C57B37874526"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc\\svc_auth.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc\\svc_auth.h"
             "TargetName" = "8:svc_auth.h"
             "Tag" = "8:"
             "Folder" = "8:_495142F2981D47C181C31EBE972FD68D"
@@ -2592,7 +2612,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_365917799053438683568CD965C5A02E"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\mkdev.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\mkdev.h"
             "TargetName" = "8:mkdev.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -2632,7 +2652,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3A0185F388D54D51956AEF5B13092C85"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\bits\\ioctls.h"
+            "SourcePath" = "8:..\\..\\..\\include\\bits\\ioctls.h"
             "TargetName" = "8:ioctls.h"
             "Tag" = "8:"
             "Folder" = "8:_923F189E14BA4E43A4685F518A0E1585"
@@ -2652,7 +2672,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3A67D08399244789B4EECE30AD71F071"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\additional\\common_hashtbl.impl.hpp"
+            "SourcePath" = "8:..\\..\\..\\include\\additional\\common_hashtbl.impl.hpp"
             "TargetName" = "8:common_hashtbl.impl.hpp"
             "Tag" = "8:"
             "Folder" = "8:_3C48E799D8534D88B474CBA6364948A1"
@@ -2692,7 +2712,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3B8CCC3B16574E5C97E23C964FAF78C5"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\signal.h"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\signal.h"
             "TargetName" = "8:signal.h"
             "Tag" = "8:"
             "Folder" = "8:_9A27B1C083EC4A20BF429537A1297F57"
@@ -2712,7 +2732,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3BDA47301AAD481D8F90730D797C77B6"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\param.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\param.h"
             "TargetName" = "8:param.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -2732,7 +2752,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3CE2F4369F7243E3B08EFD990343F06B"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\epoll.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\epoll.h"
             "TargetName" = "8:epoll.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -2772,7 +2792,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_40C482DDCFCE4C7BBAE8F5B7FAADE627"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\string.h"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\string.h"
             "TargetName" = "8:string.h"
             "Tag" = "8:"
             "Folder" = "8:_9A27B1C083EC4A20BF429537A1297F57"
@@ -2792,7 +2812,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_430EC22511454B338BA10D397F5761A9"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc\\rpc.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc\\rpc.h"
             "TargetName" = "8:rpc.h"
             "Tag" = "8:"
             "Folder" = "8:_495142F2981D47C181C31EBE972FD68D"
@@ -2812,7 +2832,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4581ED6C3D3C470EB2ED5B9F36DD1CD0"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\additional\\util\\directory_iterator.h"
+            "SourcePath" = "8:..\\..\\..\\include\\additional\\util\\directory_iterator.h"
             "TargetName" = "8:directory_iterator.h"
             "Tag" = "8:"
             "Folder" = "8:_9C18E4ADF1BC4E82A7D689F4B4B036CD"
@@ -2852,7 +2872,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_46709F38EA2849B489FA7CD616F1C046"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc\\auth_des.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc\\auth_des.h"
             "TargetName" = "8:auth_des.h"
             "Tag" = "8:"
             "Folder" = "8:_495142F2981D47C181C31EBE972FD68D"
@@ -2872,7 +2892,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_469E72975D4248A3BFF7855CC4BFEA32"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\systeminfo.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\systeminfo.h"
             "TargetName" = "8:systeminfo.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -2892,7 +2912,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_46A1197CC1D846BCBCDA1AFB81E584E1"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc\\pmap_prot.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc\\pmap_prot.h"
             "TargetName" = "8:pmap_prot.h"
             "Tag" = "8:"
             "Folder" = "8:_495142F2981D47C181C31EBE972FD68D"
@@ -2912,7 +2932,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_46A747C36F5941CB82DC10601060473C"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\win_raw_socket_old_2017.12.24.h"
+            "SourcePath" = "8:..\\..\\..\\include\\win_raw_socket_old_2017.12.24.h"
             "TargetName" = "8:win_raw_socket_old_2017.12.24.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -2970,29 +2990,9 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_49D6B381CBF34C5BAA4EBBA2B3C164AB"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\sys\\win64\\dll\\remote_function_call_false_without_lib.4.0.4.0.dll"
-            "TargetName" = "8:remote_function_call_false_without_lib.4.0.4.0.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_9128AEF1EDC847BD9B0C3A0DCEF55BCA"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_49E540F730A74240A6F36B96231D0D3C"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rfc\\functions_libgui_hacker_base.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rfc\\functions_libgui_hacker_base.h"
             "TargetName" = "8:functions_libgui_hacker_base.h"
             "Tag" = "8:"
             "Folder" = "8:_C386515542C145D68740311B18F9C267"
@@ -3032,7 +3032,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4AE55D8810364509B078293C68153AA3"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\shm.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\shm.h"
             "TargetName" = "8:shm.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -3072,7 +3072,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4C078A0A9D2D4E4D97BC716C919AE36E"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\wchar.h"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\wchar.h"
             "TargetName" = "8:wchar.h"
             "Tag" = "8:"
             "Folder" = "8:_9A27B1C083EC4A20BF429537A1297F57"
@@ -3092,7 +3092,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4E218A75735C4EBB9144B3DCD9D054B9"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc_mini\\RPC\\#NETDB.H#"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc_mini\\RPC\\#NETDB.H#"
             "TargetName" = "8:#NETDB.H#"
             "Tag" = "8:"
             "Folder" = "8:_0C167502DE9B4857A2CB20EE12A04BCA"
@@ -3112,7 +3112,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4ED2BC6A65AC48D3AF4519EF4442B24F"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\strings.h"
+            "SourcePath" = "8:..\\..\\..\\include\\strings.h"
             "TargetName" = "8:strings.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -3212,7 +3212,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5164580CC4784EC28CDBD283347006B6"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc_mini\\RPC\\BCOPY.H"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc_mini\\RPC\\BCOPY.H"
             "TargetName" = "8:BCOPY.H"
             "Tag" = "8:"
             "Folder" = "8:_0C167502DE9B4857A2CB20EE12A04BCA"
@@ -3232,7 +3232,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_526AD58A1D2E47479CE73F5BC71E8052"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc_mini\\RPC\\AUTH_UNI.H"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc_mini\\RPC\\AUTH_UNI.H"
             "TargetName" = "8:AUTH_UNI.H"
             "Tag" = "8:"
             "Folder" = "8:_0C167502DE9B4857A2CB20EE12A04BCA"
@@ -3272,7 +3272,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5533AEBE3DBC4D7EBBCDABC49B21FDDF"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\wait.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\wait.h"
             "TargetName" = "8:wait.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -3352,7 +3352,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_596E7C1E5B0149DFAB2F340562D42071"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\getopt.h"
+            "SourcePath" = "8:..\\..\\..\\include\\getopt.h"
             "TargetName" = "8:getopt.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -3392,7 +3392,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5A7550C07C4C4326B53EF1FDDBA53A05"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\sys\\types.h"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\sys\\types.h"
             "TargetName" = "8:types.h"
             "Tag" = "8:"
             "Folder" = "8:_01A2E843AF4D4A4897986405A78862FE"
@@ -3412,7 +3412,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5B037B0FB2CA47BF85FFB4BFA7E170A9"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\test\\redesigned\\stdio.h"
+            "SourcePath" = "8:..\\..\\..\\include\\test\\redesigned\\stdio.h"
             "TargetName" = "8:stdio.h"
             "Tag" = "8:"
             "Folder" = "8:_ACCCD927B2264F318DD0A938A2F6B6AC"
@@ -3472,7 +3472,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5CB5DD8AB52840F0A461DCC0E51DABF8"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\test\\redesigned\\ofstream.h"
+            "SourcePath" = "8:..\\..\\..\\include\\test\\redesigned\\ofstream.h"
             "TargetName" = "8:ofstream.h"
             "Tag" = "8:"
             "Folder" = "8:_ACCCD927B2264F318DD0A938A2F6B6AC"
@@ -3532,7 +3532,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5D2B3C82B72B4982A571FAD784C3FFB0"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc\\svc.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc\\svc.h"
             "TargetName" = "8:svc.h"
             "Tag" = "8:"
             "Folder" = "8:_495142F2981D47C181C31EBE972FD68D"
@@ -3552,7 +3552,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5D8FB1AE88FC448FA771B591EB668C65"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\test\\redesigned\\std_wlac_fios.hpp"
+            "SourcePath" = "8:..\\..\\..\\include\\test\\redesigned\\std_wlac_fios.hpp"
             "TargetName" = "8:std_wlac_fios.hpp"
             "Tag" = "8:"
             "Folder" = "8:_ACCCD927B2264F318DD0A938A2F6B6AC"
@@ -3592,7 +3592,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5E8A0ECB317C49F48588DDA81494DE4F"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\windows.h"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\windows.h"
             "TargetName" = "8:windows.h"
             "Tag" = "8:"
             "Folder" = "8:_9A27B1C083EC4A20BF429537A1297F57"
@@ -3612,7 +3612,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_609DFCC78B0440F3878DF2528492F1CA"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\winsock2_locked.h"
+            "SourcePath" = "8:..\\..\\..\\include\\winsock2_locked.h"
             "TargetName" = "8:winsock2_locked.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -3632,7 +3632,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_615031DE74C24E28BF48479BC5FA4C83"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc_mini\\RPC\\.old\\XDR.H"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc_mini\\RPC\\.old\\XDR.H"
             "TargetName" = "8:XDR.H"
             "Tag" = "8:"
             "Folder" = "8:_0678B46AF1744D4E90370A9583632D91"
@@ -3652,7 +3652,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6231A5FF03564BBE89E00680C27FD08A"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc\\types.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc\\types.h"
             "TargetName" = "8:types.h"
             "Tag" = "8:"
             "Folder" = "8:_495142F2981D47C181C31EBE972FD68D"
@@ -3692,7 +3692,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_647D43934C6C4FE9A61335BFD0B383B5"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\process.h"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\process.h"
             "TargetName" = "8:process.h"
             "Tag" = "8:"
             "Folder" = "8:_9A27B1C083EC4A20BF429537A1297F57"
@@ -3732,7 +3732,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_65CAE52FCACE47B28C4D8D37D7BCD7D2"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\ioctl.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\ioctl.h"
             "TargetName" = "8:ioctl.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -3772,7 +3772,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6636211FE73C436CB7E0AFE5E3216B01"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc\\dk_additions.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc\\dk_additions.h"
             "TargetName" = "8:dk_additions.h"
             "Tag" = "8:"
             "Folder" = "8:_495142F2981D47C181C31EBE972FD68D"
@@ -3792,7 +3792,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_66A3578AF14C45F4AAD42FDF9D1731C9"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\un.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\un.h"
             "TargetName" = "8:un.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -3832,7 +3832,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_68F4334940954D14B3688A912CFA06E1"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\std_wlac_fios.hpp"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\std_wlac_fios.hpp"
             "TargetName" = "8:std_wlac_fios.hpp"
             "Tag" = "8:"
             "Folder" = "8:_9A27B1C083EC4A20BF429537A1297F57"
@@ -3852,7 +3852,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_69D857E3EC4143E0BA0AED72EAD93294"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc\\rpcb_prot.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc\\rpcb_prot.h"
             "TargetName" = "8:rpcb_prot.h"
             "Tag" = "8:"
             "Folder" = "8:_495142F2981D47C181C31EBE972FD68D"
@@ -3892,7 +3892,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6B3283D28BD846CD837B854435785CB1"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rfc\\remote_function_caller.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rfc\\remote_function_caller.h"
             "TargetName" = "8:remote_function_caller.h"
             "Tag" = "8:"
             "Folder" = "8:_C386515542C145D68740311B18F9C267"
@@ -3912,7 +3912,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6B93CA90853C439A867A8EF38E9B5305"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\cdef.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\cdef.h"
             "TargetName" = "8:cdef.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -3932,7 +3932,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6C1A2DF48D334BECACD03BE130A6AA66"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc_mini\\RPC\\TYPES.H"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc_mini\\RPC\\TYPES.H"
             "TargetName" = "8:TYPES.H"
             "Tag" = "8:"
             "Folder" = "8:_0C167502DE9B4857A2CB20EE12A04BCA"
@@ -3952,7 +3952,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6CECF16B003341DCA5776EF208D5C2E2"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc_mini\\RPC\\SVC_AUTH.H"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc_mini\\RPC\\SVC_AUTH.H"
             "TargetName" = "8:SVC_AUTH.H"
             "Tag" = "8:"
             "Folder" = "8:_0C167502DE9B4857A2CB20EE12A04BCA"
@@ -3972,7 +3972,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6D99552E4A1D4FBBBB9E44E8A99E20DC"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\bits\\uio.h"
+            "SourcePath" = "8:..\\..\\..\\include\\bits\\uio.h"
             "TargetName" = "8:uio.h"
             "Tag" = "8:"
             "Folder" = "8:_923F189E14BA4E43A4685F518A0E1585"
@@ -3992,7 +3992,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6DE2083C3AE34726923006871F9906A7"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\bits\\mman.h"
+            "SourcePath" = "8:..\\..\\..\\include\\bits\\mman.h"
             "TargetName" = "8:mman.h"
             "Tag" = "8:"
             "Folder" = "8:_923F189E14BA4E43A4685F518A0E1585"
@@ -4012,7 +4012,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6F26094276D140F2B65E10DEDC49CE5D"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\netconfig.h"
+            "SourcePath" = "8:..\\..\\..\\include\\netconfig.h"
             "TargetName" = "8:netconfig.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -4052,7 +4052,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_702FF80407064E42A1105C1FBD5B69C4"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\netinet\\in.h"
+            "SourcePath" = "8:..\\..\\..\\include\\netinet\\in.h"
             "TargetName" = "8:in.h"
             "Tag" = "8:"
             "Folder" = "8:_BF0BA552F00349B4874AFE87AFCB4517"
@@ -4072,7 +4072,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_70C053257DD54AC6869E7F47B4D7308E"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\stdlib.h"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\stdlib.h"
             "TargetName" = "8:stdlib.h"
             "Tag" = "8:"
             "Folder" = "8:_9A27B1C083EC4A20BF429537A1297F57"
@@ -4092,7 +4092,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7101C0C4C8E44868B1DB84AAF2537F6C"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rfc\\remote_function_caller_base.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rfc\\remote_function_caller_base.h"
             "TargetName" = "8:remote_function_caller_base.h"
             "Tag" = "8:"
             "Folder" = "8:_C386515542C145D68740311B18F9C267"
@@ -4132,7 +4132,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7553A5716B084CEDA6F1BAC5EC0502F7"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\bits\\wordsize.h"
+            "SourcePath" = "8:..\\..\\..\\include\\bits\\wordsize.h"
             "TargetName" = "8:wordsize.h"
             "Tag" = "8:"
             "Folder" = "8:_923F189E14BA4E43A4685F518A0E1585"
@@ -4172,7 +4172,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_76EEB190221A4BBFB9F4F8F064B2C3F2"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\.privatei\\header_for_resolving_errno.h"
+            "SourcePath" = "8:..\\..\\..\\include\\.privatei\\header_for_resolving_errno.h"
             "TargetName" = "8:header_for_resolving_errno.h"
             "Tag" = "8:"
             "Folder" = "8:_7FEA3FFA91B241ABA75271669F012AC6"
@@ -4192,7 +4192,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_78D338B4C8A4419C8A3C87B7516336BB"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc\\xdr.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc\\xdr.h"
             "TargetName" = "8:xdr.h"
             "Tag" = "8:"
             "Folder" = "8:_495142F2981D47C181C31EBE972FD68D"
@@ -4212,7 +4212,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_79047341D04441359DF7540034253B76"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc_mini\\RPC\\AUTH.H"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc_mini\\RPC\\AUTH.H"
             "TargetName" = "8:AUTH.H"
             "Tag" = "8:"
             "Folder" = "8:_0C167502DE9B4857A2CB20EE12A04BCA"
@@ -4252,7 +4252,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7A25CF8051124D2698D28FD9939508E8"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\endian.h"
+            "SourcePath" = "8:..\\..\\..\\include\\endian.h"
             "TargetName" = "8:endian.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -4272,7 +4272,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7AAC9D719898462F828379F4299D657E"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\bits\\signum.h"
+            "SourcePath" = "8:..\\..\\..\\include\\bits\\signum.h"
             "TargetName" = "8:signum.h"
             "Tag" = "8:"
             "Folder" = "8:_923F189E14BA4E43A4685F518A0E1585"
@@ -4312,7 +4312,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7AC5C98D07E54F6F9980974E38D3FF7C"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\file.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\file.h"
             "TargetName" = "8:file.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -4332,7 +4332,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7B408E7E80C7486BB5A5FA392DD8E2A4"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\rpc.h"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\rpc.h"
             "TargetName" = "8:rpc.h"
             "Tag" = "8:"
             "Folder" = "8:_9A27B1C083EC4A20BF429537A1297F57"
@@ -4372,7 +4372,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7B99968B068C4DCAA7713A2353169E0F"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\err.h"
+            "SourcePath" = "8:..\\..\\..\\include\\err.h"
             "TargetName" = "8:err.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -4392,7 +4392,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7C581F3E2A6B4372967B4442CEB82C89"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\grp.h"
+            "SourcePath" = "8:..\\..\\..\\include\\grp.h"
             "TargetName" = "8:grp.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -4412,7 +4412,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7C9E3B0CA2F64C10851786584215B7C1"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\sem.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\sem.h"
             "TargetName" = "8:sem.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -4432,7 +4432,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7D8427798F7D494EAB0825FAB2CAD60A"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\unistd.h"
+            "SourcePath" = "8:..\\..\\..\\include\\unistd.h"
             "TargetName" = "8:unistd.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -4472,7 +4472,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_80E5C21CCF894D1994A1FEEEED45A9E9"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\bfd.h"
+            "SourcePath" = "8:..\\..\\..\\include\\bfd.h"
             "TargetName" = "8:bfd.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -4492,7 +4492,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_80F803762581480C9E219130895B4AA6"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\bytesex.h"
+            "SourcePath" = "8:..\\..\\..\\include\\bytesex.h"
             "TargetName" = "8:bytesex.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -4552,7 +4552,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_83B67C2DA84D413BB0E522E6073A1206"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\thread.h"
+            "SourcePath" = "8:..\\..\\..\\include\\thread.h"
             "TargetName" = "8:thread.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -4572,7 +4572,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_83ED0B184F95427FA7B2C8844BE6F59A"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\bits\\siginfo.h"
+            "SourcePath" = "8:..\\..\\..\\include\\bits\\siginfo.h"
             "TargetName" = "8:siginfo.h"
             "Tag" = "8:"
             "Folder" = "8:_923F189E14BA4E43A4685F518A0E1585"
@@ -4592,7 +4592,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_83F6070B6C114CD1A0486CD250D7D134"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\linux\\version.h"
+            "SourcePath" = "8:..\\..\\..\\include\\linux\\version.h"
             "TargetName" = "8:version.h"
             "Tag" = "8:"
             "Folder" = "8:_8C31390896774EAF9C34942634DA3D73"
@@ -4612,7 +4612,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_854DD571523D439DAC25F96D57D36098"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\sys\\stat.h"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\sys\\stat.h"
             "TargetName" = "8:stat.h"
             "Tag" = "8:"
             "Folder" = "8:_01A2E843AF4D4A4897986405A78862FE"
@@ -4632,7 +4632,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8637E9F98B484C0CB6D4886696173A03"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\semaphore.h"
+            "SourcePath" = "8:..\\..\\..\\include\\semaphore.h"
             "TargetName" = "8:semaphore.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -4652,7 +4652,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_863C3748A302438B96A633CEF1591296"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc_mini\\strings.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc_mini\\strings.h"
             "TargetName" = "8:strings.h"
             "Tag" = "8:"
             "Folder" = "8:_81A4EBC405014FC9B56C4EB67F2C9949"
@@ -4672,7 +4672,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_866A6B9F40344472B3E26E368CE0303A"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc\\pmap_rmt.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc\\pmap_rmt.h"
             "TargetName" = "8:pmap_rmt.h"
             "Tag" = "8:"
             "Folder" = "8:_495142F2981D47C181C31EBE972FD68D"
@@ -4692,7 +4692,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_87BF124990C74E04B3855CA3C2153386"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\gnu_getopt.h"
+            "SourcePath" = "8:..\\..\\..\\include\\gnu_getopt.h"
             "TargetName" = "8:gnu_getopt.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -4712,7 +4712,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_87EDD4E600E34EED88E3B83146CAFD2B"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\mman.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\mman.h"
             "TargetName" = "8:mman.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -4732,7 +4732,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_890F3C136AD94433B80E8D0ACCB75B3D"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\first_includes\\new_winldap_common_include.h"
+            "SourcePath" = "8:..\\..\\..\\include\\first_includes\\new_winldap_common_include.h"
             "TargetName" = "8:new_winldap_common_include.h"
             "Tag" = "8:"
             "Folder" = "8:_B471F383C3C943948DAE7C9C5BDF3F16"
@@ -4792,7 +4792,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8C3295E1328248A0AACF1B9C04BE556C"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\times.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\times.h"
             "TargetName" = "8:times.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -4832,7 +4832,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8E493FCC8D894A38B802EB3723E95297"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\ws2tcpip.h"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\ws2tcpip.h"
             "TargetName" = "8:ws2tcpip.h"
             "Tag" = "8:"
             "Folder" = "8:_9A27B1C083EC4A20BF429537A1297F57"
@@ -4852,7 +4852,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8E9FEDBF6A2445DF9C503ED9BED85EE8"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\stdafx.h"
+            "SourcePath" = "8:..\\..\\..\\include\\stdafx.h"
             "TargetName" = "8:stdafx.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -4912,7 +4912,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_901DB0F3D4DC4E8B999B699B97B5DE10"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\linux\\ioctl.h"
+            "SourcePath" = "8:..\\..\\..\\include\\linux\\ioctl.h"
             "TargetName" = "8:ioctl.h"
             "Tag" = "8:"
             "Folder" = "8:_8C31390896774EAF9C34942634DA3D73"
@@ -4932,7 +4932,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_91869AFC55A043CBAFB792D37A7DF2B9"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\netinet\\tcp.h"
+            "SourcePath" = "8:..\\..\\..\\include\\netinet\\tcp.h"
             "TargetName" = "8:tcp.h"
             "Tag" = "8:"
             "Folder" = "8:_BF0BA552F00349B4874AFE87AFCB4517"
@@ -4952,7 +4952,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_96127513B285418F9442EAB2DDF32DF1"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc\\rpc.h_2015.12.15"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc\\rpc.h_2015.12.15"
             "TargetName" = "8:rpc.h_2015.12.15"
             "Tag" = "8:"
             "Folder" = "8:_495142F2981D47C181C31EBE972FD68D"
@@ -4972,7 +4972,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_962EFA576324423CA7455F13946F1A5C"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\bits\\sigaction.h"
+            "SourcePath" = "8:..\\..\\..\\include\\bits\\sigaction.h"
             "TargetName" = "8:sigaction.h"
             "Tag" = "8:"
             "Folder" = "8:_923F189E14BA4E43A4685F518A0E1585"
@@ -4992,7 +4992,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9949C53B45D743C38E9662F4E4F91EC2"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\libgen.h"
+            "SourcePath" = "8:..\\..\\..\\include\\libgen.h"
             "TargetName" = "8:libgen.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -5012,7 +5012,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_99E4FC64874B41F995B8788286D13FB6"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\time.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\time.h"
             "TargetName" = "8:time.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -5032,7 +5032,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9A639E68186F46EFA5FBF120D027B9FB"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\test\\redesigned\\fstream"
+            "SourcePath" = "8:..\\..\\..\\include\\test\\redesigned\\fstream"
             "TargetName" = "8:fstream"
             "Tag" = "8:"
             "Folder" = "8:_ACCCD927B2264F318DD0A938A2F6B6AC"
@@ -5072,7 +5072,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9D040ECBFFBB47A1BA80A32D4E807AD3"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rfc\\readme.txt"
+            "SourcePath" = "8:..\\..\\..\\include\\rfc\\readme.txt"
             "TargetName" = "8:readme.txt"
             "Tag" = "8:"
             "Folder" = "8:_C386515542C145D68740311B18F9C267"
@@ -5092,7 +5092,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9E9AB56590124B3F9B4FD0DAE588120D"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\lber.h"
+            "SourcePath" = "8:..\\..\\..\\include\\lber.h"
             "TargetName" = "8:lber.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -5112,7 +5112,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9F26F51E7A86474D8E86075B66479DF7"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\ipc.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\ipc.h"
             "TargetName" = "8:ipc.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -5152,7 +5152,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9F342130908A49EDA7D3A5D10895F7DE"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\.comp_files\\company_def_file.hin"
+            "SourcePath" = "8:..\\..\\..\\include\\.comp_files\\company_def_file.hin"
             "TargetName" = "8:company_def_file.hin"
             "Tag" = "8:"
             "Folder" = "8:_671BA1E65CED48E5BBE32A9A6D9C88CF"
@@ -5192,7 +5192,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A0E007A97F454E1FA9953AEE3530BABF"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\syslog.h"
+            "SourcePath" = "8:..\\..\\..\\include\\syslog.h"
             "TargetName" = "8:syslog.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -5232,7 +5232,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A1E8F5C92579494B863652690A86453E"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\test\\redesigned\\stdlib.h"
+            "SourcePath" = "8:..\\..\\..\\include\\test\\redesigned\\stdlib.h"
             "TargetName" = "8:stdlib.h"
             "Tag" = "8:"
             "Folder" = "8:_ACCCD927B2264F318DD0A938A2F6B6AC"
@@ -5252,7 +5252,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A1F6A87D0B304EBE85E0BDF77FE8B2E7"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc\\svc_soc.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc\\svc_soc.h"
             "TargetName" = "8:svc_soc.h"
             "Tag" = "8:"
             "Folder" = "8:_495142F2981D47C181C31EBE972FD68D"
@@ -5312,7 +5312,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A421F0CE779D4DB99C4163DE58CEA49C"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sched.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sched.h"
             "TargetName" = "8:sched.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -5332,7 +5332,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A67744F191B64C7C921C460BAA6881DF"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\stdio.h"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\stdio.h"
             "TargetName" = "8:stdio.h"
             "Tag" = "8:"
             "Folder" = "8:_9A27B1C083EC4A20BF429537A1297F57"
@@ -5352,7 +5352,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A82FC40A5A1C48D08A5ABADFDCFA836E"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc_mini\\RPC\\PMAP_CLN.H"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc_mini\\RPC\\PMAP_CLN.H"
             "TargetName" = "8:PMAP_CLN.H"
             "Tag" = "8:"
             "Folder" = "8:_0C167502DE9B4857A2CB20EE12A04BCA"
@@ -5372,7 +5372,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A8CA149B4E6A4262B4A69E5050BE219F"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\errno.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\errno.h"
             "TargetName" = "8:errno.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -5412,7 +5412,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AC06FCC8E89C49CFA5B0CDFDF8165630"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\first_includes\\common_include_for_headers.h"
+            "SourcePath" = "8:..\\..\\..\\include\\first_includes\\common_include_for_headers.h"
             "TargetName" = "8:common_include_for_headers.h"
             "Tag" = "8:"
             "Folder" = "8:_B471F383C3C943948DAE7C9C5BDF3F16"
@@ -5492,7 +5492,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AE3A50CA2DF74FA7A71535299AD296AA"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\statvfs.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\statvfs.h"
             "TargetName" = "8:statvfs.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -5572,7 +5572,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B2177BA231884C04979B264F7C76E2FB"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\bits\\resource.h"
+            "SourcePath" = "8:..\\..\\..\\include\\bits\\resource.h"
             "TargetName" = "8:resource.h"
             "Tag" = "8:"
             "Folder" = "8:_923F189E14BA4E43A4685F518A0E1585"
@@ -5592,7 +5592,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B2D83184BBB04597BA86BAFAB52F47EE"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\fstream"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\fstream"
             "TargetName" = "8:fstream"
             "Tag" = "8:"
             "Folder" = "8:_9A27B1C083EC4A20BF429537A1297F57"
@@ -5612,7 +5612,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B37399C179594C679B55FCFA39687730"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\time.h"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\time.h"
             "TargetName" = "8:time.h"
             "Tag" = "8:"
             "Folder" = "8:_9A27B1C083EC4A20BF429537A1297F57"
@@ -5692,7 +5692,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B8F62566CB2341C18B17B31AEC37E273"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\test\\redesigned\\ifstream"
+            "SourcePath" = "8:..\\..\\..\\include\\test\\redesigned\\ifstream"
             "TargetName" = "8:ifstream"
             "Tag" = "8:"
             "Folder" = "8:_ACCCD927B2264F318DD0A938A2F6B6AC"
@@ -5712,7 +5712,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B8FF0F6613214530AA6F9F739A4EB4F6"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sdef_gem_windows.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sdef_gem_windows.h"
             "TargetName" = "8:sdef_gem_windows.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -5732,7 +5732,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B960C6FB38974863A4A0F520DF7DF80F"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\direct.h"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\direct.h"
             "TargetName" = "8:direct.h"
             "Tag" = "8:"
             "Folder" = "8:_9A27B1C083EC4A20BF429537A1297F57"
@@ -5752,7 +5752,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B974DD98647F411A90FD5C637498E833"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\syscall.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\syscall.h"
             "TargetName" = "8:syscall.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -5772,7 +5772,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BA67BA5CDC604CCE8F64228DA0168107"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\signal.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\signal.h"
             "TargetName" = "8:signal.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -5792,7 +5792,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BBC1871F191845CEBA0CB82BBFCD8A99"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\test\\common_include_for_headers.h"
+            "SourcePath" = "8:..\\..\\..\\include\\test\\common_include_for_headers.h"
             "TargetName" = "8:common_include_for_headers.h"
             "Tag" = "8:"
             "Folder" = "8:_7BAB48AAD52F465AB48B3702EF42BF4F"
@@ -5832,7 +5832,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BBCDF3FA8F20405AA1699596E1EE1213"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\linux\\iso_fs.h"
+            "SourcePath" = "8:..\\..\\..\\include\\linux\\iso_fs.h"
             "TargetName" = "8:iso_fs.h"
             "Tag" = "8:"
             "Folder" = "8:_8C31390896774EAF9C34942634DA3D73"
@@ -5872,7 +5872,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BCD70AEA6D6D491792237309843C4A53"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\.comp_files\\company_def_file.h"
+            "SourcePath" = "8:..\\..\\..\\include\\.comp_files\\company_def_file.h"
             "TargetName" = "8:company_def_file.h"
             "Tag" = "8:"
             "Folder" = "8:_671BA1E65CED48E5BBE32A9A6D9C88CF"
@@ -5892,7 +5892,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BD3064726CD84800B68E428AE443A176"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\.privatei\\windows_and_socket_headers.h"
+            "SourcePath" = "8:..\\..\\..\\include\\.privatei\\windows_and_socket_headers.h"
             "TargetName" = "8:windows_and_socket_headers.h"
             "Tag" = "8:"
             "Folder" = "8:_7FEA3FFA91B241ABA75271669F012AC6"
@@ -5932,7 +5932,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BED279CAA1B741A3B280C3F1624E4EFE"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc\\rpc_msg.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc\\rpc_msg.h"
             "TargetName" = "8:rpc_msg.h"
             "Tag" = "8:"
             "Folder" = "8:_495142F2981D47C181C31EBE972FD68D"
@@ -5972,7 +5972,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C331B7058A224EAFBAC1BF4D56A8D51F"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc\\clnt.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc\\clnt.h"
             "TargetName" = "8:clnt.h"
             "Tag" = "8:"
             "Folder" = "8:_495142F2981D47C181C31EBE972FD68D"
@@ -6012,7 +6012,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C4D2C849335D44FDACE4BB3D17DBDA05"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\netdb.h"
+            "SourcePath" = "8:..\\..\\..\\include\\netdb.h"
             "TargetName" = "8:netdb.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -6072,7 +6072,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CA102AC3986C41A2A8D4F252E4FFE117"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\proc\\sysinfo.h"
+            "SourcePath" = "8:..\\..\\..\\include\\proc\\sysinfo.h"
             "TargetName" = "8:sysinfo.h"
             "Tag" = "8:"
             "Folder" = "8:_A498FF0AEB7043ACB6FD729E08E01E50"
@@ -6092,7 +6092,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CB18B095AF0545D68062998B8A2D7BD7"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\linux\\limits.h"
+            "SourcePath" = "8:..\\..\\..\\include\\linux\\limits.h"
             "TargetName" = "8:limits.h"
             "Tag" = "8:"
             "Folder" = "8:_8C31390896774EAF9C34942634DA3D73"
@@ -6112,7 +6112,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CDA688DE479E4C30B53BBC02C347F9A5"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc\\rpc_com.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc\\rpc_com.h"
             "TargetName" = "8:rpc_com.h"
             "Tag" = "8:"
             "Folder" = "8:_495142F2981D47C181C31EBE972FD68D"
@@ -6132,7 +6132,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CE497DF68B1B406D9E2EB3BF7316FB2B"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\winsock2.h"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\winsock2.h"
             "TargetName" = "8:winsock2.h"
             "Tag" = "8:"
             "Folder" = "8:_9A27B1C083EC4A20BF429537A1297F57"
@@ -6152,7 +6152,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CEC35F19B2D64DCAA8AB0072B5240F91"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\.original\\msc1900\\winsock2_locked.h"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\.original\\msc1900\\winsock2_locked.h"
             "TargetName" = "8:winsock2_locked.h"
             "Tag" = "8:"
             "Folder" = "8:_2494B57E8A2C4BC19770EEB0C3A5CAD8"
@@ -6172,7 +6172,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CF2ABA3C5CE749CA8D205C86D63AC5E5"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rfc\\windows_signal.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rfc\\windows_signal.h"
             "TargetName" = "8:windows_signal.h"
             "Tag" = "8:"
             "Folder" = "8:_C386515542C145D68740311B18F9C267"
@@ -6212,7 +6212,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D0D08BB1F7CA4A828F1BECD652107928"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\linux\\minix_fs.h"
+            "SourcePath" = "8:..\\..\\..\\include\\linux\\minix_fs.h"
             "TargetName" = "8:minix_fs.h"
             "Tag" = "8:"
             "Folder" = "8:_8C31390896774EAF9C34942634DA3D73"
@@ -6232,7 +6232,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D0DC853A80CB4C10955C290012E0D379"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\redesigned\\fcntl.h"
+            "SourcePath" = "8:..\\..\\..\\include\\redesigned\\fcntl.h"
             "TargetName" = "8:fcntl.h"
             "Tag" = "8:"
             "Folder" = "8:_9A27B1C083EC4A20BF429537A1297F57"
@@ -6272,7 +6272,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D11DAB1C0E2F4249B4F339D3D2D4D26C"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc_mini\\RPC\\PMAP_RMT.H"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc_mini\\RPC\\PMAP_RMT.H"
             "TargetName" = "8:PMAP_RMT.H"
             "Tag" = "8:"
             "Folder" = "8:_0C167502DE9B4857A2CB20EE12A04BCA"
@@ -6312,7 +6312,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D198C80439984D829EA3588040DBA2F4"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\test\\redesigned\\std_wlac_fios.impl.hpp"
+            "SourcePath" = "8:..\\..\\..\\include\\test\\redesigned\\std_wlac_fios.impl.hpp"
             "TargetName" = "8:std_wlac_fios.impl.hpp"
             "Tag" = "8:"
             "Folder" = "8:_ACCCD927B2264F318DD0A938A2F6B6AC"
@@ -6332,7 +6332,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D1B2984F06E14B2489C3CA7AABB5963D"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\pthread.h"
+            "SourcePath" = "8:..\\..\\..\\include\\pthread.h"
             "TargetName" = "8:pthread.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -6412,7 +6412,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D52511BC28FD4840A078756EC2001399"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rfc\\win_signaling.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rfc\\win_signaling.h"
             "TargetName" = "8:win_signaling.h"
             "Tag" = "8:"
             "Folder" = "8:_C386515542C145D68740311B18F9C267"
@@ -6432,7 +6432,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D6115B6B0700426A8F9179AC0ACA36FE"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\ldap.h"
+            "SourcePath" = "8:..\\..\\..\\include\\ldap.h"
             "TargetName" = "8:ldap.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -6472,7 +6472,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D8229C1DF5394B3887BB23E8C2A3601D"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\.tmp\\wlac_temporary.h"
+            "SourcePath" = "8:..\\..\\..\\include\\.tmp\\wlac_temporary.h"
             "TargetName" = "8:wlac_temporary.h"
             "Tag" = "8:"
             "Folder" = "8:_022A7331B4074B7B8DCBE3A512361B95"
@@ -6492,7 +6492,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D8F5A36DCB74404B8B487CF92272A1FB"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\test\\redesigned\\process.h"
+            "SourcePath" = "8:..\\..\\..\\include\\test\\redesigned\\process.h"
             "TargetName" = "8:process.h"
             "Tag" = "8:"
             "Folder" = "8:_ACCCD927B2264F318DD0A938A2F6B6AC"
@@ -6552,7 +6552,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DA564F93943D4A6AB67D3316994C7032"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\arpa\\inet.h"
+            "SourcePath" = "8:..\\..\\..\\include\\arpa\\inet.h"
             "TargetName" = "8:inet.h"
             "Tag" = "8:"
             "Folder" = "8:_89D22622A581490EBB66A9619B5145FB"
@@ -6592,7 +6592,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DCFC6222C6AD4A61A61539545E01292F"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\cdefs.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\cdefs.h"
             "TargetName" = "8:cdefs.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -6612,7 +6612,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DD3299622524413B948E554D7741B062"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\uio.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\uio.h"
             "TargetName" = "8:uio.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -6632,7 +6632,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DD9580E9673E4729B9E59137084B26A7"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\syslog.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\syslog.h"
             "TargetName" = "8:syslog.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -6652,7 +6652,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DE268DE3983249BEB59247CAEB467FF3"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\resource.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\resource.h"
             "TargetName" = "8:resource.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -6672,7 +6672,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DF001180777741CB9B5FECFB3E85E70B"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\first_includes\\gem_undefined_apis.h"
+            "SourcePath" = "8:..\\..\\..\\include\\first_includes\\gem_undefined_apis.h"
             "TargetName" = "8:gem_undefined_apis.h"
             "Tag" = "8:"
             "Folder" = "8:_B471F383C3C943948DAE7C9C5BDF3F16"
@@ -6732,7 +6732,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E11AA1F855234F949EA7EFBD809AA288"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\bits\\typesizes.h"
+            "SourcePath" = "8:..\\..\\..\\include\\bits\\typesizes.h"
             "TargetName" = "8:typesizes.h"
             "Tag" = "8:"
             "Folder" = "8:_923F189E14BA4E43A4685F518A0E1585"
@@ -6752,7 +6752,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E42FE6C83A6644B0B8C06D21C9638960"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\unix_like_user_group_header.h"
+            "SourcePath" = "8:..\\..\\..\\include\\unix_like_user_group_header.h"
             "TargetName" = "8:unix_like_user_group_header.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -6792,7 +6792,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E493DD337A45453BBC39A59BB31EC3FC"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc_mini\\RPC\\PMAP_PRO.H"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc_mini\\RPC\\PMAP_PRO.H"
             "TargetName" = "8:PMAP_PRO.H"
             "Tag" = "8:"
             "Folder" = "8:_0C167502DE9B4857A2CB20EE12A04BCA"
@@ -6832,7 +6832,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E6493C0A947C4C4ABDCBD6777CF9DEA6"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\first_includes\\gem_first_common_include.h"
+            "SourcePath" = "8:..\\..\\..\\include\\first_includes\\gem_first_common_include.h"
             "TargetName" = "8:gem_first_common_include.h"
             "Tag" = "8:"
             "Folder" = "8:_B471F383C3C943948DAE7C9C5BDF3F16"
@@ -6852,7 +6852,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E82A276D23164F65A1ABA0BCABA8A2F9"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\netdir.h"
+            "SourcePath" = "8:..\\..\\..\\include\\netdir.h"
             "TargetName" = "8:netdir.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -6892,7 +6892,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E93A9650BD024D6B8338A1920ADFE25A"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\additional\\common_argument_parser.impl.hpp"
+            "SourcePath" = "8:..\\..\\..\\include\\additional\\common_argument_parser.impl.hpp"
             "TargetName" = "8:common_argument_parser.impl.hpp"
             "Tag" = "8:"
             "Folder" = "8:_3C48E799D8534D88B474CBA6364948A1"
@@ -6912,7 +6912,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E95EFB0ED31D40A0955BB94E388591EE"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc_mini\\RPC\\CLNT.H"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc_mini\\RPC\\CLNT.H"
             "TargetName" = "8:CLNT.H"
             "Tag" = "8:"
             "Folder" = "8:_0C167502DE9B4857A2CB20EE12A04BCA"
@@ -7012,7 +7012,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EAFB9B37AD0F456588A407FBF9F3EE8F"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\pwd.h"
+            "SourcePath" = "8:..\\..\\..\\include\\pwd.h"
             "TargetName" = "8:pwd.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -7032,7 +7032,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EB1DC52724D34DA19856D91A82A4B09F"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\syscall.h"
+            "SourcePath" = "8:..\\..\\..\\include\\syscall.h"
             "TargetName" = "8:syscall.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -7052,7 +7052,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EBA76415761B4491B87309924E8A9FC1"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\net\\if.h"
+            "SourcePath" = "8:..\\..\\..\\include\\net\\if.h"
             "TargetName" = "8:if.h"
             "Tag" = "8:"
             "Folder" = "8:_FBF3C50BCAD046D9AB0800E0C38C6DF5"
@@ -7072,7 +7072,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EC6A4E743EC44399A5443BCAABEF99CA"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc\\nettype.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc\\nettype.h"
             "TargetName" = "8:nettype.h"
             "Tag" = "8:"
             "Folder" = "8:_495142F2981D47C181C31EBE972FD68D"
@@ -7112,7 +7112,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F13991695A7C4D04ABA8895672D81E56"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\win_socket_common.h"
+            "SourcePath" = "8:..\\..\\..\\include\\win_socket_common.h"
             "TargetName" = "8:win_socket_common.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -7132,7 +7132,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F2181B27C909451A8DF694E5A5C3E242"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc\\auth.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc\\auth.h"
             "TargetName" = "8:auth.h"
             "Tag" = "8:"
             "Folder" = "8:_495142F2981D47C181C31EBE972FD68D"
@@ -7172,7 +7172,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F2729EDA978D44A281E7310A1528230A"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc_mini\\RPC\\SVC.H"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc_mini\\RPC\\SVC.H"
             "TargetName" = "8:SVC.H"
             "Tag" = "8:"
             "Folder" = "8:_0C167502DE9B4857A2CB20EE12A04BCA"
@@ -7212,7 +7212,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F3D81B96CB5C4A75A5146B21D73F3952"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rfc\\wlac_rfc.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rfc\\wlac_rfc.h"
             "TargetName" = "8:wlac_rfc.h"
             "Tag" = "8:"
             "Folder" = "8:_C386515542C145D68740311B18F9C267"
@@ -7232,7 +7232,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F3DEB99FD5904F9C837497BE3D2CFD63"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\features.h"
+            "SourcePath" = "8:..\\..\\..\\include\\features.h"
             "TargetName" = "8:features.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -7252,7 +7252,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F404B65D80A148E38E5D8D6D9E717122"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\poll.h"
+            "SourcePath" = "8:..\\..\\..\\include\\poll.h"
             "TargetName" = "8:poll.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -7272,7 +7272,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F43515D6214A4BD4A30AE231B29405CF"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\termios.h"
+            "SourcePath" = "8:..\\..\\..\\include\\termios.h"
             "TargetName" = "8:termios.h"
             "Tag" = "8:"
             "Folder" = "8:_D7AC36D96DA346E5821F8C0018048C62"
@@ -7292,7 +7292,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F4B334E5944B47468A4880C593A5429E"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc\\auth_unix.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc\\auth_unix.h"
             "TargetName" = "8:auth_unix.h"
             "Tag" = "8:"
             "Folder" = "8:_495142F2981D47C181C31EBE972FD68D"
@@ -7312,7 +7312,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F4F2B7BF23274CD1B73682F9B0BA71F4"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc_mini\\RPC\\.old\\RPC.H"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc_mini\\RPC\\.old\\RPC.H"
             "TargetName" = "8:RPC.H"
             "Tag" = "8:"
             "Folder" = "8:_0678B46AF1744D4E90370A9583632D91"
@@ -7332,7 +7332,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F757A8B943004F88BBADC48493D00F92"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\first_includes\\common_definations_wul.h"
+            "SourcePath" = "8:..\\..\\..\\include\\first_includes\\common_definations_wul.h"
             "TargetName" = "8:common_definations_wul.h"
             "Tag" = "8:"
             "Folder" = "8:_B471F383C3C943948DAE7C9C5BDF3F16"
@@ -7412,7 +7412,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FAA411A3CF304D7687828FD14D5AB9EF"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\sys\\socket.h"
+            "SourcePath" = "8:..\\..\\..\\include\\sys\\socket.h"
             "TargetName" = "8:socket.h"
             "Tag" = "8:"
             "Folder" = "8:_7E8C4B2DFF8A45FB8B6853C7B504AAD7"
@@ -7432,7 +7432,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FBE34A7E74A845449A70A1DC23E08604"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\bits\\types.h"
+            "SourcePath" = "8:..\\..\\..\\include\\bits\\types.h"
             "TargetName" = "8:types.h"
             "Tag" = "8:"
             "Folder" = "8:_923F189E14BA4E43A4685F518A0E1585"
@@ -7452,7 +7452,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FD521D22624644788897277FA7A44950"
             {
-            "SourcePath" = "8:..\\..\\..\\public\\include\\rpc\\pmap_clnt.h"
+            "SourcePath" = "8:..\\..\\..\\include\\rpc\\pmap_clnt.h"
             "TargetName" = "8:pmap_clnt.h"
             "Tag" = "8:"
             "Folder" = "8:_495142F2981D47C181C31EBE972FD68D"

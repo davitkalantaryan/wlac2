@@ -179,14 +179,14 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_LIB;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\src\include;..\..\..\public\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\src\include;..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\lib\.
-copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb  ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|Win32'">
@@ -196,14 +196,14 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_LIB;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\src\include;..\..\..\public\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\src\include;..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\lib\.
-copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb  ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -213,14 +213,14 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\src\include;..\..\..\public\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\src\include;..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\lib\.
-copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb  ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|x64'">
@@ -230,14 +230,14 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\src\include;..\..\..\public\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\src\include;..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\lib\.
-copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb  ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
@@ -247,14 +247,14 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_LIB;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\src\include;..\..\..\public\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\src\include;..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\lib\.
-copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb  ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|ARM'">
@@ -264,14 +264,14 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_LIB;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\src\include;..\..\..\public\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\src\include;..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\lib\.
-copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb  ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -283,7 +283,7 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>_LIB;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\src\include;..\..\..\public\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\src\include;..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -291,8 +291,8 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\lib\.
-copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb  ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -304,7 +304,7 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\src\include;..\..\..\public\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\src\include;..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -312,8 +312,8 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\lib\.
-copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb  ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
@@ -325,7 +325,7 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>_LIB;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\src\include;..\..\..\public\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\src\include;..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -333,8 +333,8 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\lib\.
-copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb  ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -345,7 +345,7 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
     <ClCompile Include="..\..\..\src\usergroupid\usergroupdatabase.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\public\include\unix_like_user_group_header.h" />
+    <ClInclude Include="..\..\..\include\unix_like_user_group_header.h" />
     <ClInclude Include="..\..\..\src\include\util\common_hashtbl.hpp" />
     <ClInclude Include="..\..\..\src\include\util\common_hashtbl.impl.hpp" />
     <ClInclude Include="..\..\..\src\include\util\common_list.hpp" />

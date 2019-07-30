@@ -223,7 +223,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
@@ -235,8 +235,8 @@
       <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
-copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|Win32'">
@@ -246,7 +246,7 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
@@ -258,8 +258,8 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
-copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -269,7 +269,7 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
@@ -281,8 +281,8 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
-copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|x64'">
@@ -292,7 +292,7 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
@@ -304,8 +304,8 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
-copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
@@ -315,7 +315,7 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
@@ -327,8 +327,8 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
-copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|ARM'">
@@ -338,7 +338,7 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
@@ -350,8 +350,8 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
-copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -363,7 +363,7 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
@@ -377,8 +377,8 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
-copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -390,7 +390,7 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
@@ -404,8 +404,8 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
-copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
@@ -417,7 +417,7 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
@@ -431,8 +431,8 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
-copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -515,17 +515,17 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
     <Text Include="..\..\..\src\mini_xdr_rpc\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\public\include\netdb.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\auth_unix.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\pmap_clnt.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\pmap_prot.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\rpcb_prot.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\wrpc_first_com_include.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\xdr.h" />
-    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\.old\RPC.H" />
-    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\.old\XDR.H" />
-    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\NETDB.H" />
-    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\RPC_MSG.H" />
+    <ClInclude Include="..\..\..\include\netdb.h" />
+    <ClInclude Include="..\..\..\include\rpc\auth_unix.h" />
+    <ClInclude Include="..\..\..\include\rpc\pmap_clnt.h" />
+    <ClInclude Include="..\..\..\include\rpc\pmap_prot.h" />
+    <ClInclude Include="..\..\..\include\rpc\rpcb_prot.h" />
+    <ClInclude Include="..\..\..\include\rpc\wrpc_first_com_include.h" />
+    <ClInclude Include="..\..\..\include\rpc\xdr.h" />
+    <ClInclude Include="..\..\..\include\rpc_mini\RPC\.old\RPC.H" />
+    <ClInclude Include="..\..\..\include\rpc_mini\RPC\.old\XDR.H" />
+    <ClInclude Include="..\..\..\include\rpc_mini\RPC\NETDB.H" />
+    <ClInclude Include="..\..\..\include\rpc_mini\RPC\RPC_MSG.H" />
     <ClInclude Include="..\..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h" />
     <ClInclude Include="..\..\..\src\mini_xdr_rpc\SUNRPC.H" />
   </ItemGroup>

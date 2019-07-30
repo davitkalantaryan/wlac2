@@ -223,7 +223,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include;..\..\..\src\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\src\include</AdditionalIncludeDirectories>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
     <Link>
@@ -234,8 +234,8 @@
       <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
-copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|Win32'">
@@ -245,7 +245,7 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include;..\..\..\src\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\src\include</AdditionalIncludeDirectories>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
     <Link>
@@ -256,8 +256,8 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
-copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -267,7 +267,7 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include;..\..\..\src\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\src\include</AdditionalIncludeDirectories>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
     <Link>
@@ -278,8 +278,8 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
-copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|x64'">
@@ -289,7 +289,7 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include;..\..\..\src\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\src\include</AdditionalIncludeDirectories>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
     <Link>
@@ -300,8 +300,8 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
-copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
@@ -311,7 +311,7 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include;..\..\..\src\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\src\include</AdditionalIncludeDirectories>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
     <Link>
@@ -322,8 +322,8 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
-copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|ARM'">
@@ -333,7 +333,7 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include;..\..\..\src\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\src\include</AdditionalIncludeDirectories>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
     <Link>
@@ -344,8 +344,8 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
-copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -357,7 +357,7 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include;..\..\..\src\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\src\include</AdditionalIncludeDirectories>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
     <Link>
@@ -370,8 +370,8 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
-copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -383,7 +383,7 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include;..\..\..\src\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\src\include</AdditionalIncludeDirectories>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
     <Link>
@@ -396,8 +396,8 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
-copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
@@ -409,7 +409,7 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include;..\..\..\src\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\src\include</AdditionalIncludeDirectories>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
     <Link>
@@ -422,8 +422,8 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
       <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
-copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -442,186 +442,186 @@ copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBas
     <ClCompile Include="..\..\..\src\wlac\wlac_wait_functions.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\..\public\include\rfc\readme.txt" />
+    <Text Include="..\..\..\include\rfc\readme.txt" />
     <Text Include="..\..\..\src\wlac\README.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\public\include\.old\company_def_file.h" />
-    <ClInclude Include="..\..\..\public\include\.privatei\header_for_resolving_errno.h" />
-    <ClInclude Include="..\..\..\public\include\.privatei\windows_and_socket_headers.h" />
-    <ClInclude Include="..\..\..\public\include\.tmp\wlac_temporary.h" />
-    <ClInclude Include="..\..\..\public\include\additional\common_argument_parser.hpp" />
-    <ClInclude Include="..\..\..\public\include\additional\common_argument_parser.impl.hpp" />
-    <ClInclude Include="..\..\..\public\include\additional\common_hashtbl.hpp" />
-    <ClInclude Include="..\..\..\public\include\additional\common_hashtbl.impl.hpp" />
-    <ClInclude Include="..\..\..\public\include\additional\util\directory_iterator.h" />
-    <ClInclude Include="..\..\..\public\include\alloca.h" />
-    <ClInclude Include="..\..\..\public\include\arpa\inet.h" />
-    <ClInclude Include="..\..\..\public\include\bfd.h" />
-    <ClInclude Include="..\..\..\public\include\bits\ioctls.h" />
-    <ClInclude Include="..\..\..\public\include\bits\mman.h" />
-    <ClInclude Include="..\..\..\public\include\bits\resource.h" />
-    <ClInclude Include="..\..\..\public\include\bits\semaphore.h" />
-    <ClInclude Include="..\..\..\public\include\bits\sigaction.h" />
-    <ClInclude Include="..\..\..\public\include\bits\siginfo.h" />
-    <ClInclude Include="..\..\..\public\include\bits\signum.h" />
-    <ClInclude Include="..\..\..\public\include\bits\types.h" />
-    <ClInclude Include="..\..\..\public\include\bits\typesizes.h" />
-    <ClInclude Include="..\..\..\public\include\bits\uio.h" />
-    <ClInclude Include="..\..\..\public\include\bits\wordsize.h" />
-    <ClInclude Include="..\..\..\public\include\bytesex.h" />
-    <ClInclude Include="..\..\..\public\include\dirent.h" />
-    <ClInclude Include="..\..\..\public\include\dlfcn.h" />
-    <ClInclude Include="..\..\..\public\include\endian.h" />
-    <ClInclude Include="..\..\..\public\include\err.h" />
-    <ClInclude Include="..\..\..\public\include\features.h" />
-    <ClInclude Include="..\..\..\public\include\first_includes\common_definations_wul.h" />
-    <ClInclude Include="..\..\..\public\include\first_includes\common_include_for_headers.h" />
-    <ClInclude Include="..\..\..\public\include\first_includes\gem_first_common_include.h" />
-    <ClInclude Include="..\..\..\public\include\first_includes\gem_undefined_apis.h" />
-    <ClInclude Include="..\..\..\public\include\first_includes\new_winldap_common_include.h" />
-    <ClInclude Include="..\..\..\public\include\getopt.h" />
-    <ClInclude Include="..\..\..\public\include\gnu_getopt.h" />
-    <ClInclude Include="..\..\..\public\include\grp.h" />
-    <ClInclude Include="..\..\..\public\include\lber.h" />
-    <ClInclude Include="..\..\..\public\include\ldap.h" />
-    <ClInclude Include="..\..\..\public\include\libgen.h" />
-    <ClInclude Include="..\..\..\public\include\linux\ioctl.h" />
-    <ClInclude Include="..\..\..\public\include\linux\iso_fs.h" />
-    <ClInclude Include="..\..\..\public\include\linux\limits.h" />
-    <ClInclude Include="..\..\..\public\include\linux\minix_fs.h" />
-    <ClInclude Include="..\..\..\public\include\linux\version.h" />
-    <ClInclude Include="..\..\..\public\include\netconfig.h" />
-    <ClInclude Include="..\..\..\public\include\netdb.h" />
-    <ClInclude Include="..\..\..\public\include\netdir.h" />
-    <ClInclude Include="..\..\..\public\include\netinet\in.h" />
-    <ClInclude Include="..\..\..\public\include\netinet\tcp.h" />
-    <ClInclude Include="..\..\..\public\include\net\if.h" />
-    <ClInclude Include="..\..\..\public\include\poll.h" />
-    <ClInclude Include="..\..\..\public\include\proc\sysinfo.h" />
-    <ClInclude Include="..\..\..\public\include\pthread.h" />
-    <ClInclude Include="..\..\..\public\include\pwd.h" />
-    <ClInclude Include="..\..\..\public\include\redesigned\.original\msc1900\winsock2_locked.h" />
-    <ClInclude Include="..\..\..\public\include\redesigned\.original\other\winsock2_locked.h" />
-    <ClInclude Include="..\..\..\public\include\redesigned\direct.h" />
-    <ClInclude Include="..\..\..\public\include\redesigned\errno.h" />
-    <ClInclude Include="..\..\..\public\include\redesigned\fcntl.h" />
-    <ClInclude Include="..\..\..\public\include\redesigned\io.h" />
-    <ClInclude Include="..\..\..\public\include\redesigned\process.h" />
-    <ClInclude Include="..\..\..\public\include\redesigned\rpc.h" />
-    <ClInclude Include="..\..\..\public\include\redesigned\signal.h" />
-    <ClInclude Include="..\..\..\public\include\redesigned\stddef.h" />
-    <ClInclude Include="..\..\..\public\include\redesigned\stdio.h" />
-    <ClInclude Include="..\..\..\public\include\redesigned\stdlib.h" />
-    <ClInclude Include="..\..\..\public\include\redesigned\std_wlac_fios.hpp" />
-    <ClInclude Include="..\..\..\public\include\redesigned\impl.std_wlac_fios.hpp" />
-    <ClInclude Include="..\..\..\public\include\redesigned\string.h" />
-    <ClInclude Include="..\..\..\public\include\redesigned\sys\stat.h" />
-    <ClInclude Include="..\..\..\public\include\redesigned\sys\types.h" />
-    <ClInclude Include="..\..\..\public\include\redesigned\time.h" />
-    <ClInclude Include="..\..\..\public\include\redesigned\wchar.h" />
-    <ClInclude Include="..\..\..\public\include\redesigned\windows.h" />
-    <ClInclude Include="..\..\..\public\include\redesigned\winsock2.h" />
-    <ClInclude Include="..\..\..\public\include\redesigned\ws2tcpip.h" />
-    <ClInclude Include="..\..\..\public\include\rfc\functions_libgui_hacker.h" />
-    <ClInclude Include="..\..\..\public\include\rfc\functions_libgui_hacker_base.h" />
-    <ClInclude Include="..\..\..\public\include\rfc\remote_function_caller.h" />
-    <ClInclude Include="..\..\..\public\include\rfc\remote_function_caller_base.h" />
-    <ClInclude Include="..\..\..\public\include\rfc\windows_signal.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\auth.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\auth_des.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\auth_unix.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\clnt.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\dk_additions.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\nettype.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\pmap_clnt.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\pmap_prot.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\pmap_rmt.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\rpc.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\rpcb_prot.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\rpc_com.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\rpc_msg.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\svc.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\svc_auth.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\svc_soc.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\types.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\wrpc_first_com_include.h" />
-    <ClInclude Include="..\..\..\public\include\rpc\xdr.h" />
-    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\.old\RPC.H" />
-    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\.old\XDR.H" />
-    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\AUTH.H" />
-    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\AUTH_UNI.H" />
-    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\BCOPY.H" />
-    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\CLNT.H" />
-    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\NETDB.H" />
-    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\PMAP_CLN.H" />
-    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\PMAP_PRO.H" />
-    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\PMAP_RMT.H" />
-    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\RPC_MSG.H" />
-    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\SVC.H" />
-    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\SVC_AUTH.H" />
-    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\TYPES.H" />
-    <ClInclude Include="..\..\..\public\include\rpc_mini\strings.h" />
-    <ClInclude Include="..\..\..\public\include\sched.h" />
-    <ClInclude Include="..\..\..\public\include\sdef_gem_windows.h" />
-    <ClInclude Include="..\..\..\public\include\semaphore.h" />
-    <ClInclude Include="..\..\..\public\include\stdafx.h" />
-    <ClInclude Include="..\..\..\public\include\strings.h" />
-    <ClInclude Include="..\..\..\public\include\syscall.h" />
-    <ClInclude Include="..\..\..\public\include\syslog.h" />
-    <ClInclude Include="..\..\..\public\include\sys\cdef.h" />
-    <ClInclude Include="..\..\..\public\include\sys\cdefs.h" />
-    <ClInclude Include="..\..\..\public\include\sys\epoll.h" />
-    <ClInclude Include="..\..\..\public\include\sys\errno.h" />
-    <ClInclude Include="..\..\..\public\include\sys\file.h" />
-    <ClInclude Include="..\..\..\public\include\sys\ioctl.h" />
-    <ClInclude Include="..\..\..\public\include\sys\ipc.h" />
-    <ClInclude Include="..\..\..\public\include\sys\mkdev.h" />
-    <ClInclude Include="..\..\..\public\include\sys\mman.h" />
-    <ClInclude Include="..\..\..\public\include\sys\param.h" />
-    <ClInclude Include="..\..\..\public\include\sys\resource.h" />
-    <ClInclude Include="..\..\..\public\include\sys\sem.h" />
-    <ClInclude Include="..\..\..\public\include\sys\shm.h" />
-    <ClInclude Include="..\..\..\public\include\sys\signal.h" />
-    <ClInclude Include="..\..\..\public\include\sys\socket.h" />
-    <ClInclude Include="..\..\..\public\include\sys\statvfs.h" />
-    <ClInclude Include="..\..\..\public\include\sys\syscall.h" />
-    <ClInclude Include="..\..\..\public\include\sys\syslog.h" />
-    <ClInclude Include="..\..\..\public\include\sys\systeminfo.h" />
-    <ClInclude Include="..\..\..\public\include\sys\time.h" />
-    <ClInclude Include="..\..\..\public\include\sys\times.h" />
-    <ClInclude Include="..\..\..\public\include\sys\uio.h" />
-    <ClInclude Include="..\..\..\public\include\sys\un.h" />
-    <ClInclude Include="..\..\..\public\include\sys\vfs.h" />
-    <ClInclude Include="..\..\..\public\include\sys\wait.h" />
-    <ClInclude Include="..\..\..\public\include\termios.h" />
-    <ClInclude Include="..\..\..\public\include\test\common_include_for_headers.h" />
-    <ClInclude Include="..\..\..\public\include\test\common_macroses.h" />
-    <ClInclude Include="..\..\..\public\include\test\redesigned\ofstream.h" />
-    <ClInclude Include="..\..\..\public\include\test\redesigned\process.h" />
-    <ClInclude Include="..\..\..\public\include\test\redesigned\stdio.h" />
-    <ClInclude Include="..\..\..\public\include\test\redesigned\stdlib.h" />
-    <ClInclude Include="..\..\..\public\include\test\redesigned\std_wlac_fios.hpp" />
-    <ClInclude Include="..\..\..\public\include\test\redesigned\std_wlac_fios.impl.hpp" />
-    <ClInclude Include="..\..\..\public\include\thread.h" />
-    <ClInclude Include="..\..\..\public\include\unistd.h" />
-    <ClInclude Include="..\..\..\public\include\unix_like_user_group_header.h" />
-    <ClInclude Include="..\..\..\public\include\winsock2_locked.h" />
-    <ClInclude Include="..\..\..\public\include\win_raw_socket_old_2017.12.24.h" />
-    <ClInclude Include="..\..\..\public\include\win_socket_common.h" />
-    <ClInclude Include="..\..\..\public\include\wlac_vector_old_2017.12.24.hpp" />
+    <ClInclude Include="..\..\..\include\.old\company_def_file.h" />
+    <ClInclude Include="..\..\..\include\.privatei\header_for_resolving_errno.h" />
+    <ClInclude Include="..\..\..\include\.privatei\windows_and_socket_headers.h" />
+    <ClInclude Include="..\..\..\include\.tmp\wlac_temporary.h" />
+    <ClInclude Include="..\..\..\include\additional\common_argument_parser.hpp" />
+    <ClInclude Include="..\..\..\include\additional\common_argument_parser.impl.hpp" />
+    <ClInclude Include="..\..\..\include\additional\common_hashtbl.hpp" />
+    <ClInclude Include="..\..\..\include\additional\common_hashtbl.impl.hpp" />
+    <ClInclude Include="..\..\..\include\additional\util\directory_iterator.h" />
+    <ClInclude Include="..\..\..\include\alloca.h" />
+    <ClInclude Include="..\..\..\include\arpa\inet.h" />
+    <ClInclude Include="..\..\..\include\bfd.h" />
+    <ClInclude Include="..\..\..\include\bits\ioctls.h" />
+    <ClInclude Include="..\..\..\include\bits\mman.h" />
+    <ClInclude Include="..\..\..\include\bits\resource.h" />
+    <ClInclude Include="..\..\..\include\bits\semaphore.h" />
+    <ClInclude Include="..\..\..\include\bits\sigaction.h" />
+    <ClInclude Include="..\..\..\include\bits\siginfo.h" />
+    <ClInclude Include="..\..\..\include\bits\signum.h" />
+    <ClInclude Include="..\..\..\include\bits\types.h" />
+    <ClInclude Include="..\..\..\include\bits\typesizes.h" />
+    <ClInclude Include="..\..\..\include\bits\uio.h" />
+    <ClInclude Include="..\..\..\include\bits\wordsize.h" />
+    <ClInclude Include="..\..\..\include\bytesex.h" />
+    <ClInclude Include="..\..\..\include\dirent.h" />
+    <ClInclude Include="..\..\..\include\dlfcn.h" />
+    <ClInclude Include="..\..\..\include\endian.h" />
+    <ClInclude Include="..\..\..\include\err.h" />
+    <ClInclude Include="..\..\..\include\features.h" />
+    <ClInclude Include="..\..\..\include\first_includes\common_definations_wul.h" />
+    <ClInclude Include="..\..\..\include\first_includes\common_include_for_headers.h" />
+    <ClInclude Include="..\..\..\include\first_includes\gem_first_common_include.h" />
+    <ClInclude Include="..\..\..\include\first_includes\gem_undefined_apis.h" />
+    <ClInclude Include="..\..\..\include\first_includes\new_winldap_common_include.h" />
+    <ClInclude Include="..\..\..\include\getopt.h" />
+    <ClInclude Include="..\..\..\include\gnu_getopt.h" />
+    <ClInclude Include="..\..\..\include\grp.h" />
+    <ClInclude Include="..\..\..\include\lber.h" />
+    <ClInclude Include="..\..\..\include\ldap.h" />
+    <ClInclude Include="..\..\..\include\libgen.h" />
+    <ClInclude Include="..\..\..\include\linux\ioctl.h" />
+    <ClInclude Include="..\..\..\include\linux\iso_fs.h" />
+    <ClInclude Include="..\..\..\include\linux\limits.h" />
+    <ClInclude Include="..\..\..\include\linux\minix_fs.h" />
+    <ClInclude Include="..\..\..\include\linux\version.h" />
+    <ClInclude Include="..\..\..\include\netconfig.h" />
+    <ClInclude Include="..\..\..\include\netdb.h" />
+    <ClInclude Include="..\..\..\include\netdir.h" />
+    <ClInclude Include="..\..\..\include\netinet\in.h" />
+    <ClInclude Include="..\..\..\include\netinet\tcp.h" />
+    <ClInclude Include="..\..\..\include\net\if.h" />
+    <ClInclude Include="..\..\..\include\poll.h" />
+    <ClInclude Include="..\..\..\include\proc\sysinfo.h" />
+    <ClInclude Include="..\..\..\include\pthread.h" />
+    <ClInclude Include="..\..\..\include\pwd.h" />
+    <ClInclude Include="..\..\..\include\redesigned\.original\msc1900\winsock2_locked.h" />
+    <ClInclude Include="..\..\..\include\redesigned\.original\other\winsock2_locked.h" />
+    <ClInclude Include="..\..\..\include\redesigned\direct.h" />
+    <ClInclude Include="..\..\..\include\redesigned\errno.h" />
+    <ClInclude Include="..\..\..\include\redesigned\fcntl.h" />
+    <ClInclude Include="..\..\..\include\redesigned\io.h" />
+    <ClInclude Include="..\..\..\include\redesigned\process.h" />
+    <ClInclude Include="..\..\..\include\redesigned\rpc.h" />
+    <ClInclude Include="..\..\..\include\redesigned\signal.h" />
+    <ClInclude Include="..\..\..\include\redesigned\stddef.h" />
+    <ClInclude Include="..\..\..\include\redesigned\stdio.h" />
+    <ClInclude Include="..\..\..\include\redesigned\stdlib.h" />
+    <ClInclude Include="..\..\..\include\redesigned\std_wlac_fios.hpp" />
+    <ClInclude Include="..\..\..\include\redesigned\impl.std_wlac_fios.hpp" />
+    <ClInclude Include="..\..\..\include\redesigned\string.h" />
+    <ClInclude Include="..\..\..\include\redesigned\sys\stat.h" />
+    <ClInclude Include="..\..\..\include\redesigned\sys\types.h" />
+    <ClInclude Include="..\..\..\include\redesigned\time.h" />
+    <ClInclude Include="..\..\..\include\redesigned\wchar.h" />
+    <ClInclude Include="..\..\..\include\redesigned\windows.h" />
+    <ClInclude Include="..\..\..\include\redesigned\winsock2.h" />
+    <ClInclude Include="..\..\..\include\redesigned\ws2tcpip.h" />
+    <ClInclude Include="..\..\..\include\rfc\functions_libgui_hacker.h" />
+    <ClInclude Include="..\..\..\include\rfc\functions_libgui_hacker_base.h" />
+    <ClInclude Include="..\..\..\include\rfc\remote_function_caller.h" />
+    <ClInclude Include="..\..\..\include\rfc\remote_function_caller_base.h" />
+    <ClInclude Include="..\..\..\include\rfc\windows_signal.h" />
+    <ClInclude Include="..\..\..\include\rpc\auth.h" />
+    <ClInclude Include="..\..\..\include\rpc\auth_des.h" />
+    <ClInclude Include="..\..\..\include\rpc\auth_unix.h" />
+    <ClInclude Include="..\..\..\include\rpc\clnt.h" />
+    <ClInclude Include="..\..\..\include\rpc\dk_additions.h" />
+    <ClInclude Include="..\..\..\include\rpc\nettype.h" />
+    <ClInclude Include="..\..\..\include\rpc\pmap_clnt.h" />
+    <ClInclude Include="..\..\..\include\rpc\pmap_prot.h" />
+    <ClInclude Include="..\..\..\include\rpc\pmap_rmt.h" />
+    <ClInclude Include="..\..\..\include\rpc\rpc.h" />
+    <ClInclude Include="..\..\..\include\rpc\rpcb_prot.h" />
+    <ClInclude Include="..\..\..\include\rpc\rpc_com.h" />
+    <ClInclude Include="..\..\..\include\rpc\rpc_msg.h" />
+    <ClInclude Include="..\..\..\include\rpc\svc.h" />
+    <ClInclude Include="..\..\..\include\rpc\svc_auth.h" />
+    <ClInclude Include="..\..\..\include\rpc\svc_soc.h" />
+    <ClInclude Include="..\..\..\include\rpc\types.h" />
+    <ClInclude Include="..\..\..\include\rpc\wrpc_first_com_include.h" />
+    <ClInclude Include="..\..\..\include\rpc\xdr.h" />
+    <ClInclude Include="..\..\..\include\rpc_mini\RPC\.old\RPC.H" />
+    <ClInclude Include="..\..\..\include\rpc_mini\RPC\.old\XDR.H" />
+    <ClInclude Include="..\..\..\include\rpc_mini\RPC\AUTH.H" />
+    <ClInclude Include="..\..\..\include\rpc_mini\RPC\AUTH_UNI.H" />
+    <ClInclude Include="..\..\..\include\rpc_mini\RPC\BCOPY.H" />
+    <ClInclude Include="..\..\..\include\rpc_mini\RPC\CLNT.H" />
+    <ClInclude Include="..\..\..\include\rpc_mini\RPC\NETDB.H" />
+    <ClInclude Include="..\..\..\include\rpc_mini\RPC\PMAP_CLN.H" />
+    <ClInclude Include="..\..\..\include\rpc_mini\RPC\PMAP_PRO.H" />
+    <ClInclude Include="..\..\..\include\rpc_mini\RPC\PMAP_RMT.H" />
+    <ClInclude Include="..\..\..\include\rpc_mini\RPC\RPC_MSG.H" />
+    <ClInclude Include="..\..\..\include\rpc_mini\RPC\SVC.H" />
+    <ClInclude Include="..\..\..\include\rpc_mini\RPC\SVC_AUTH.H" />
+    <ClInclude Include="..\..\..\include\rpc_mini\RPC\TYPES.H" />
+    <ClInclude Include="..\..\..\include\rpc_mini\strings.h" />
+    <ClInclude Include="..\..\..\include\sched.h" />
+    <ClInclude Include="..\..\..\include\sdef_gem_windows.h" />
+    <ClInclude Include="..\..\..\include\semaphore.h" />
+    <ClInclude Include="..\..\..\include\stdafx.h" />
+    <ClInclude Include="..\..\..\include\strings.h" />
+    <ClInclude Include="..\..\..\include\syscall.h" />
+    <ClInclude Include="..\..\..\include\syslog.h" />
+    <ClInclude Include="..\..\..\include\sys\cdef.h" />
+    <ClInclude Include="..\..\..\include\sys\cdefs.h" />
+    <ClInclude Include="..\..\..\include\sys\epoll.h" />
+    <ClInclude Include="..\..\..\include\sys\errno.h" />
+    <ClInclude Include="..\..\..\include\sys\file.h" />
+    <ClInclude Include="..\..\..\include\sys\ioctl.h" />
+    <ClInclude Include="..\..\..\include\sys\ipc.h" />
+    <ClInclude Include="..\..\..\include\sys\mkdev.h" />
+    <ClInclude Include="..\..\..\include\sys\mman.h" />
+    <ClInclude Include="..\..\..\include\sys\param.h" />
+    <ClInclude Include="..\..\..\include\sys\resource.h" />
+    <ClInclude Include="..\..\..\include\sys\sem.h" />
+    <ClInclude Include="..\..\..\include\sys\shm.h" />
+    <ClInclude Include="..\..\..\include\sys\signal.h" />
+    <ClInclude Include="..\..\..\include\sys\socket.h" />
+    <ClInclude Include="..\..\..\include\sys\statvfs.h" />
+    <ClInclude Include="..\..\..\include\sys\syscall.h" />
+    <ClInclude Include="..\..\..\include\sys\syslog.h" />
+    <ClInclude Include="..\..\..\include\sys\systeminfo.h" />
+    <ClInclude Include="..\..\..\include\sys\time.h" />
+    <ClInclude Include="..\..\..\include\sys\times.h" />
+    <ClInclude Include="..\..\..\include\sys\uio.h" />
+    <ClInclude Include="..\..\..\include\sys\un.h" />
+    <ClInclude Include="..\..\..\include\sys\vfs.h" />
+    <ClInclude Include="..\..\..\include\sys\wait.h" />
+    <ClInclude Include="..\..\..\include\termios.h" />
+    <ClInclude Include="..\..\..\include\test\common_include_for_headers.h" />
+    <ClInclude Include="..\..\..\include\test\common_macroses.h" />
+    <ClInclude Include="..\..\..\include\test\redesigned\ofstream.h" />
+    <ClInclude Include="..\..\..\include\test\redesigned\process.h" />
+    <ClInclude Include="..\..\..\include\test\redesigned\stdio.h" />
+    <ClInclude Include="..\..\..\include\test\redesigned\stdlib.h" />
+    <ClInclude Include="..\..\..\include\test\redesigned\std_wlac_fios.hpp" />
+    <ClInclude Include="..\..\..\include\test\redesigned\std_wlac_fios.impl.hpp" />
+    <ClInclude Include="..\..\..\include\thread.h" />
+    <ClInclude Include="..\..\..\include\unistd.h" />
+    <ClInclude Include="..\..\..\include\unix_like_user_group_header.h" />
+    <ClInclude Include="..\..\..\include\winsock2_locked.h" />
+    <ClInclude Include="..\..\..\include\win_raw_socket_old_2017.12.24.h" />
+    <ClInclude Include="..\..\..\include\win_socket_common.h" />
+    <ClInclude Include="..\..\..\include\wlac_vector_old_2017.12.24.hpp" />
     <ClInclude Include="..\..\..\src\include\common_include_for_wlac_sources.h" />
     <ClInclude Include="..\..\..\src\include\pthread_private_for_source.h" />
     <ClInclude Include="..\..\..\src\include\unix_sync_objects_private.h" />
     <ClInclude Include="..\..\..\src\wlac\stdafx_gem.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\public\include\.old\company_def_file.hin" />
-    <None Include="..\..\..\public\include\redesigned\fstream" />
-    <None Include="..\..\..\public\include\rpc\rpc.h_2015.12.15" />
-    <None Include="..\..\..\public\include\rpc_mini\RPC\#NETDB.H#" />
-    <None Include="..\..\..\public\include\test\redesigned\fstream" />
-    <None Include="..\..\..\public\include\test\redesigned\ifstream" />
+    <None Include="..\..\..\include\.old\company_def_file.hin" />
+    <None Include="..\..\..\include\redesigned\fstream" />
+    <None Include="..\..\..\include\rpc\rpc.h_2015.12.15" />
+    <None Include="..\..\..\include\rpc_mini\RPC\#NETDB.H#" />
+    <None Include="..\..\..\include\test\redesigned\fstream" />
+    <None Include="..\..\..\include\test\redesigned\ifstream" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

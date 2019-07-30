@@ -20,7 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\public\include\rfc\wlac_rfc.h">
+    <ClInclude Include="..\..\..\include\rfc\wlac_rfc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\src\include\wlac_rfc_private.h">

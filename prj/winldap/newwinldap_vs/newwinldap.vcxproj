@@ -187,7 +187,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_LIB;_USE_32BIT_TIME_T;_DEBUG</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -204,8 +204,8 @@ lib /def:$(ProjectDir)..\..\..\src\winldap\Wldap32.def   /OUT:$(ProjectDir)..\..
 </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\lib\.
-copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb  ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|Win32'">
@@ -215,7 +215,7 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_LIB;_USE_32BIT_TIME_T;_DEBUG</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -232,8 +232,8 @@ lib /def:$(ProjectDir)..\..\..\src\winldap\Wldap32.def   /OUT:$(ProjectDir)..\..
 </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\lib\.
-copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb  ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -243,7 +243,7 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -260,8 +260,8 @@ lib /def:$(ProjectDir)..\..\..\src\winldap\Wldap32.def   /OUT:$(ProjectDir)..\..
 </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\lib\.
-copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb  ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|x64'">
@@ -271,7 +271,7 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -288,8 +288,8 @@ lib /def:$(ProjectDir)..\..\..\src\winldap\Wldap32.def   /OUT:$(ProjectDir)..\..
 </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\lib\.
-copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb  ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
@@ -299,7 +299,7 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_LIB;_USE_32BIT_TIME_T;_DEBUG</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -316,8 +316,8 @@ lib /def:$(ProjectDir)..\..\..\src\winldap\Wldap32.def   /OUT:$(ProjectDir)..\..
 </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\lib\.
-copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb  ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|ARM'">
@@ -327,7 +327,7 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_LIB;_USE_32BIT_TIME_T;_DEBUG</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -344,8 +344,8 @@ lib /def:$(ProjectDir)..\..\..\src\winldap\Wldap32.def   /OUT:$(ProjectDir)..\..
 </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\lib\.
-copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb  ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -357,7 +357,7 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>_LIB;_USE_32BIT_TIME_T</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -376,8 +376,8 @@ lib /def:$(ProjectDir)..\..\..\src\winldap\Wldap32.def   /OUT:$(ProjectDir)..\..
 </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\lib\.
-copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb  ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -389,7 +389,7 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>_LIB;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -408,8 +408,8 @@ lib /def:$(ProjectDir)..\..\..\src\winldap\Wldap32.def   /OUT:$(ProjectDir)..\..
 </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\lib\.
-copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb  ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
@@ -421,7 +421,7 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>_LIB;_USE_32BIT_TIME_T</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -440,8 +440,8 @@ lib /def:$(ProjectDir)..\..\..\src\winldap\Wldap32.def   /OUT:$(ProjectDir)..\..
 </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\lib\.
-copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb  ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -451,9 +451,9 @@ copy ..\..\..\sys\$(TargetFolderBase)\.objects\$(ProjectName)\$(ProjectName).pdb
     <ClCompile Include="..\..\..\src\winldap\new_winldap.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\public\include\first_includes\new_winldap_common_include.h" />
-    <ClInclude Include="..\..\..\public\include\lber.h" />
-    <ClInclude Include="..\..\..\public\include\ldap.h" />
+    <ClInclude Include="..\..\..\include\first_includes\new_winldap_common_include.h" />
+    <ClInclude Include="..\..\..\include\lber.h" />
+    <ClInclude Include="..\..\..\include\ldap.h" />
     <ClInclude Include="..\..\..\src\winldap\stdafx_new_winldap.h" />
   </ItemGroup>
   <ItemGroup>

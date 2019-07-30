@@ -26,7 +26,7 @@
     <ClInclude Include="..\..\..\src\rpc_bind\service.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\public\include\rpc\pmap_prot.h">
+    <ClInclude Include="..\..\..\include\rpc\pmap_prot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

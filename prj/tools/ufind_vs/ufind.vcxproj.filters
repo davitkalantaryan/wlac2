@@ -26,13 +26,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\public\include\additional\common_argument_parser.hpp">
+    <ClInclude Include="..\..\..\include\additional\common_argument_parser.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\public\include\additional\common_argument_parser.impl.hpp">
+    <ClInclude Include="..\..\..\include\additional\common_argument_parser.impl.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\public\include\additional\util\directory_iterator.h">
+    <ClInclude Include="..\..\..\include\additional\util\directory_iterator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

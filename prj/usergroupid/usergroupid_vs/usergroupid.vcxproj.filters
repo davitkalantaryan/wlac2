@@ -41,7 +41,7 @@
     <ClInclude Include="..\..\..\src\include\util\common_list.impl.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\public\include\unix_like_user_group_header.h">
+    <ClInclude Include="..\..\..\include\unix_like_user_group_header.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

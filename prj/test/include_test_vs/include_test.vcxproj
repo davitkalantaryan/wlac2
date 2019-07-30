@@ -220,14 +220,14 @@
     <ClCompile Include="main_include_test.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\public\include\test\common_include_for_headers.h" />
-    <ClInclude Include="..\..\..\public\include\test\common_macroses.h" />
-    <ClInclude Include="..\..\..\public\include\test\redesigned\fstream" />
-    <ClInclude Include="..\..\..\public\include\test\redesigned\process.h" />
-    <ClInclude Include="..\..\..\public\include\test\redesigned\stdio.h" />
-    <ClInclude Include="..\..\..\public\include\test\redesigned\stdlib.h" />
-    <ClInclude Include="..\..\..\public\include\test\redesigned\std_wlac_fios.hpp" />
-    <ClInclude Include="..\..\..\public\include\test\redesigned\std_wlac_fios.impl.hpp" />
+    <ClInclude Include="..\..\..\include\test\common_include_for_headers.h" />
+    <ClInclude Include="..\..\..\include\test\common_macroses.h" />
+    <ClInclude Include="..\..\..\include\test\redesigned\fstream" />
+    <ClInclude Include="..\..\..\include\test\redesigned\process.h" />
+    <ClInclude Include="..\..\..\include\test\redesigned\stdio.h" />
+    <ClInclude Include="..\..\..\include\test\redesigned\stdlib.h" />
+    <ClInclude Include="..\..\..\include\test\redesigned\std_wlac_fios.hpp" />
+    <ClInclude Include="..\..\..\include\test\redesigned\std_wlac_fios.impl.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

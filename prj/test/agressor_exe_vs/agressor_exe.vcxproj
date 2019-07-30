@@ -30,7 +30,7 @@
     <ClCompile Include="..\..\..\src\test\main_agressor_exe.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\public\include\rfc\wlac_rfc.h" />
+    <ClInclude Include="..\..\..\include\rfc\wlac_rfc.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6B1B4EC5-93BF-4991-8C13-5C826A9D7D24}</ProjectGuid>
@@ -195,7 +195,8 @@
       <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>::copy $(TargetPath) \\znpi01\c$\test\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -261,7 +262,8 @@
       <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) \\znpi01\c$\test\.</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

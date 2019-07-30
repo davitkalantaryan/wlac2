@@ -225,7 +225,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_WINDOWS;_USRDLL;REMOTE_FUNCTION_CALL_FALSE_WITHOUT_LIB_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\src\utils;..\..\..\public\include\rfc;..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\src\utils;..\..\..\include\rfc;..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
     </ClCompile>
@@ -236,7 +236,8 @@
       <ImportLibrary />
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <PreBuildEvent />
   </ItemDefinitionGroup>
@@ -247,7 +248,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_WINDOWS;_USRDLL;REMOTE_FUNCTION_CALL_FALSE_WITHOUT_LIB_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\src\utils;..\..\..\public\include\rfc;..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\src\utils;..\..\..\include\rfc;..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
     </ClCompile>
@@ -260,7 +261,8 @@
       </ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <PreBuildEvent />
   </ItemDefinitionGroup>
@@ -271,7 +273,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_WINDOWS;_USRDLL;REMOTE_FUNCTION_CALL_FALSE_WITHOUT_LIB_EXPORTS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\src\utils;..\..\..\public\include\rfc;..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\src\utils;..\..\..\include\rfc;..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
     </ClCompile>
@@ -282,7 +284,8 @@
       <ImportLibrary />
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <PreBuildEvent />
   </ItemDefinitionGroup>
@@ -293,7 +296,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_WINDOWS;_USRDLL;REMOTE_FUNCTION_CALL_FALSE_WITHOUT_LIB_EXPORTS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\src\utils;..\..\..\public\include\rfc;..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\src\utils;..\..\..\include\rfc;..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
     </ClCompile>
@@ -306,7 +309,8 @@
       </ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <PreBuildEvent />
   </ItemDefinitionGroup>
@@ -317,7 +321,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_WINDOWS;_USRDLL;REMOTE_FUNCTION_CALL_FALSE_WITHOUT_LIB_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\src\utils;..\..\..\public\include\rfc;..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\src\utils;..\..\..\include\rfc;..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
     </ClCompile>
@@ -328,7 +332,8 @@
       <ImportLibrary />
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <PreBuildEvent />
   </ItemDefinitionGroup>
@@ -339,7 +344,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_WINDOWS;_USRDLL;REMOTE_FUNCTION_CALL_FALSE_WITHOUT_LIB_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\src\utils;..\..\..\public\include\rfc;..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\src\utils;..\..\..\include\rfc;..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
     </ClCompile>
@@ -352,7 +357,8 @@
       </ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <PreBuildEvent />
   </ItemDefinitionGroup>
@@ -365,7 +371,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>_WINDOWS;_USRDLL;REMOTE_FUNCTION_CALL_FALSE_WITHOUT_LIB_EXPORTS;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\src\utils;..\..\..\public\include\rfc;..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\src\utils;..\..\..\include\rfc;..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
     </ClCompile>
@@ -378,7 +384,8 @@
       <ImportLibrary />
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <PreBuildEvent />
   </ItemDefinitionGroup>
@@ -391,7 +398,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>_WINDOWS;_USRDLL;REMOTE_FUNCTION_CALL_FALSE_WITHOUT_LIB_EXPORTS;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\src\utils;..\..\..\public\include\rfc;..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\src\utils;..\..\..\include\rfc;..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
     </ClCompile>
@@ -404,7 +411,8 @@
       <ImportLibrary />
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <PreBuildEvent />
   </ItemDefinitionGroup>
@@ -417,7 +425,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>_WINDOWS;_USRDLL;REMOTE_FUNCTION_CALL_FALSE_WITHOUT_LIB_EXPORTS;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\src\utils;..\..\..\public\include\rfc;..\..\..\public\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\src\utils;..\..\..\include\rfc;..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
     </ClCompile>
@@ -430,7 +438,8 @@
       <ImportLibrary />
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <PreBuildEvent />
   </ItemDefinitionGroup>
@@ -440,9 +449,9 @@
     <ClCompile Include="..\..\..\src\rfc\namedpipeclient.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\public\include\rfc\remote_function_caller.h" />
-    <ClInclude Include="..\..\..\public\include\rfc\remote_function_caller_base.h" />
-    <ClInclude Include="..\..\..\public\include\rfc\windows_signal.h" />
+    <ClInclude Include="..\..\..\include\rfc\remote_function_caller.h" />
+    <ClInclude Include="..\..\..\include\rfc\remote_function_caller_base.h" />
+    <ClInclude Include="..\..\..\include\rfc\windows_signal.h" />
     <ClInclude Include="..\..\..\src\rfc\namedpipebase.h" />
     <ClInclude Include="..\..\..\src\rfc\namedpipeclient.h" />
   </ItemGroup>
