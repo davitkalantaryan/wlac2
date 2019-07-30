@@ -1,0 +1,629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugDbg|ARM">
+      <Configuration>DebugDbg</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugDbg|Win32">
+      <Configuration>DebugDbg</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugDbg|x64">
+      <Configuration>DebugDbg</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{326F89E8-67F0-497C-BE78-7E028C4FDFD6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>wlac</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|ARM'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\common\common_vs\sys_common_base.props" />
+    <Import Project="..\..\common\common_vs\win32\sys.props" />
+    <Import Project="..\..\common\common_vs\sys_common.props" />
+    <Import Project="..\..\common\common_vs\dll_common.props" />
+    <Import Project="..\..\common\common_vs\wlac_common.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\common\common_vs\sys_common_base.props" />
+    <Import Project="..\..\common\common_vs\win32\sys.props" />
+    <Import Project="..\..\common\common_vs\sys_common.props" />
+    <Import Project="..\..\common\common_vs\dll_common.props" />
+    <Import Project="..\..\common\common_vs\wlac_common.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\common\common_vs\sys_common_base.props" />
+    <Import Project="..\..\common\common_vs\win32\sys.props" />
+    <Import Project="..\..\common\common_vs\sys_common.props" />
+    <Import Project="..\..\common\common_vs\dll_common.props" />
+    <Import Project="..\..\common\common_vs\wlac_common.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\common\common_vs\sys_common_base.props" />
+    <Import Project="..\..\common\common_vs\x64\sys.props" />
+    <Import Project="..\..\common\common_vs\sys_common.props" />
+    <Import Project="..\..\common\common_vs\dll_common.props" />
+    <Import Project="..\..\common\common_vs\wlac_common.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\common\common_vs\sys_common_base.props" />
+    <Import Project="..\..\common\common_vs\x64\sys.props" />
+    <Import Project="..\..\common\common_vs\sys_common.props" />
+    <Import Project="..\..\common\common_vs\dll_common.props" />
+    <Import Project="..\..\common\common_vs\wlac_common.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\common\common_vs\sys_common_base.props" />
+    <Import Project="..\..\common\common_vs\arm\sys.props" />
+    <Import Project="..\..\common\common_vs\sys_common.props" />
+    <Import Project="..\..\common\common_vs\dll_common.props" />
+    <Import Project="..\..\common\common_vs\wlac_common.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\common\common_vs\sys_common_base.props" />
+    <Import Project="..\..\common\common_vs\arm\sys.props" />
+    <Import Project="..\..\common\common_vs\sys_common.props" />
+    <Import Project="..\..\common\common_vs\dll_common.props" />
+    <Import Project="..\..\common\common_vs\wlac_common.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\common\common_vs\sys_common_base.props" />
+    <Import Project="..\..\common\common_vs\x64\sys.props" />
+    <Import Project="..\..\common\common_vs\sys_common.props" />
+    <Import Project="..\..\common\common_vs\dll_common.props" />
+    <Import Project="..\..\common\common_vs\wlac_common.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\common\common_vs\sys_common_base.props" />
+    <Import Project="..\..\common\common_vs\arm\sys.props" />
+    <Import Project="..\..\common\common_vs\sys_common.props" />
+    <Import Project="..\..\common\common_vs\dll_common.props" />
+    <Import Project="..\..\common\common_vs\wlac_common.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|ARM'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\public\include;..\..\..\src\include</AdditionalIncludeDirectories>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../../../sys/win32/lib</AdditionalLibraryDirectories>
+      <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
+copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\public\include;..\..\..\src\include</AdditionalIncludeDirectories>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../../../sys/win32/lib</AdditionalLibraryDirectories>
+      <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
+copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\public\include;..\..\..\src\include</AdditionalIncludeDirectories>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../../../sys/win64/lib</AdditionalLibraryDirectories>
+      <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
+copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\public\include;..\..\..\src\include</AdditionalIncludeDirectories>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../../../sys/win64/lib</AdditionalLibraryDirectories>
+      <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
+copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\public\include;..\..\..\src\include</AdditionalIncludeDirectories>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../../../sys/arm_win/lib</AdditionalLibraryDirectories>
+      <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
+copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|ARM'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\public\include;..\..\..\src\include</AdditionalIncludeDirectories>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../../../sys/arm_win/lib</AdditionalLibraryDirectories>
+      <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
+copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\public\include;..\..\..\src\include</AdditionalIncludeDirectories>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../../../sys/win32/lib</AdditionalLibraryDirectories>
+      <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
+copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\public\include;..\..\..\src\include</AdditionalIncludeDirectories>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../../../sys/win64/lib</AdditionalLibraryDirectories>
+      <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
+copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\public\include;..\..\..\src\include</AdditionalIncludeDirectories>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../../../sys/arm_win/lib</AdditionalLibraryDirectories>
+      <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
+copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\dl\lib_dl_functions.cpp" />
+    <ClCompile Include="..\..\..\src\wlac\gem_ipc_source.cpp" />
+    <ClCompile Include="..\..\..\src\wlac\gem_networking.cpp" />
+    <ClCompile Include="..\..\..\src\wlac\gem_timing_functions.cpp" />
+    <ClCompile Include="..\..\..\src\wlac\posix_threading_for_vs.cpp" />
+    <ClCompile Include="..\..\..\src\wlac\unix_emulator_source_for_win.cpp" />
+    <ClCompile Include="..\..\..\src\wlac\unix_emul_source_half_implemet.cpp" />
+    <ClCompile Include="..\..\..\src\wlac\unix_emul_source_not_implement_c.c" />
+    <ClCompile Include="..\..\..\src\wlac\unix_like_ioctl_for_win_c.c" />
+    <ClCompile Include="..\..\..\src\wlac\unix_sync_objects.cpp" />
+    <ClCompile Include="..\..\..\src\wlac\wlac_printf_and_friends.cpp" />
+    <ClCompile Include="..\..\..\src\wlac\wlac_redesigned.cpp" />
+    <ClCompile Include="..\..\..\src\wlac\wlac_wait_functions.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\public\include\rfc\readme.txt" />
+    <Text Include="..\..\..\src\wlac\README.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\public\include\.old\company_def_file.h" />
+    <ClInclude Include="..\..\..\public\include\.privatei\header_for_resolving_errno.h" />
+    <ClInclude Include="..\..\..\public\include\.privatei\windows_and_socket_headers.h" />
+    <ClInclude Include="..\..\..\public\include\.tmp\wlac_temporary.h" />
+    <ClInclude Include="..\..\..\public\include\additional\common_argument_parser.hpp" />
+    <ClInclude Include="..\..\..\public\include\additional\common_argument_parser.impl.hpp" />
+    <ClInclude Include="..\..\..\public\include\additional\common_hashtbl.hpp" />
+    <ClInclude Include="..\..\..\public\include\additional\common_hashtbl.impl.hpp" />
+    <ClInclude Include="..\..\..\public\include\additional\util\directory_iterator.h" />
+    <ClInclude Include="..\..\..\public\include\alloca.h" />
+    <ClInclude Include="..\..\..\public\include\arpa\inet.h" />
+    <ClInclude Include="..\..\..\public\include\bfd.h" />
+    <ClInclude Include="..\..\..\public\include\bits\ioctls.h" />
+    <ClInclude Include="..\..\..\public\include\bits\mman.h" />
+    <ClInclude Include="..\..\..\public\include\bits\resource.h" />
+    <ClInclude Include="..\..\..\public\include\bits\semaphore.h" />
+    <ClInclude Include="..\..\..\public\include\bits\sigaction.h" />
+    <ClInclude Include="..\..\..\public\include\bits\siginfo.h" />
+    <ClInclude Include="..\..\..\public\include\bits\signum.h" />
+    <ClInclude Include="..\..\..\public\include\bits\types.h" />
+    <ClInclude Include="..\..\..\public\include\bits\typesizes.h" />
+    <ClInclude Include="..\..\..\public\include\bits\uio.h" />
+    <ClInclude Include="..\..\..\public\include\bits\wordsize.h" />
+    <ClInclude Include="..\..\..\public\include\bytesex.h" />
+    <ClInclude Include="..\..\..\public\include\dirent.h" />
+    <ClInclude Include="..\..\..\public\include\dlfcn.h" />
+    <ClInclude Include="..\..\..\public\include\endian.h" />
+    <ClInclude Include="..\..\..\public\include\err.h" />
+    <ClInclude Include="..\..\..\public\include\features.h" />
+    <ClInclude Include="..\..\..\public\include\first_includes\common_definations_wul.h" />
+    <ClInclude Include="..\..\..\public\include\first_includes\common_include_for_headers.h" />
+    <ClInclude Include="..\..\..\public\include\first_includes\gem_first_common_include.h" />
+    <ClInclude Include="..\..\..\public\include\first_includes\gem_undefined_apis.h" />
+    <ClInclude Include="..\..\..\public\include\first_includes\new_winldap_common_include.h" />
+    <ClInclude Include="..\..\..\public\include\getopt.h" />
+    <ClInclude Include="..\..\..\public\include\gnu_getopt.h" />
+    <ClInclude Include="..\..\..\public\include\grp.h" />
+    <ClInclude Include="..\..\..\public\include\lber.h" />
+    <ClInclude Include="..\..\..\public\include\ldap.h" />
+    <ClInclude Include="..\..\..\public\include\libgen.h" />
+    <ClInclude Include="..\..\..\public\include\linux\ioctl.h" />
+    <ClInclude Include="..\..\..\public\include\linux\iso_fs.h" />
+    <ClInclude Include="..\..\..\public\include\linux\limits.h" />
+    <ClInclude Include="..\..\..\public\include\linux\minix_fs.h" />
+    <ClInclude Include="..\..\..\public\include\linux\version.h" />
+    <ClInclude Include="..\..\..\public\include\netconfig.h" />
+    <ClInclude Include="..\..\..\public\include\netdb.h" />
+    <ClInclude Include="..\..\..\public\include\netdir.h" />
+    <ClInclude Include="..\..\..\public\include\netinet\in.h" />
+    <ClInclude Include="..\..\..\public\include\netinet\tcp.h" />
+    <ClInclude Include="..\..\..\public\include\net\if.h" />
+    <ClInclude Include="..\..\..\public\include\poll.h" />
+    <ClInclude Include="..\..\..\public\include\proc\sysinfo.h" />
+    <ClInclude Include="..\..\..\public\include\pthread.h" />
+    <ClInclude Include="..\..\..\public\include\pwd.h" />
+    <ClInclude Include="..\..\..\public\include\redesigned\.original\msc1900\winsock2_locked.h" />
+    <ClInclude Include="..\..\..\public\include\redesigned\.original\other\winsock2_locked.h" />
+    <ClInclude Include="..\..\..\public\include\redesigned\direct.h" />
+    <ClInclude Include="..\..\..\public\include\redesigned\errno.h" />
+    <ClInclude Include="..\..\..\public\include\redesigned\fcntl.h" />
+    <ClInclude Include="..\..\..\public\include\redesigned\io.h" />
+    <ClInclude Include="..\..\..\public\include\redesigned\process.h" />
+    <ClInclude Include="..\..\..\public\include\redesigned\rpc.h" />
+    <ClInclude Include="..\..\..\public\include\redesigned\signal.h" />
+    <ClInclude Include="..\..\..\public\include\redesigned\stddef.h" />
+    <ClInclude Include="..\..\..\public\include\redesigned\stdio.h" />
+    <ClInclude Include="..\..\..\public\include\redesigned\stdlib.h" />
+    <ClInclude Include="..\..\..\public\include\redesigned\std_wlac_fios.hpp" />
+    <ClInclude Include="..\..\..\public\include\redesigned\impl.std_wlac_fios.hpp" />
+    <ClInclude Include="..\..\..\public\include\redesigned\string.h" />
+    <ClInclude Include="..\..\..\public\include\redesigned\sys\stat.h" />
+    <ClInclude Include="..\..\..\public\include\redesigned\sys\types.h" />
+    <ClInclude Include="..\..\..\public\include\redesigned\time.h" />
+    <ClInclude Include="..\..\..\public\include\redesigned\wchar.h" />
+    <ClInclude Include="..\..\..\public\include\redesigned\windows.h" />
+    <ClInclude Include="..\..\..\public\include\redesigned\winsock2.h" />
+    <ClInclude Include="..\..\..\public\include\redesigned\ws2tcpip.h" />
+    <ClInclude Include="..\..\..\public\include\rfc\functions_libgui_hacker.h" />
+    <ClInclude Include="..\..\..\public\include\rfc\functions_libgui_hacker_base.h" />
+    <ClInclude Include="..\..\..\public\include\rfc\remote_function_caller.h" />
+    <ClInclude Include="..\..\..\public\include\rfc\remote_function_caller_base.h" />
+    <ClInclude Include="..\..\..\public\include\rfc\windows_signal.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\auth.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\auth_des.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\auth_unix.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\clnt.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\dk_additions.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\nettype.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\pmap_clnt.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\pmap_prot.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\pmap_rmt.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\rpc.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\rpcb_prot.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\rpc_com.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\rpc_msg.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\svc.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\svc_auth.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\svc_soc.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\types.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\wrpc_first_com_include.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\xdr.h" />
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\.old\RPC.H" />
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\.old\XDR.H" />
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\AUTH.H" />
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\AUTH_UNI.H" />
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\BCOPY.H" />
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\CLNT.H" />
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\NETDB.H" />
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\PMAP_CLN.H" />
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\PMAP_PRO.H" />
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\PMAP_RMT.H" />
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\RPC_MSG.H" />
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\SVC.H" />
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\SVC_AUTH.H" />
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\TYPES.H" />
+    <ClInclude Include="..\..\..\public\include\rpc_mini\strings.h" />
+    <ClInclude Include="..\..\..\public\include\sched.h" />
+    <ClInclude Include="..\..\..\public\include\sdef_gem_windows.h" />
+    <ClInclude Include="..\..\..\public\include\semaphore.h" />
+    <ClInclude Include="..\..\..\public\include\stdafx.h" />
+    <ClInclude Include="..\..\..\public\include\strings.h" />
+    <ClInclude Include="..\..\..\public\include\syscall.h" />
+    <ClInclude Include="..\..\..\public\include\syslog.h" />
+    <ClInclude Include="..\..\..\public\include\sys\cdef.h" />
+    <ClInclude Include="..\..\..\public\include\sys\cdefs.h" />
+    <ClInclude Include="..\..\..\public\include\sys\epoll.h" />
+    <ClInclude Include="..\..\..\public\include\sys\errno.h" />
+    <ClInclude Include="..\..\..\public\include\sys\file.h" />
+    <ClInclude Include="..\..\..\public\include\sys\ioctl.h" />
+    <ClInclude Include="..\..\..\public\include\sys\ipc.h" />
+    <ClInclude Include="..\..\..\public\include\sys\mkdev.h" />
+    <ClInclude Include="..\..\..\public\include\sys\mman.h" />
+    <ClInclude Include="..\..\..\public\include\sys\param.h" />
+    <ClInclude Include="..\..\..\public\include\sys\resource.h" />
+    <ClInclude Include="..\..\..\public\include\sys\sem.h" />
+    <ClInclude Include="..\..\..\public\include\sys\shm.h" />
+    <ClInclude Include="..\..\..\public\include\sys\signal.h" />
+    <ClInclude Include="..\..\..\public\include\sys\socket.h" />
+    <ClInclude Include="..\..\..\public\include\sys\statvfs.h" />
+    <ClInclude Include="..\..\..\public\include\sys\syscall.h" />
+    <ClInclude Include="..\..\..\public\include\sys\syslog.h" />
+    <ClInclude Include="..\..\..\public\include\sys\systeminfo.h" />
+    <ClInclude Include="..\..\..\public\include\sys\time.h" />
+    <ClInclude Include="..\..\..\public\include\sys\times.h" />
+    <ClInclude Include="..\..\..\public\include\sys\uio.h" />
+    <ClInclude Include="..\..\..\public\include\sys\un.h" />
+    <ClInclude Include="..\..\..\public\include\sys\vfs.h" />
+    <ClInclude Include="..\..\..\public\include\sys\wait.h" />
+    <ClInclude Include="..\..\..\public\include\termios.h" />
+    <ClInclude Include="..\..\..\public\include\test\common_include_for_headers.h" />
+    <ClInclude Include="..\..\..\public\include\test\common_macroses.h" />
+    <ClInclude Include="..\..\..\public\include\test\redesigned\ofstream.h" />
+    <ClInclude Include="..\..\..\public\include\test\redesigned\process.h" />
+    <ClInclude Include="..\..\..\public\include\test\redesigned\stdio.h" />
+    <ClInclude Include="..\..\..\public\include\test\redesigned\stdlib.h" />
+    <ClInclude Include="..\..\..\public\include\test\redesigned\std_wlac_fios.hpp" />
+    <ClInclude Include="..\..\..\public\include\test\redesigned\std_wlac_fios.impl.hpp" />
+    <ClInclude Include="..\..\..\public\include\thread.h" />
+    <ClInclude Include="..\..\..\public\include\unistd.h" />
+    <ClInclude Include="..\..\..\public\include\unix_like_user_group_header.h" />
+    <ClInclude Include="..\..\..\public\include\winsock2_locked.h" />
+    <ClInclude Include="..\..\..\public\include\win_raw_socket_old_2017.12.24.h" />
+    <ClInclude Include="..\..\..\public\include\win_socket_common.h" />
+    <ClInclude Include="..\..\..\public\include\wlac_vector_old_2017.12.24.hpp" />
+    <ClInclude Include="..\..\..\src\include\common_include_for_wlac_sources.h" />
+    <ClInclude Include="..\..\..\src\include\pthread_private_for_source.h" />
+    <ClInclude Include="..\..\..\src\include\unix_sync_objects_private.h" />
+    <ClInclude Include="..\..\..\src\wlac\stdafx_gem.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\public\include\.old\company_def_file.hin" />
+    <None Include="..\..\..\public\include\redesigned\fstream" />
+    <None Include="..\..\..\public\include\rpc\rpc.h_2015.12.15" />
+    <None Include="..\..\..\public\include\rpc_mini\RPC\#NETDB.H#" />
+    <None Include="..\..\..\public\include\test\redesigned\fstream" />
+    <None Include="..\..\..\public\include\test\redesigned\ifstream" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

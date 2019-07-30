@@ -1,0 +1,25 @@
+
+// wlac/redesigned/fstream
+// 2017 Dec 07
+
+#ifndef __wlac_redesigen_fstream__
+#define __wlac_redesigen_fstream__
+
+#pragma include_alias( <fstream>, <fstream> )
+#pragma include_alias( "fstream", "fstream" )
+#include <fstream>
+#include "std_wlac_fios.hpp"
+
+namespace std{
+	typedef wlac_fios<::std::fstream> wlac_fstream;
+	typedef wlac_fios<::std::ifstream> wlac_ifstream;
+	typedef wlac_fios<::std::ofstream> wlac_ofstream;
+}
+
+
+#define fstream wlac_fstream
+#define ifstream wlac_ifstream
+#define ofstream wlac_ofstream
+
+
+#endif  // #ifndef __wlac_redesigen_fstream__

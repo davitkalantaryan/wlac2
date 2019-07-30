@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "wlac_amd64", "wlac_amd64.vdproj", "{BF431733-6257-4867-9CBF-1F73CCFE0388}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF431733-6257-4867-9CBF-1F73CCFE0388}.Debug|Default.ActiveCfg = Debug
+		{BF431733-6257-4867-9CBF-1F73CCFE0388}.Debug|Default.Build.0 = Debug
+		{BF431733-6257-4867-9CBF-1F73CCFE0388}.Release|Default.ActiveCfg = Release
+		{BF431733-6257-4867-9CBF-1F73CCFE0388}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9ED147A-740A-49ED-8E1D-691F3CEE5875}
+	EndGlobalSection
+EndGlobal

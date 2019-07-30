@@ -1,0 +1,23 @@
+
+#if 0
+// wlac/redesigned/ifstream
+// 2017 Dec 07
+
+#ifndef __wlac_redesigen_ifstream__
+#define __wlac_redesigen_ifstream__
+
+#pragma include_alias( <ifstream>, <ifstream> )
+#pragma include_alias( "ifstream", "ifstream" )
+#include <ifstream>
+#include "std_wlac_fios.hpp"
+
+namespace std{
+	typedef wlac_fios<::std::ifstream> wlac_ifstream;
+}
+
+
+#define ifstream wlac_ifstream
+
+
+#endif  // #ifndef __wlac_redesigen_ifstream__
+#endif

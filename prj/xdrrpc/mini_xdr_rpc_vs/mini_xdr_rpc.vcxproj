@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugDbg|ARM">
+      <Configuration>DebugDbg</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugDbg|Win32">
+      <Configuration>DebugDbg</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugDbg|x64">
+      <Configuration>DebugDbg</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DA4CC78F-B152-48B6-AA66-00A5996689A2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>mini_xdr_rpc</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|ARM'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\common\common_vs\sys_common_base.props" />
+    <Import Project="..\..\common\common_vs\win32\sys.props" />
+    <Import Project="..\..\common\common_vs\sys_common.props" />
+    <Import Project="..\..\common\common_vs\dll_common.props" />
+    <Import Project="..\..\common\common_vs\wlac_common.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\common\common_vs\sys_common_base.props" />
+    <Import Project="..\..\common\common_vs\win32\sys.props" />
+    <Import Project="..\..\common\common_vs\sys_common.props" />
+    <Import Project="..\..\common\common_vs\dll_common.props" />
+    <Import Project="..\..\common\common_vs\wlac_common.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\common\common_vs\sys_common_base.props" />
+    <Import Project="..\..\common\common_vs\win32\sys.props" />
+    <Import Project="..\..\common\common_vs\sys_common.props" />
+    <Import Project="..\..\common\common_vs\dll_common.props" />
+    <Import Project="..\..\common\common_vs\wlac_common.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\common\common_vs\sys_common_base.props" />
+    <Import Project="..\..\common\common_vs\x64\sys.props" />
+    <Import Project="..\..\common\common_vs\sys_common.props" />
+    <Import Project="..\..\common\common_vs\dll_common.props" />
+    <Import Project="..\..\common\common_vs\wlac_common.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\common\common_vs\sys_common_base.props" />
+    <Import Project="..\..\common\common_vs\x64\sys.props" />
+    <Import Project="..\..\common\common_vs\sys_common.props" />
+    <Import Project="..\..\common\common_vs\dll_common.props" />
+    <Import Project="..\..\common\common_vs\wlac_common.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\common\common_vs\sys_common_base.props" />
+    <Import Project="..\..\common\common_vs\arm\sys.props" />
+    <Import Project="..\..\common\common_vs\sys_common.props" />
+    <Import Project="..\..\common\common_vs\dll_common.props" />
+    <Import Project="..\..\common\common_vs\wlac_common.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\common\common_vs\sys_common_base.props" />
+    <Import Project="..\..\common\common_vs\arm\sys.props" />
+    <Import Project="..\..\common\common_vs\sys_common.props" />
+    <Import Project="..\..\common\common_vs\dll_common.props" />
+    <Import Project="..\..\common\common_vs\wlac_common.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\common\common_vs\sys_common_base.props" />
+    <Import Project="..\..\common\common_vs\x64\sys.props" />
+    <Import Project="..\..\common\common_vs\sys_common.props" />
+    <Import Project="..\..\common\common_vs\dll_common.props" />
+    <Import Project="..\..\common\common_vs\wlac_common.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\common\common_vs\sys_common_base.props" />
+    <Import Project="..\..\common\common_vs\arm\sys.props" />
+    <Import Project="..\..\common\common_vs\sys_common.props" />
+    <Import Project="..\..\common\common_vs\dll_common.props" />
+    <Import Project="..\..\common\common_vs\wlac_common.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|ARM'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
+      <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
+copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
+      <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
+copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
+      <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
+copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
+      <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
+copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
+      <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
+copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|ARM'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
+      <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
+copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
+      <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
+copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
+      <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
+copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\public\include</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
+      <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\public\sys\$(TargetFolderBase)\dll\.
+copy $(TargetDir)..\lib\$(ProjectName).lib ..\..\..\public\sys\$(TargetFolderBase)\lib\.</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\AUTHUNIX.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\AUTH_NON.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\AUTH_UNI.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\BINDRESV.C">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugDbg|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugDbg|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugDbg|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\CLNT_GEN.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\CLNT_PER.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\CLNT_RAW.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\CLNT_SIM.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\CLNT_TCP.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\CLNT_UDP.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\cpp_addition_for_win\xdr_cpp.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='DebugDbg|Win32'">..\..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">..\..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">..\..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='DebugDbg|ARM'">..\..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='DebugDbg|x64'">..\..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\GETRPCEN.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\GETRPCPO.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\GET_MYAD.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\NT.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\PMAP_CLN.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\PMAP_GET.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\PMAP_GMA.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\PMAP_PR.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\PMAP_PRO.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\PMAP_RMT.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\PORTMAP.C">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugDbg|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugDbg|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugDbg|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\RPC_CALL.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\RPC_COMM.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\RPC_PROT.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\sunrpc.c" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\SVC.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\SVC_AUTH.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\SVC_AUTU.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\SVC_RAW.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\SVC_RUN.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\SVC_SIMP.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\SVC_TCP.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\SVC_UDP.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\XDR.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\XDR_ARRA.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\XDR_FLOA.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\XDR_MEM.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\XDR_REC.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\XDR_REFE.C" />
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\XDR_STDI.C" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\src\mini_xdr_rpc\mini_xdr_rpc.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\src\mini_xdr_rpc\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\public\include\netdb.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\auth_unix.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\pmap_clnt.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\pmap_prot.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\rpcb_prot.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\wrpc_first_com_include.h" />
+    <ClInclude Include="..\..\..\public\include\rpc\xdr.h" />
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\.old\RPC.H" />
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\.old\XDR.H" />
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\NETDB.H" />
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\RPC_MSG.H" />
+    <ClInclude Include="..\..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h" />
+    <ClInclude Include="..\..\..\src\mini_xdr_rpc\SUNRPC.H" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

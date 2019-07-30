@@ -1,0 +1,16 @@
+/*
+ *	File: <company_def_file.h> For WINDOWS MFC
+ *
+ *	Created on: Dec 29, 2015
+ *	Author    : Davit Kalantaryan (Email: davit.kalantaryan@desy.de)
+ *            : Anushavan Azatyan (Email: anushavan.azatyan@desy.de)
+ *
+ * //
+ *
+ *
+ */
+#ifndef __company_def_file_h__
+#define __company_def_file_h__
+
+
+#endif  /* #ifndef __company_def_file_h__ */

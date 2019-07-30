@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="doc">
+      <UniqueIdentifier>{c5b7e292-13c2-4d67-95c1-d019fdc57488}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cpp_addition_wor_win">
+      <UniqueIdentifier>{10b7c3b7-f499-4d45-ae38-05398d13b423}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cpp_addition_wor_win\includes">
+      <UniqueIdentifier>{b7d05d85-ea8f-4770-9017-094f9ff44da1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cpp_addition_wor_win\includes\.old">
+      <UniqueIdentifier>{0c4712db-c05b-4d8f-bd7e-5e5f0122802d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cpp_addition_wor_win\includes\wlac">
+      <UniqueIdentifier>{a70333a4-5a20-4b4e-a447-13915bbe8a85}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\AUTH_NON.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\AUTH_UNI.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\AUTHUNIX.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\BINDRESV.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\CLNT_GEN.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\CLNT_PER.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\CLNT_RAW.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\CLNT_SIM.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\CLNT_TCP.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\CLNT_UDP.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\GET_MYAD.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\GETRPCEN.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\GETRPCPO.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\NT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\PMAP_CLN.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\PMAP_GET.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\PMAP_GMA.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\PMAP_PR.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\PMAP_PRO.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\PMAP_RMT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\PORTMAP.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\RPC_CALL.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\RPC_COMM.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\RPC_PROT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\sunrpc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\SVC.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\SVC_AUTH.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\SVC_AUTU.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\SVC_RAW.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\SVC_RUN.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\SVC_SIMP.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\SVC_TCP.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\SVC_UDP.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\XDR.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\XDR_ARRA.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\XDR_FLOA.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\XDR_MEM.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\XDR_REC.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\XDR_REFE.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\XDR_STDI.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mini_xdr_rpc\cpp_addition_for_win\xdr_cpp.cpp">
+      <Filter>Source Files\cpp_addition_wor_win</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\src\mini_xdr_rpc\mini_xdr_rpc.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\mini_xdr_rpc\SUNRPC.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h">
+      <Filter>Source Files\cpp_addition_wor_win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\public\include\netdb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\public\include\rpc\auth_unix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\public\include\rpc\pmap_clnt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\public\include\rpc\pmap_prot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\public\include\rpc\rpcb_prot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\public\include\rpc\wrpc_first_com_include.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\public\include\rpc\xdr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\.old\RPC.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\.old\XDR.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\NETDB.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\public\include\rpc_mini\RPC\RPC_MSG.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\src\mini_xdr_rpc\ReadMe.txt">
+      <Filter>doc</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
