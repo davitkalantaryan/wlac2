@@ -115,6 +115,8 @@ enum
 #define PTHREAD_CREATE_DETACHED	PTHREAD_CREATE_DETACHED
 };
 
+GEM_VAR_FAR pthread_t GetThreadHandleFromId(DWORD a_id);
+
 GEM_VAR_FAR int kb_main_total;
 GEM_VAR_FAR int kb_swap_free;
 

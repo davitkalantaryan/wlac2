@@ -251,9 +251,8 @@ GEM_API int pthread_cond_timedwait(pthread_cond_t *RESTRICT a_cond, pthread_mute
 		if (nReturn == ERROR_TIMEOUT) { nReturn = ETIMEDOUT; }
 	}
 
-
-	WaitForSingleObject(HANDLE_FROM_MUTEX(*a_mutex), INFINITE);
 	LeaveCriticalSection(&((*a_cond)->cs));
+	WaitForSingleObject(HANDLE_FROM_MUTEX(*a_mutex), INFINITE);
 
 	return nReturn;
 

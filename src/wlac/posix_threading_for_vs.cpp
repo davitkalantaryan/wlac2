@@ -33,6 +33,8 @@
 
 __BEGIN_C_DECLS
 
+static pthread_t	s_threadsTable[4096];
+
 static THREAD_RET_TYPE THREAD_CALL_CONV Thread_Start_Routine_Static(void* arg);
 static _inline int IterFuncForThreadNumber(THREADENTRY32* a_pThrItem, void* a_pUser);
 static void FreeThreadDataOnlyResource2(pthread_t a_data, void* a_pRet);
@@ -40,6 +42,10 @@ static void FreeThreadData3(pthread_t a_thread);
 
 extern DWORD g_tlsPthreadDataKey;
 
+GEM_API pthread_t GetThreadHandleFromId(DWORD a_id) 
+{
+	return s_threadsTable[a_id%4096];
+}
 
 GEM_API int pthread_create(pthread_t *a_thread, const pthread_attr_t *a_attr,
 								void *(*a_start_routine) (void *), void *a_arg)
@@ -58,6 +64,9 @@ GEM_API int pthread_create(pthread_t *a_thread, const pthread_attr_t *a_attr,
 		*a_thread = (pthread_t)0;
 		return errno > 0 ? -errno : errno;
 	}
+
+	s_threadsTable[(*a_thread)->thrdID % 4096] = *a_thread;
+
 	return 0;
 }
 
@@ -73,6 +82,7 @@ GEM_API int pthread_join(pthread_t a_thread, void **a_retval)
 		if (a_thread->resourse && (dwExitCode == STILL_ACTIVE)){
 			// Target thread will not exit untill DllMain for the thread is not called
 			// spin untill thread alive
+			s_threadsTable[a_thread->thrdID % 4096] = NULL;
 			while(a_thread->resourse){Sleep(1);}
 			dwExitCode = (DWORD)((size_t)a_thread->reserved);
 			// Mark the thread to delete in DllMain // not necessary
