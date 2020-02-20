@@ -183,38 +183,56 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|x64'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|ARM'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -232,7 +250,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
       <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
-      <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\lib</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -255,7 +273,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
       <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
-      <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\lib</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -278,7 +296,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
       <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
-      <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\lib</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -301,7 +319,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
       <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
-      <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\lib</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -324,7 +342,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
       <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
-      <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\lib</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -347,7 +365,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
       <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
-      <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\lib</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -374,7 +392,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
       <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
-      <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\lib</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -401,7 +419,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
       <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
-      <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\lib</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -428,7 +446,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
       <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
-      <AdditionalLibraryDirectories>..\..\..\..\sys\$(TargetFolderBase)\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\lib</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>

@@ -183,38 +183,56 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|x64'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDbg|ARM'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -230,7 +248,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>rfc.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>../../../../sys/win32/lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\lib</AdditionalLibraryDirectories>
       <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
@@ -252,7 +270,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>rfc.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>../../../../sys/win32/lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\lib</AdditionalLibraryDirectories>
       <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
@@ -274,7 +292,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>rfc.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>../../../../sys/win64/lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\lib</AdditionalLibraryDirectories>
       <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
@@ -296,7 +314,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>rfc.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>../../../../sys/win64/lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\lib</AdditionalLibraryDirectories>
       <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
@@ -318,7 +336,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>rfc.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>../../../../sys/arm_win/lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\lib</AdditionalLibraryDirectories>
       <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
@@ -340,7 +358,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>rfc.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>../../../../sys/arm_win/lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\lib</AdditionalLibraryDirectories>
       <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
@@ -366,7 +384,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>rfc.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>../../../../sys/win32/lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\lib</AdditionalLibraryDirectories>
       <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
@@ -392,7 +410,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>rfc.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>../../../../sys/win64/lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\lib</AdditionalLibraryDirectories>
       <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
@@ -418,7 +436,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>rfc.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>../../../../sys/arm_win/lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\lib</AdditionalLibraryDirectories>
       <ImportLibrary>$(TargetDir)..\lib\$(ProjectName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>

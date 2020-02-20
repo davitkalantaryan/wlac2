@@ -115,22 +115,28 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <OutDir>..\..\..\sys\$(TargetFolderBase)\dll\</OutDir>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
-    <OutDir>..\..\..\sys\$(TargetFolderBase)\dll\</OutDir>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>..\..\..\sys\$(TargetFolderBase)\dll\</OutDir>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>..\..\..\sys\$(TargetFolderBase)\dll\</OutDir>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>..\..\..\sys\$(TargetFolderBase)\dll\</OutDir>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>..\..\..\sys\$(TargetFolderBase)\dll\</OutDir>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
