@@ -203,10 +203,12 @@ GEM_API_FAR int setgroups(size_t size, const gid_t *list);
 #define lseek _lseek
 #endif
 
+#ifndef sleep_not_needed
 #ifdef sleep
 #undef sleep
 #endif
 #define	sleep(_seconds_)	SleepEx((_seconds_)*1000,TRUE)
+#endif // #ifndef sleep_not_needed
 
 __END_C_DECLS
 
