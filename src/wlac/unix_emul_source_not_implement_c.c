@@ -160,37 +160,6 @@ GEM_API int pthread_sigmask(int how, const sigset_t *set, sigset_t *oldset)
 }
 
 
-GEM_API int pthread_getname_np(pthread_t a_thread, char *a_buffer, size_t a_len)
-{
-	if((!a_thread)||(!a_thread->threadName)){return -1;}
-	strncpy(a_buffer,a_thread->threadName,a_len);
-	return 0;
-}
-
-
-GEM_API int pthread_setname_np(pthread_t a_target_thread, __const char *a_name)
-{
-	int nReturn = -1;
-	BOOL bDebugger = TRUE;
-
-	if (a_target_thread){
-		size_t unStrLenPlus1 = strlen(a_name)+1;
-		char* newName = (char*)realloc(a_target_thread->threadName,unStrLenPlus1);
-		if(!newName){return ENOMEM;}
-		memcpy(newName, a_name,unStrLenPlus1);
-		a_target_thread->threadName = newName;
-		nReturn = 0;
-	}
-
-	CheckRemoteDebuggerPresent(GetCurrentProcess(), &bDebugger);
-
-	if (bDebugger) {
-		nReturn= SetThreadNameForDebugger(a_target_thread,a_name);
-	}
-	return nReturn;
-}
-
-
 GEM_API int pthread_mutexattr_setpshared(pthread_mutexattr_t *attr, int pshared)
 {
 	return 0;
@@ -378,13 +347,13 @@ typedef struct tagTHREADNAME_INFO
 #endif
 
 
-int SetThreadNameForDebugger(pthread_t a_target_thread,const char *a_name)
+HIDE_SYMBOL2 int SetThreadNameForDebugger(DWORD a_target_thread_id,const char *a_name)
 {
 	THREADNAME_INFO info;
 	info.dwType = 0x1000;
 	info.szName = a_name;
 	//info.dwThreadID = GetThreadId(a_target_thread->thrd);
-	info.dwThreadID = a_target_thread->thrdID;
+	info.dwThreadID = a_target_thread_id;
 	info.dwFlags = 0;
 
 	__try{

@@ -650,6 +650,18 @@
     <ClInclude Include="..\..\..\include\redesigned\impl.std_wlac_fios.hpp">
       <Filter>include\redesigned</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\src\include\common\hashtbl.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\include\common\hashtbl.impl.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\include\wlac_intellisence_fix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\first_includes\wlac_compiler_internal.h">
+      <Filter>include\first_includes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\..\src\wlac\README.txt">

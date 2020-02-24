@@ -243,6 +243,7 @@
       <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\src\include</AdditionalIncludeDirectories>
       <ShowIncludes>false</ShowIncludes>
+      <ForcedIncludeFiles>wlac_intellisence_fix.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -265,6 +266,7 @@
       <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\src\include</AdditionalIncludeDirectories>
       <ShowIncludes>false</ShowIncludes>
+      <ForcedIncludeFiles>wlac_intellisence_fix.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -287,6 +289,7 @@
       <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\src\include</AdditionalIncludeDirectories>
       <ShowIncludes>false</ShowIncludes>
+      <ForcedIncludeFiles>wlac_intellisence_fix.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -309,6 +312,7 @@
       <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\src\include</AdditionalIncludeDirectories>
       <ShowIncludes>false</ShowIncludes>
+      <ForcedIncludeFiles>wlac_intellisence_fix.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -331,6 +335,7 @@
       <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\src\include</AdditionalIncludeDirectories>
       <ShowIncludes>false</ShowIncludes>
+      <ForcedIncludeFiles>wlac_intellisence_fix.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -353,6 +358,7 @@
       <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\src\include</AdditionalIncludeDirectories>
       <ShowIncludes>false</ShowIncludes>
+      <ForcedIncludeFiles>wlac_intellisence_fix.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -377,6 +383,7 @@
       <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\src\include</AdditionalIncludeDirectories>
       <ShowIncludes>false</ShowIncludes>
+      <ForcedIncludeFiles>wlac_intellisence_fix.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -403,6 +410,7 @@
       <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\src\include</AdditionalIncludeDirectories>
       <ShowIncludes>false</ShowIncludes>
+      <ForcedIncludeFiles>wlac_intellisence_fix.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -429,6 +437,7 @@
       <PreprocessorDefinitions>usergroupid_lib_not_needed;USE_STD_VECTOR;pthread_getschedparam_needed;read_write_close_needed;PTHREAD_JOIN_IN_CLEANUP_IGNORE;CORRECT_COND_WAIT_IN_LIB_CLEANING;___GEM_LIB_CREATION___;_WINDOWS;_USRDLL;WLAC_EXPORTS;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\src\include</AdditionalIncludeDirectories>
       <ShowIncludes>false</ShowIncludes>
+      <ForcedIncludeFiles>wlac_intellisence_fix.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -498,6 +507,7 @@
     <ClInclude Include="..\..\..\include\first_includes\gem_first_common_include.h" />
     <ClInclude Include="..\..\..\include\first_includes\gem_undefined_apis.h" />
     <ClInclude Include="..\..\..\include\first_includes\new_winldap_common_include.h" />
+    <ClInclude Include="..\..\..\include\first_includes\wlac_compiler_internal.h" />
     <ClInclude Include="..\..\..\include\getopt.h" />
     <ClInclude Include="..\..\..\include\gnu_getopt.h" />
     <ClInclude Include="..\..\..\include\grp.h" />
@@ -628,9 +638,12 @@
     <ClInclude Include="..\..\..\include\win_raw_socket_old_2017.12.24.h" />
     <ClInclude Include="..\..\..\include\win_socket_common.h" />
     <ClInclude Include="..\..\..\include\wlac_vector_old_2017.12.24.hpp" />
+    <ClInclude Include="..\..\..\src\include\common\hashtbl.hpp" />
+    <ClInclude Include="..\..\..\src\include\common\hashtbl.impl.hpp" />
     <ClInclude Include="..\..\..\src\include\common_include_for_wlac_sources.h" />
     <ClInclude Include="..\..\..\src\include\pthread_private_for_source.h" />
     <ClInclude Include="..\..\..\src\include\unix_sync_objects_private.h" />
+    <ClInclude Include="..\..\..\src\include\wlac_intellisence_fix.h" />
     <ClInclude Include="..\..\..\src\wlac\stdafx_gem.h" />
   </ItemGroup>
   <ItemGroup>

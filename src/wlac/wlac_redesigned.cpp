@@ -197,21 +197,21 @@ GEM_API size_t wlac_strftime(char *a_strDest, size_t a_maxsize, const char *a_fo
 
 GEM_API char* wlac_getenv(const char* a_name)
 {
-	pthread_t pThrData = GetPthreadDataPointer();
-	if(pThrData){
-		DWORD dwCount = GetEnvironmentVariableA(a_name, pThrData->resourse, pThrData->resourseSize);
-		if (!dwCount) { return NULL; }
-		if((dwCount+1)>pThrData->resourseSize){
-			char* pcFrmBuff = (char*)realloc(pThrData->resourse, (dwCount + 1));
+	struct pthread_s_new* pThreadData = GetCurrentThreadDataPointer();
+	if(LIKELY2(pThreadData)){
+		DWORD dwCount = GetEnvironmentVariableA(a_name, pThreadData->resourse, pThreadData->resourseSize);
+		if (!dwCount) { return NEWNULLPTR2; }
+		if((dwCount+1)> pThreadData->resourseSize){
+			char* pcFrmBuff = STATIC_CAST2(char*,realloc(pThreadData->resourse,(dwCount+1)));
 			if(pcFrmBuff){
-				pThrData->resourse = pcFrmBuff;
-				pThrData->resourseSize = (dwCount + 1);
-				GetEnvironmentVariableA(a_name, pThrData->resourse, pThrData->resourseSize);
+				pThreadData->resourse = pcFrmBuff;
+				pThreadData->resourseSize = (dwCount + 1);
+				GetEnvironmentVariableA(a_name, pThreadData->resourse, pThreadData->resourseSize);
 			}
 		}
-		return pThrData->resourse;
+		return pThreadData->resourse;
 	}
-	return NULL;
+	return NEWNULLPTR2;
 }
 
 #ifdef strerror
@@ -219,14 +219,14 @@ GEM_API char* wlac_getenv(const char* a_name)
 #endif
 GEM_API char* wlac_strerror(int a_nError)
 {
-	pthread_t pThrData = GetPthreadDataPointer();
-	if(pThrData){
-		errno_t tError = strerror_s(pThrData->resourse,pThrData->resourseSize, a_nError);
+	struct pthread_s_new* pThreadData = GetCurrentThreadDataPointer();
+	if(LIKELY2(pThreadData)){
+		errno_t tError = strerror_s(pThreadData->resourse, pThreadData->resourseSize, a_nError);
 
 		if(tError){
-			_snprintf(pThrData->resourse, pThrData->resourseSize, "wlac_strerror returned %d", (int)tError);
+			_snprintf(pThreadData->resourse, pThreadData->resourseSize, "wlac_strerror returned %d", (int)tError);
 		}
-		return pThrData->resourse;
+		return pThreadData->resourse;
 
 	}
 	return "error to get thread data";

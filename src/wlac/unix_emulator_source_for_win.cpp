@@ -36,7 +36,7 @@ GEM_API int sigaction(int a_sig, const struct sigaction *RESTRICT a_act, struct 
 GEM_VAR void* g_pWlacLoadCode = NULL;
 GEM_VAR void* g_pProcessExitCallCode = NULL;
 GEM_VAR int	  g_nLibraryCleanupStarted = 1;
-DWORD	g_tlsPthreadDataKey = 0;
+//DWORD	g_tlsPthreadDataKey = 0;
 DWORD	g_nLoaderThreadTID;
 int IsDescriptorASocket(int a_d);
 static void default_sa_restorer(void) {}
@@ -454,7 +454,6 @@ static BOOL init_wlac_functions(HINSTANCE a_hMod, void* a_pReserved)
 	if (!initialize_windows_socket_library()) return FALSE;
 
 	if(!a_hMod){a_hMod = GetModuleHandleA(NULL);}
-	g_tlsPthreadDataKey = TlsAlloc();
 
 	aConstructDestruct = (lib_cons_dest_t)GetProcAddress(a_hMod,
 		__GET_FUNC_NAME__(LIBRARY_CONSTRUCTOR_FUNCTION));
@@ -492,11 +491,6 @@ static void destroy_wlac_functions(HINSTANCE a_hMod, void* a_pReserved)
 
 	if (aConstructDestruct){
 		(*aConstructDestruct)();
-	}
-
-	if (g_tlsPthreadDataKey) {
-		TlsFree(g_tlsPthreadDataKey);
-		g_tlsPthreadDataKey = 0;
 	}
 
 	WSACleanup();
@@ -595,7 +589,7 @@ BOOL WINAPI DllMain(HINSTANCE a_hinstDLL, DWORD fdwReason, LPVOID a_lpvReserved)
 	case DLL_THREAD_ATTACH:
 		break;
 	case DLL_THREAD_DETACH:
-		ProperlyRemoveTlsInCurrentThread(NULL);
+		//ProperlyRemoveTlsInCurrentThread(NULL);
 		break;
 	default:
 		break;

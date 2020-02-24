@@ -28,7 +28,7 @@
 __BEGIN_C_DECLS
 
 typedef void*(*start_routine_t)(void*);
-typedef struct pthread_s* pthread_t;
+typedef HANDLE pthread_t;
 
 #if !defined(__pthread_key_t_defined) & !defined(pthread_key_t_defined) & !defined(pthread_key_t)
 typedef LONG pthread_key_t;
@@ -115,13 +115,13 @@ enum
 #define PTHREAD_CREATE_DETACHED	PTHREAD_CREATE_DETACHED
 };
 
-GEM_VAR_FAR pthread_t GetThreadHandleFromId(DWORD a_id);
+//GEM_VAR_FAR pthread_t GetThreadHandleFromId(DWORD a_id);
 
 GEM_VAR_FAR int kb_main_total;
 GEM_VAR_FAR int kb_swap_free;
 
 GEM_API_FAR int GetNumberOfProcessThreads(int pid);
-GEM_API_FAR pthread_t GetPthreadDataPointer(void);
+//#define GetNumberOfCurrentProcessThreads()	GetNumberOfProcessThreads(GetCurrentProcessId())
 GEM_API_FAR int pthread_mutex_init(pthread_mutex_t *RESTRICT mutex,
 	const pthread_mutexattr_t *RESTRICT attr);
 GEM_API_FAR int pthread_mutex_destroy(pthread_mutex_t *mutex);
