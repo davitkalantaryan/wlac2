@@ -16,6 +16,7 @@ __BEGIN_C_DECLS
 
 struct pthread_s_new
 {
+	struct pthread_s_new* prev, * next;
 	HANDLE			thrd;
 	char*			threadName;
 	char*			resourse;
@@ -26,7 +27,9 @@ struct pthread_s_new
 	DWORD			thrdID;
 	uint64_t		existOnThreadLocalStorage : 1;
 	uint64_t		isAlive : 1;
-	uint64_t		reserved64bit : 62;
+	uint64_t		isNameSet : 1;
+	uint64_t		isDetached : 1;
+	uint64_t		reserved64bit : 60;
 };
 
 
@@ -41,7 +44,6 @@ struct pthread_attr_s{
 //int SetThreadNameForDebugger(pthread_t a_target_thread,const char *a_name);
 HIDE_SYMBOL2 struct pthread_s_new* GetCurrentThreadDataPointer(void);
 HIDE_SYMBOL2 struct pthread_s_new* GetAnyThreadDataPointer(pthread_t a_anyThread);
-HIDE_SYMBOL2 int SetThreadNameForDebugger(DWORD a_target_thread_id, const char* a_name);
 
 __END_C_DECLS
 

@@ -184,6 +184,12 @@ typedef unsigned __int64 segment_t;
 #define segment_t_defined
 #endif
 
+#if !defined(__u_int64_t_defined) && !defined(u_int64_t_defined)
+typedef unsigned __int64 u_int64_t;
+#define __u_int64_t_defined
+#define u_int64_t_defined
+#endif
+
 
 #if !defined(__shmid_ds_defined) && !defined(shmid_ds_defined)
 struct shmid_ds

@@ -59,19 +59,24 @@
 //#define	THREAD_INP_TYPE		LPVOID
 //#endif  // #ifdef _USE_BEGIN_THREAD_EX
 
-static common::HashTbl<pthread_s_new*>  s_hashByHandles;  // key is pthread_t => HANDLE
-static common::HashTbl<pthread_s_new*>  s_hashByIds;     // key is DWORD
+static common::HashTbl<pthread_s_new*>  s_hashByHandles2;  // key is pthread_t => HANDLE
+static common::HashTbl<pthread_s_new*>  s_hashByIds2;     // key is DWORD
+static struct pthread_s_new*			s_pFirstThreadData;
 static HANDLE	s_mutexForThreadContainers = NULL;
 static DWORD	s_tlsPthreadDataKey = 0;
+static int		s_nRunDebuggerThread = 0;
+static HANDLE	s_handleDebggerHandlerThread = NEWNULLPTR2;
 
 __BEGIN_C_DECLS
 
 
 static DWORD WINAPI Thread_Start_Routine_Static(LPVOID arg);
+static DWORD WINAPI ThreadDebuggerHandling(LPVOID arg);
 static _inline int IterFuncForThreadNumber(THREADENTRY32* a_pThrItem, void* a_pUser);
-static void FreeThreadData(struct pthread_s_new* threadData);
-static void InitThreadData(struct pthread_s_new* threadData, pthread_t threadHandle, DWORD a_id);
-static void InitThreadDataOnlyPointers(struct pthread_s_new* a_threadData);
+static void FreeThreadDataAndRemoveFromList(struct pthread_s_new* threadData);
+static void InitThreadDataAndAddToList(struct pthread_s_new* threadData, pthread_t threadHandle, DWORD a_id);
+static void InitThreadDataOnlyPointersAndAddToList(struct pthread_s_new* a_threadData);
+static int SetThreadNameForDebugger(struct pthread_s_new* a_threadData);
 
 #ifdef WaitForSingleObject
 #ifndef __INTELLISENSE__
@@ -86,15 +91,15 @@ static struct pthread_s_new* GetThreadPointerFromId(DWORD a_id)
 	pthread_t threadHandle;
 
 	WaitForSingleObject(s_mutexForThreadContainers,INFINITE);
-	if(!s_hashByIds.FindEntry(&a_id,sizeof(DWORD),&pThreadData)){
+	if(!s_hashByIds2.FindEntry(&a_id,sizeof(DWORD),&pThreadData)){
 		threadHandle=OpenThread(THREAD_ALL_ACCESS,FALSE,a_id);
 		if(threadHandle){
 			// we have thread currently not in the containers
 			pThreadData = STATIC_CAST2(struct pthread_s_new*,calloc(1, sizeof(struct pthread_s_new)));
 			if(LIKELY2(pThreadData)){
-				InitThreadData(pThreadData,threadHandle,a_id);
-				s_hashByIds.AddEntry(&a_id, sizeof(DWORD), pThreadData);
-				s_hashByHandles.AddEntry(&threadHandle, sizeof(pthread_t), pThreadData);
+				InitThreadDataAndAddToList(pThreadData,threadHandle,a_id);
+				s_hashByIds2.AddEntry(&a_id, sizeof(DWORD), pThreadData);
+				s_hashByHandles2.AddEntry(&threadHandle, sizeof(pthread_t), pThreadData);
 				bAddedHere = TRUE;
 			}
 		}
@@ -133,11 +138,11 @@ GEM_API int pthread_create(pthread_t *a_thread, const pthread_attr_t *a_attr,voi
 	}
 
 	pThreadData->isAlive = 1;
-	InitThreadDataOnlyPointers(pThreadData);
+	InitThreadDataOnlyPointersAndAddToList(pThreadData);
 
 	WaitForSingleObject(s_mutexForThreadContainers, INFINITE);
-	s_hashByIds.AddEntry(&pThreadData->thrdID, sizeof(DWORD), pThreadData);
-	s_hashByHandles.AddEntry(&pThreadData->thrd, sizeof(pthread_t), pThreadData);
+	s_hashByIds2.AddEntry(&pThreadData->thrdID, sizeof(DWORD), pThreadData);
+	s_hashByHandles2.AddEntry(&pThreadData->thrd, sizeof(pthread_t), pThreadData);
 	ReleaseMutex(s_mutexForThreadContainers);
 
 	return 0;
@@ -156,9 +161,9 @@ GEM_API int pthread_join(pthread_t a_thread, void **a_retval)
 		if (dwExitCode == STILL_ACTIVE){
 			// lock and unlock is not needed
 			//WaitForSingleObject(s_mutexForThreadContainers, INFINITE);
-			if(s_hashByHandles.FindEntry(&a_thread, sizeof(pthread_t), &pThreadData)){
-				s_hashByHandles.RemoveEntry(&a_thread, sizeof(pthread_t));
-				s_hashByIds.RemoveEntry(&pThreadData->thrdID, sizeof(DWORD));
+			if(s_hashByHandles2.FindEntry(&a_thread, sizeof(pthread_t), &pThreadData)){
+				s_hashByHandles2.RemoveEntry(&a_thread, sizeof(pthread_t));
+				s_hashByIds2.RemoveEntry(&pThreadData->thrdID, sizeof(DWORD));
 			}
 			//ReleaseMutex(s_mutexForThreadContainers);
 			if(pThreadData){
@@ -173,16 +178,16 @@ GEM_API int pthread_join(pthread_t a_thread, void **a_retval)
 	}
 	else{
 		WaitForSingleObject(s_mutexForThreadContainers, INFINITE);
-		if (s_hashByHandles.FindEntry(&a_thread, sizeof(pthread_t), &pThreadData)) {
-			s_hashByHandles.RemoveEntry(&a_thread, sizeof(pthread_t));
-			s_hashByIds.RemoveEntry(&pThreadData->thrdID, sizeof(DWORD));
+		if (s_hashByHandles2.FindEntry(&a_thread, sizeof(pthread_t), &pThreadData)) {
+			s_hashByHandles2.RemoveEntry(&a_thread, sizeof(pthread_t));
+			s_hashByIds2.RemoveEntry(&pThreadData->thrdID, sizeof(DWORD));
 		}
 		ReleaseMutex(s_mutexForThreadContainers);
 		WaitForSingleObject(a_thread, INFINITE);
 		GetExitCodeThread(a_thread, &dwExitCode);
 	}
 
-	if(pThreadData){FreeThreadData(pThreadData);}
+	if(pThreadData){FreeThreadDataAndRemoveFromList(pThreadData);}
 	if(a_retval){*a_retval=(void*)((size_t)dwExitCode);}
 	
 	return 0;
@@ -191,12 +196,14 @@ GEM_API int pthread_join(pthread_t a_thread, void **a_retval)
 
 GEM_API int pthread_attr_init(pthread_attr_t *a_attr)
 {
+	*a_attr = STATIC_CAST2(struct pthread_attr_s*, calloc(1, sizeof(struct pthread_attr_s)));
 	return 0;
 }
 
 
 GEM_API int pthread_attr_destroy(pthread_attr_t *a_attr)
 {
+	free(*a_attr);
 	return 0;
 }
 
@@ -256,12 +263,13 @@ GEM_API int pthread_setname_np(pthread_t a_thread, __const char* a_name)
 		if (!newName) { return ENOMEM; }
 		memcpy(newName, a_name, unStrLenPlus1);
 		pThreadData->threadName = newName;
+		pThreadData->isNameSet = 1;
 
 		//CheckRemoteDebuggerPresent(GetCurrentProcess(), &bDebugger);
 		bDebugger=IsDebuggerPresent();
 
 		if (bDebugger) {
-			SetThreadNameForDebugger(pThreadData->thrdID,a_name);
+			SetThreadNameForDebugger(pThreadData);
 		}
 
 		return 0;
@@ -323,24 +331,32 @@ GEM_API int GetNumberOfProcessThreads(int a_nPid)
 }
 
 
-static void FreeThreadData(struct pthread_s_new* a_threadData)
+static void FreeThreadDataAndRemoveFromList(struct pthread_s_new* a_threadData)
 {
 #ifdef __INTELLISENSE__
 	struct pthread_s_new
 	{
+		pthread_s_new* prev, * next;
 		HANDLE			thrd;
-		char*			threadName;
-		char*			resourse;
-		void*			reserved;
+		char* threadName;
+		char* resourse;
+		void* reserved;
 		start_routine_t	func;
-		void*			arg;
+		void* arg;
 		DWORD			resourseSize;
 		DWORD			thrdID;
 		uint64_t		existOnThreadLocalStorage : 1;
 		uint64_t		isAlive : 1;
-		uint64_t		reserved64bit : 62;
+		uint64_t		isNameSet : 1;
+		uint64_t		isDetached : 1;
+		uint64_t		reserved64bit : 60;
 	};
 #endif
+
+	if(a_threadData->prev){a_threadData->prev->next=a_threadData->next;}
+	if(a_threadData->next){a_threadData->next->prev=a_threadData->prev;}
+	if(a_threadData==s_pFirstThreadData){s_pFirstThreadData=a_threadData->next;}
+
 	free(a_threadData->resourse);
 	free(a_threadData->threadName);
 	if(a_threadData->thrd){CloseHandle(a_threadData->thrd);}
@@ -387,7 +403,7 @@ static _inline int IterFuncForThreadNumber(THREADENTRY32* a_pThrItem, void* a_pU
 }
 
 
-static void InitThreadDataOnlyPointers(struct pthread_s_new* a_threadData)
+static void InitThreadDataOnlyPointersAndAddToList(struct pthread_s_new* a_threadData)
 {
 	char* pNewResource;
 	a_threadData->threadName = _strdup("wlac_thread");
@@ -396,10 +412,15 @@ static void InitThreadDataOnlyPointers(struct pthread_s_new* a_threadData)
 		a_threadData->resourse = pNewResource;
 		a_threadData->resourseSize = 1024;
 	}
+
+	a_threadData->prev = NEWNULLPTR2;
+	if(s_pFirstThreadData){s_pFirstThreadData->prev=a_threadData;}
+	a_threadData->next = s_pFirstThreadData;
+	s_pFirstThreadData = a_threadData;
 }
 
 
-static void InitThreadData(struct pthread_s_new* a_threadData, pthread_t a_threadHandle, DWORD a_id)
+static void InitThreadDataAndAddToList(struct pthread_s_new* a_threadData, pthread_t a_threadHandle, DWORD a_id)
 {
 #ifdef __INTELLISENSE__
 #endif
@@ -407,7 +428,7 @@ static void InitThreadData(struct pthread_s_new* a_threadData, pthread_t a_threa
 	//if(UNLIKELY2(!pReturn)){return NEWNULLPTR2;}
 	a_threadData->thrd = a_threadHandle;
 	a_threadData->thrdID = a_id;
-	InitThreadDataOnlyPointers(a_threadData);
+	InitThreadDataOnlyPointersAndAddToList(a_threadData);
 
 	//if (a_isTheCurrentThread) {
 	//	pReturn->existOnThreadLocalStorage =1;
@@ -426,13 +447,13 @@ HIDE_SYMBOL2 struct pthread_s_new* GetCurrentThreadDataPointer(void)
 
 	dwThrId = GetCurrentThreadId();
 	WaitForSingleObject(s_mutexForThreadContainers, INFINITE);
-	if (!s_hashByIds.FindEntry(&dwThrId, sizeof(DWORD), &pThreadData)) {
+	if (!s_hashByIds2.FindEntry(&dwThrId, sizeof(DWORD), &pThreadData)) {
 		aThread = pthread_self();
 		pThreadData = STATIC_CAST2(struct pthread_s_new*, calloc(1, sizeof(struct pthread_s_new)));
 		if(LIKELY2(pThreadData)){
-			InitThreadData(pThreadData,aThread,dwThrId);
-			s_hashByIds.AddEntry(&dwThrId, sizeof(DWORD),pThreadData);
-			s_hashByHandles.AddEntry(&aThread, sizeof(pthread_t), pThreadData);
+			InitThreadDataAndAddToList(pThreadData,aThread,dwThrId);
+			s_hashByIds2.AddEntry(&dwThrId, sizeof(DWORD),pThreadData);
+			s_hashByHandles2.AddEntry(&aThread, sizeof(pthread_t), pThreadData);
 		}
 	}
 	ReleaseMutex(s_mutexForThreadContainers);
@@ -457,18 +478,18 @@ HIDE_SYMBOL2 struct pthread_s_new* GetAnyThreadDataPointer(pthread_t a_anyThread
 	}
 
 	WaitForSingleObject(s_mutexForThreadContainers, INFINITE);
-	if (!s_hashByHandles.FindEntry(&a_anyThread, sizeof(pthread_t), &pThreadData)) {
+	if (!s_hashByHandles2.FindEntry(&a_anyThread, sizeof(pthread_t), &pThreadData)) {
 		DWORD dwThrId = GetThreadId(a_anyThread);
 
-		if (s_hashByIds.FindEntry(&dwThrId, sizeof(DWORD), &pThreadData)) {
-			s_hashByHandles.AddEntry(&a_anyThread, sizeof(pthread_t), pThreadData);
+		if (s_hashByIds2.FindEntry(&dwThrId, sizeof(DWORD), &pThreadData)) {
+			s_hashByHandles2.AddEntry(&a_anyThread, sizeof(pthread_t), pThreadData);
 		}
 		else {
 			pThreadData = STATIC_CAST2(struct pthread_s_new*, calloc(1, sizeof(struct pthread_s_new)));
 			if (LIKELY2(pThreadData)) {
-				InitThreadData(pThreadData, a_anyThread, dwThrId);
-				s_hashByIds.AddEntry(&dwThrId, sizeof(DWORD), pThreadData);
-				s_hashByHandles.AddEntry(&a_anyThread, sizeof(pthread_t), pThreadData);
+				InitThreadDataAndAddToList(pThreadData, a_anyThread, dwThrId);
+				s_hashByIds2.AddEntry(&dwThrId, sizeof(DWORD), pThreadData);
+				s_hashByHandles2.AddEntry(&a_anyThread, sizeof(pthread_t), pThreadData);
 			}
 		}
 	}
@@ -478,7 +499,78 @@ HIDE_SYMBOL2 struct pthread_s_new* GetAnyThreadDataPointer(pthread_t a_anyThread
 }
 
 
+/*//////////////////////////////////////////////*/
+#define MS_VC_EXCEPTION 0x406d1388
+#ifdef _WIN64
+#define LAST_ARG_TYPE	ULONG_PTR
+#else
+#define LAST_ARG_TYPE	DWORD
+#endif
+typedef struct tagTHREADNAME_INFO
+{
+	DWORD dwType;        // must be 0x1000
+	LPCSTR szName;       // pointer to name (in same addr space)
+	DWORD dwThreadID;    // thread ID (-1 caller thread)
+	DWORD dwFlags;       // reserved for future use, most be zero
+} THREADNAME_INFO;
+
+static inline int SetThreadNameForDebuggerRaw(DWORD a_threadId, const char* a_threadName)
+{
+	THREADNAME_INFO info;
+	info.dwType = 0x1000;
+	info.szName = a_threadName;
+	//info.dwThreadID = GetThreadId(a_target_thread->thrd);
+	info.dwThreadID = a_threadId;
+	info.dwFlags = 0;
+
+	__try {
+		RaiseException(MS_VC_EXCEPTION, 0, sizeof(info) / sizeof(DWORD), (LAST_ARG_TYPE*)&info);
+	}
+	__except (EXCEPTION_CONTINUE_EXECUTION) {
+	}
+	return 0;
+}
+
+
+static int SetThreadNameForDebugger(struct pthread_s_new* a_threadData)
+{
+	if(a_threadData->isNameSet){
+		SetThreadNameForDebuggerRaw(a_threadData->thrdID, a_threadData->threadName);
+	}
+	return 0;
+}
+
+
+static DWORD WINAPI ThreadDebuggerHandling(LPVOID)
+{
+	struct pthread_s_new* pThreadData;
+	DWORD thisThreadId = GetCurrentThreadId();
+	BOOL bDebuggerPresent,bDebuggerPresentOld = IsDebuggerPresent();
+
+	//while (s_nRunDebuggerThread&&(!g_nLibraryCleanupStarted)){
+	while (s_nRunDebuggerThread&&(!g_nLibraryCleanupStarted)){
+		SleepEx(2000, TRUE);
+		bDebuggerPresent = IsDebuggerPresent();
+		if(bDebuggerPresent && (!bDebuggerPresentOld)){
+			SetThreadNameForDebuggerRaw(thisThreadId, "DebuggerHandlingThread");
+			WaitForSingleObject(s_mutexForThreadContainers, INFINITE);
+			pThreadData = s_pFirstThreadData;
+			while(pThreadData){
+				SetThreadNameForDebugger(pThreadData);
+				pThreadData = pThreadData->next;
+			}
+			ReleaseMutex(s_mutexForThreadContainers);
+		}
+		bDebuggerPresentOld = bDebuggerPresent;
+	}
+
+	return 0;
+}
+
+
 __END_C_DECLS
+
+static VOID NTAPI DebuggerThreadInterrupter(_In_ ULONG_PTR) {}
 
 
 static void ThreadFunctionsCleanup(void)
@@ -492,6 +584,14 @@ static void ThreadFunctionsCleanup(void)
 		TlsFree(s_tlsPthreadDataKey);
 		s_tlsPthreadDataKey = 0;
 	}
+
+	if(s_handleDebggerHandlerThread){
+		s_nRunDebuggerThread = 0;
+		QueueUserAPC(&DebuggerThreadInterrupter,s_handleDebggerHandlerThread,0);
+		if(!g_nLibraryCleanupStarted){WaitForSingleObject(s_handleDebggerHandlerThread,INFINITE);}
+		CloseHandle(s_handleDebggerHandlerThread);
+		s_handleDebggerHandlerThread = NEWNULLPTR2;
+	}
 }
 
 
@@ -501,6 +601,10 @@ WLAC_INITIALIZER(ThreadFunctionsInit)
 
 	s_mutexForThreadContainers = CreateMutex(NULL, FALSE, NULL);
 	s_tlsPthreadDataKey = TlsAlloc();
+
+	s_nRunDebuggerThread = 1;
+	s_handleDebggerHandlerThread = CreateThread(NEWNULLPTR2,0,&ThreadDebuggerHandling,NEWNULLPTR2,0,NEWNULLPTR2);
+
 	atexit(&ThreadFunctionsCleanup); 
 }
 

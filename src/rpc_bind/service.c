@@ -66,11 +66,11 @@ int main(int a_argc, char **a_argv)
 
 static int AppType(int* argc, char*** argv)
 {
-	if ((*argc) < 1) return WINDOWS_SAERVICE;
+	if ((*argc) < 1) return WINDOWS_APP;
 
 	switch (((*argv)[0])[0])
 	{
-	case 'w': --argc; ++argv; return WINDOWS_APP;
+	case 's': --argc; ++argv; return WINDOWS_SAERVICE;
 	case 'c': --argc; ++argv; return CONSOLE_APP;
 	default: break;
 	}
