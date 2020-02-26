@@ -10,6 +10,7 @@
 */
 
 #include "stdafx.h"
+#include "first_includes/wlac_compiler_internal.h"
 #include "common_include_for_wlac_sources.h"
 #include <signal.h>
 #include <sys/time.h>
@@ -33,10 +34,11 @@ static _inline void* map_and_unmap_private(int a_is_map, void *__addr, uint64_t 
 __BEGIN_C_DECLS
 
 GEM_API int sigaction(int a_sig, const struct sigaction *RESTRICT a_act, struct sigaction *RESTRICT a_oact) __THROW;
-GEM_VAR void* g_pWlacLoadCode = NULL;
-GEM_VAR void* g_pProcessExitCallCode = NULL;
-GEM_VAR int	  g_nLibraryCleanupStarted = 1;
-//DWORD	g_tlsPthreadDataKey = 0;
+//GEM_VAR void* g_pWlacLoadCode = NULL;
+
+HIDE_SYMBOL2 BOOL gh_bLibraryCleanupStarted = FALSE;
+HIDE_SYMBOL2 BOOL gh_bIsAllowedToWaitForSignal = TRUE;
+
 DWORD	g_nLoaderThreadTID;
 int IsDescriptorASocket(int a_d);
 static void default_sa_restorer(void) {}
@@ -401,6 +403,19 @@ GEM_API int pthread_key_create(pthread_key_t *key, void(*destructor)(void*))
 }
 
 
+GEM_API int IsAllowedWaitForSignal(void)
+{
+	return gh_bIsAllowedToWaitForSignal;
+}
+
+
+GEM_API void SetIsAllowedWaitForSignal(void* a_dllMainArg)
+{
+	gh_bIsAllowedToWaitForSignal = a_dllMainArg ? FALSE : TRUE;
+	gh_bLibraryCleanupStarted = TRUE;
+}
+
+
 int pthread_key_create_once_np(pthread_key_t *key, void(*destructor)(void*))
 {
 	return 0;
@@ -447,9 +462,6 @@ static BOOL init_wlac_functions(HINSTANCE a_hMod, void* a_pReserved)
 {
 	lib_cons_dest_t aConstructDestruct = NULL;
 
-	g_nLibraryCleanupStarted = 0;
-	g_pWlacLoadCode = a_pReserved;
-	g_pProcessExitCallCode = NULL;
 	g_nLoaderThreadTID = GetCurrentThreadId();
 	if (!initialize_windows_socket_library()) return FALSE;
 
@@ -477,8 +489,9 @@ static void destroy_wlac_functions(HINSTANCE a_hMod, void* a_pReserved)
 
 	lib_cons_dest_t aConstructDestruct = NULL;
 
-	g_nLibraryCleanupStarted = 1;
-	g_pProcessExitCallCode = a_pReserved;
+	gh_bLibraryCleanupStarted = 1;
+	//gh_bIsAllowedToWaitForSignal = a_pReserved ? FALSE : TRUE;
+	SetIsAllowedWaitForSignal(a_pReserved);
 
 	if(!a_hMod){a_hMod = GetModuleHandleA(NULL);}
 

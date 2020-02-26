@@ -176,6 +176,10 @@ GEM_API_FAR int setgid(gid_t gid);
 GEM_API_FAR int setuid(uid_t uid);
 GEM_API_FAR int setgroups(size_t size, const gid_t *list);
 
+GEM_API_FAR int IsAllowedWaitForSignal(void);
+GEM_API_FAR void SetIsAllowedWaitForSignal(void* a_dllMainArg);
+GEM_API_FAR void FinalizingCalculateThreadsNumbers(void);
+
 #ifndef geteuid
 #define geteuid getuid
 #endif

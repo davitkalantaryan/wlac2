@@ -148,24 +148,22 @@ GEM_API int pthread_create(pthread_t *a_thread, const pthread_attr_t *a_attr,voi
 	return 0;
 }
 
-GEM_VAR_FAR int   g_nLibraryCleanupStarted;
-
 
 GEM_API int pthread_join(pthread_t a_thread, void **a_retval)
 {
 	struct pthread_s_new* pThreadData = NEWNULLPTR2;
 	DWORD dwExitCode;
 
-	if(g_nLibraryCleanupStarted){
+	if(gh_bLibraryCleanupStarted){
 		GetExitCodeThread(a_thread, &dwExitCode);
 		if (dwExitCode == STILL_ACTIVE){
 			// lock and unlock is not needed
-			//WaitForSingleObject(s_mutexForThreadContainers, INFINITE);
+			if(gh_bIsAllowedToWaitForSignal){WaitForSingleObject(s_mutexForThreadContainers, INFINITE);}
 			if(s_hashByHandles2.FindEntry(&a_thread, sizeof(pthread_t), &pThreadData)){
 				s_hashByHandles2.RemoveEntry(&a_thread, sizeof(pthread_t));
 				s_hashByIds2.RemoveEntry(&pThreadData->thrdID, sizeof(DWORD));
 			}
-			//ReleaseMutex(s_mutexForThreadContainers);
+			if(gh_bIsAllowedToWaitForSignal){ReleaseMutex(s_mutexForThreadContainers);}
 			if(pThreadData){
 				// Target thread will not exit untill DllMain for the thread is not called
 				// spin untill thread alive
@@ -331,6 +329,21 @@ GEM_API int GetNumberOfProcessThreads(int a_nPid)
 }
 
 
+GEM_API void FinalizingCalculateThreadsNumbers(void)
+{
+	int nNumberOfThreads = GetNumberOfProcessThreads(GetCurrentProcessId());
+	if(nNumberOfThreads>1){
+		gh_bIsAllowedToWaitForSignal = TRUE;
+		//gh_bLibraryCleanupStarted = FALSE;
+		gh_bLibraryCleanupStarted = TRUE;
+	}
+	else{
+		gh_bIsAllowedToWaitForSignal = FALSE;
+		gh_bLibraryCleanupStarted = TRUE;
+	}
+}
+
+
 static void FreeThreadDataAndRemoveFromList(struct pthread_s_new* a_threadData)
 {
 #ifdef __INTELLISENSE__
@@ -379,6 +392,7 @@ static DWORD WINAPI Thread_Start_Routine_Static(LPVOID a_pArg)
 	struct pthread_s_new* pThreadData = STATIC_CAST2(struct pthread_s_new* ,a_pArg);
 	DWORD unReturn;
 	
+	gh_bIsAllowedToWaitForSignal = TRUE;
 	pThreadData->existOnThreadLocalStorage = 1;
 	TlsSetValue(s_tlsPthreadDataKey, pThreadData);
 
@@ -548,7 +562,7 @@ static DWORD WINAPI ThreadDebuggerHandling(LPVOID)
 	BOOL bDebuggerPresent,bDebuggerPresentOld = IsDebuggerPresent();
 
 	//while (s_nRunDebuggerThread&&(!g_nLibraryCleanupStarted)){
-	while (s_nRunDebuggerThread&&(!g_nLibraryCleanupStarted)){
+	while (s_nRunDebuggerThread&&(!gh_bLibraryCleanupStarted)){
 		SleepEx(2000, TRUE);
 		bDebuggerPresent = IsDebuggerPresent();
 		if(bDebuggerPresent && (!bDebuggerPresentOld)){
@@ -588,7 +602,8 @@ static void ThreadFunctionsCleanup(void)
 	if(s_handleDebggerHandlerThread){
 		s_nRunDebuggerThread = 0;
 		QueueUserAPC(&DebuggerThreadInterrupter,s_handleDebggerHandlerThread,0);
-		if(!g_nLibraryCleanupStarted){WaitForSingleObject(s_handleDebggerHandlerThread,INFINITE);}
+		if(!gh_bLibraryCleanupStarted){WaitForSingleObject(s_handleDebggerHandlerThread,INFINITE);}
+		else { SleepEx(1,FALSE); }
 		CloseHandle(s_handleDebggerHandlerThread);
 		s_handleDebggerHandlerThread = NEWNULLPTR2;
 	}

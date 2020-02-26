@@ -13,7 +13,7 @@
 //#define INCLUDE_NEXT	#include
 #endif
 
-#ifndef _WIN64
+#if !defined(_WIN64) && !defined(_M_ARM64)
 // In the UNIX like systems sizeof(time_t)==sizeof(void*)==sizeof(long)
 #if !defined(_USE_32BIT_TIME_T)
 #define _USE_32BIT_TIME_T

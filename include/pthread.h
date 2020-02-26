@@ -164,6 +164,9 @@ GEM_API_FAR int pthread_once(pthread_once_t *once_control, void(*init_routine)(v
 GEM_API_FAR int pthread_once_void_ptr(pthread_once_t *once_control, void(*init_routine)(void*), void* a_arg);
 GEM_API_FAR int pthread_key_create(pthread_key_t *key, void(*destructor)(void*));
 
+GEM_API_FAR int IsAllowedWaitForSignal(void);
+GEM_API_FAR void SetIsAllowedWaitForSignal(void* a_dllMainArg);
+
 __END_C_DECLS
 
 #endif  /* #ifndef __win_pthread_h__ */

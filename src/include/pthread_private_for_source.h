@@ -11,6 +11,7 @@
 #include <Windows.h>
 #include <stddef.h>
 #include <stdint.h>
+#include <pthread.h>
 
 __BEGIN_C_DECLS
 
@@ -44,6 +45,9 @@ struct pthread_attr_s{
 //int SetThreadNameForDebugger(pthread_t a_target_thread,const char *a_name);
 HIDE_SYMBOL2 struct pthread_s_new* GetCurrentThreadDataPointer(void);
 HIDE_SYMBOL2 struct pthread_s_new* GetAnyThreadDataPointer(pthread_t a_anyThread);
+
+extern HIDE_SYMBOL2 BOOL gh_bLibraryCleanupStarted;
+extern HIDE_SYMBOL2 BOOL gh_bIsAllowedToWaitForSignal;
 
 __END_C_DECLS
 

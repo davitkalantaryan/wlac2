@@ -4,13 +4,12 @@
 
 #include "stdafx.h"
 #include "common_include_for_wlac_sources.h"
-#include <windows.h>
+#include <Windows.h>
 #include <stddef.h>
+#include "pthread_private_for_source.h"
 
 __BEGIN_C_DECLS
 
-GEM_VAR_FAR void* g_pProcessExitCallCode;
-GEM_VAR_FAR int   g_nLibraryCleanupStarted;
 extern DWORD g_nLoaderThreadTID;
 
 #if 0
@@ -19,7 +18,7 @@ extern DWORD g_nLoaderThreadTID;
 									   (g_nLoaderThreadTID==GetCurrentThreadId())  )  )
 #endif
 
-#define ALLOWED_WAITING(...)	(g_pProcessExitCallCode==NULL)
+#define ALLOWED_WAITING(...)	(gh_bIsAllowedToWaitForSignal)
 
 
 #ifdef WaitForSingleObject

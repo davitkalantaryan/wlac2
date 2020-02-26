@@ -24,11 +24,16 @@
 
 /* Structure crudely representing a timezone.
 This is obsolete and should never be used.  */
+#ifndef timezone_not_needed
+#ifdef timezone
+#undef timezone
+#endif
 struct timezone
 {
 	int tz_minuteswest;		/* Minutes west of GMT.  */
 	int tz_dsttime;		/* Nonzero if DST is ever in effect.  */
 };
+#endif
 
 
 __BEGIN_C_DECLS

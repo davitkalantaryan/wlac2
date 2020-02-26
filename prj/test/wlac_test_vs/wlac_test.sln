@@ -1,37 +1,34 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wlac_test", "wlac_test.vcxproj", "{1C779CA8-8077-43AD-83A5-8908042467C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
-		DebugDbg|ARM = DebugDbg|ARM
-		DebugDbg|x64 = DebugDbg|x64
-		DebugDbg|x86 = DebugDbg|x86
 		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1C779CA8-8077-43AD-83A5-8908042467C6}.Debug|ARM.ActiveCfg = Debug|ARM
-		{1C779CA8-8077-43AD-83A5-8908042467C6}.Debug|ARM.Build.0 = Debug|ARM
+		{1C779CA8-8077-43AD-83A5-8908042467C6}.Debug|ARM.ActiveCfg = Debug|ARM64
+		{1C779CA8-8077-43AD-83A5-8908042467C6}.Debug|ARM.Build.0 = Debug|ARM64
+		{1C779CA8-8077-43AD-83A5-8908042467C6}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{1C779CA8-8077-43AD-83A5-8908042467C6}.Debug|ARM64.Build.0 = Debug|ARM64
 		{1C779CA8-8077-43AD-83A5-8908042467C6}.Debug|x64.ActiveCfg = Debug|x64
 		{1C779CA8-8077-43AD-83A5-8908042467C6}.Debug|x64.Build.0 = Debug|x64
 		{1C779CA8-8077-43AD-83A5-8908042467C6}.Debug|x86.ActiveCfg = Debug|Win32
 		{1C779CA8-8077-43AD-83A5-8908042467C6}.Debug|x86.Build.0 = Debug|Win32
-		{1C779CA8-8077-43AD-83A5-8908042467C6}.DebugDbg|ARM.ActiveCfg = DebugDbg|ARM
-		{1C779CA8-8077-43AD-83A5-8908042467C6}.DebugDbg|ARM.Build.0 = DebugDbg|ARM
-		{1C779CA8-8077-43AD-83A5-8908042467C6}.DebugDbg|x64.ActiveCfg = DebugDbg|x64
-		{1C779CA8-8077-43AD-83A5-8908042467C6}.DebugDbg|x64.Build.0 = DebugDbg|x64
-		{1C779CA8-8077-43AD-83A5-8908042467C6}.DebugDbg|x86.ActiveCfg = DebugDbg|Win32
-		{1C779CA8-8077-43AD-83A5-8908042467C6}.DebugDbg|x86.Build.0 = DebugDbg|Win32
 		{1C779CA8-8077-43AD-83A5-8908042467C6}.Release|ARM.ActiveCfg = Release|ARM
 		{1C779CA8-8077-43AD-83A5-8908042467C6}.Release|ARM.Build.0 = Release|ARM
+		{1C779CA8-8077-43AD-83A5-8908042467C6}.Release|ARM64.ActiveCfg = Release|ARM
+		{1C779CA8-8077-43AD-83A5-8908042467C6}.Release|ARM64.Build.0 = Release|ARM
 		{1C779CA8-8077-43AD-83A5-8908042467C6}.Release|x64.ActiveCfg = Release|x64
 		{1C779CA8-8077-43AD-83A5-8908042467C6}.Release|x64.Build.0 = Release|x64
 		{1C779CA8-8077-43AD-83A5-8908042467C6}.Release|x86.ActiveCfg = Release|Win32
@@ -39,5 +36,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {254A1063-1877-4830-A537-9CF4846365E5}
 	EndGlobalSection
 EndGlobal

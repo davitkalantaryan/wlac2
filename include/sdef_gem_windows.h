@@ -44,9 +44,6 @@
 
 __BEGIN_C_DECLS
 
-GEM_VAR_FAR void* g_pWlacLoadCode;
-GEM_VAR_FAR void* g_pProcessExitCallCode;
-GEM_VAR_FAR int   g_nLibraryCleanupStarted;
 
 #if !defined(lib_cons_dest_t_defined) && !defined(__lib_cons_dest_t_defined)
 typedef void(*lib_cons_dest_t)(void);
@@ -67,8 +64,8 @@ static void Destructor_##_destructor_function_(void)\
 	if(snLibraryCleanupForCurrentSource==0) \
 	{\
 		snLibraryCleanupForCurrentSource = 1; \
-		g_nLibraryCleanupStarted = 1; \
-		if(!g_pWlacLoadCode){(_destructor_function_)();} \
+		FinalizingCalculateThreadsNumbers(); \
+		if(!IsAllowedWaitForSignal()){(_destructor_function_)();} \
 		/*(_destructor_function_)();*/ \
 		WSACleanup(); \
 	}\
@@ -100,7 +97,7 @@ EXPORT_TO_LIB_API BOOL WINAPI DllMain##_extra_(HINSTANCE hinstDLL, DWORD fdwReas
 	case DLL_PROCESS_ATTACH: /*DisableThreadLibraryCalls(hinstDLL);*/\
 		return Construncor_##_constructor_function_(); \
 	case DLL_PROCESS_DETACH: \
-		g_pProcessExitCallCode = lpvReserved; \
+		SetIsAllowedWaitForSignal(lpvReserved); \
 		Destructor_##_destructor_function_();\
 	default: break; \
 	}\
@@ -115,7 +112,7 @@ class netlib_cons_destr##_extra_ \
 public: \
 	netlib_cons_destr##_extra_(void) \
 		{Construncor_##_constructor_function_();} \
-	~netlib_cons_destr##_extra_(){Destructor_##_destructor_function_();} \
+	~netlib_cons_destr##_extra_(){FinalizingCalculateThreadsNumbers();Destructor_##_destructor_function_();} \
 }static volatile s_netlib_cons_destr_; 
 //static volatile netlib_cons_destr##extra  s_netlib_cons_destr_;
 #endif // #if defined(_USRDLL)
