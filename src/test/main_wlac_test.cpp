@@ -28,3 +28,29 @@ int main()
 
 	return 0;
 }
+
+
+#define DOOCS_CLNT_EXPORT
+
+#ifdef _WIN32
+DOOCS_CLNT_EXPORT
+#else  
+static
+#endif  
+void doocs_client_cleanup(void)
+{
+	// on non Windows cases no need for sync, because the routine will be called once, by ~PrivateArea
+#ifdef _WIN32  
+	static volatile SHORT  ssnCleanupCalled = 0;
+	if(InterlockedExchange16(&ssnCleanupCalled,1)){return;/* Already cleaned */}
+#endif  
+	// below is current actual cleanup code  
+	delete resp_;
+	delete ensp_;
+
+	ensp_ = nullptr;
+	resp_ = nullptr;
+
+	// destroy protocol modules
+	pmod_fini();
+}

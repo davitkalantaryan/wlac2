@@ -303,7 +303,7 @@ GEM_API BOOL ListProcessThreads(DWORD a_dwOwnerPID, void* a_pUser, int(*a_IterFu
 	// associated with the specified process
 	do
 	{
-		//if (te32.th32OwnerProcessID == a_dwOwnerPID) // this check is not necessary
+		if (te32.th32OwnerProcessID == a_dwOwnerPID) // this check is not necessary
 		{
 			if ((*a_IterFunc)(&te32, a_pUser))
 			{
