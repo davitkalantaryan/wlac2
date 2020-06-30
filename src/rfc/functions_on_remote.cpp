@@ -33,6 +33,7 @@ REMOTE_FNC_LINKAGE __int64 freopen_std_new_on_remote(_uint64_ttt a_pArg)
 
 REMOTE_FNC_LINKAGE __int64 raise_on_remote(_uint64_ttt a_pArg)
 {
+	static int snForcedKillCounter = 0;
 	win_signal_handler_type		pInitialHandler;
 	struct SWinSignal* pSignal = (struct SWinSignal*)((void*)((size_t)a_pArg));
 	int nSigNumNorm = pSignal->m_sig_num % _NSIG;
@@ -41,8 +42,13 @@ REMOTE_FNC_LINKAGE __int64 raise_on_remote(_uint64_ttt a_pArg)
 	{
 	case 0: return 0;
 	//case SIGKILL: ExitProcess(3);
-	case SIGKILL: 
-		::std::terminate();
+	case SIGKILL:
+		if(!(snForcedKillCounter++)){
+			::std::terminate();
+		}
+		else {
+			ExitProcess(3);
+		}
 	default:break;
 	}
 
@@ -84,7 +90,12 @@ REMOTE_FNC_LINKAGE __int64 raise_on_remote(_uint64_ttt a_pArg)
 			break;
 		default:
 			//ExitProcess(3);
-			::std::terminate();
+			//::std::terminate();
+			if (!(snForcedKillCounter++)) {
+				::std::terminate();
+			} else {
+				ExitProcess(3);
+			}
 			break;
 		}
 	}  // else{ of if (g_bLocalSignalsInitState==LSIS_INITED)
