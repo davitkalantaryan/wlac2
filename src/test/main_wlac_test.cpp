@@ -45,12 +45,12 @@ void doocs_client_cleanup(void)
 	if(InterlockedExchange16(&ssnCleanupCalled,1)){return;/* Already cleaned */}
 #endif  
 	// below is current actual cleanup code  
-	delete resp_;
-	delete ensp_;
+	//delete resp_;
+	//delete ensp_;
 
-	ensp_ = nullptr;
-	resp_ = nullptr;
+	//ensp_ = nullptr;
+	//resp_ = nullptr;
 
-	// destroy protocol modules
-	pmod_fini();
+	//// destroy protocol modules
+	//pmod_fini();
 }
