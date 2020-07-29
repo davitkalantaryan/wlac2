@@ -11,14 +11,9 @@ contrib/sys/*/bin/*
 !contrib/sys/*/*.udoc
 !contrib/sys/*.udoc
 !contrib/sys/*/doocs64_install/server/*.bat
-sys/*/*/*/*
-sys/*/lib/*
-sys/*/dll/*
-sys/*/bin/*
-!sys/*/*/*.udoc
-!sys/*/*.udoc
-!sys/*.udoc
-!sys/*/install/server/*.bat
+
+sys
+
 prj/*/*/*
 !prj/*/*_vs*/*.sln
 !prj/*/*_vs*/*.vcxproj
