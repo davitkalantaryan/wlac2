@@ -20,10 +20,24 @@
 #pragma include_alias( "time.h", "time.h" )
 #include <time.h>
 
+#ifdef __cplusplus
+GEM_API_FAR struct tm* wlac_localtime(const long* timep);
+#if ( defined(_WIN64) || defined(_M_ARM64) ) && !defined(_USE_32BIT_TIME_T)
+GEM_API_FAR struct tm* wlac_localtime(const time_t* a_timep);
+#endif
+#endif
+
 #ifdef strftime
 #undef strftime
 #endif
 #define strftime wlac_strftime
+
+#ifndef wlac_localtime_not_needed
+#ifdef localtime
+#undef localtime
+#endif
+#define localtime wlac_localtime
+#endif  // #ifndef wlac_localtime_not_needed
 
 
 #if defined(_MSC_VER) && (_MSC_VER>=1900) && defined(_INC_TIME)
@@ -56,7 +70,7 @@ __BEGIN_C_DECLS
 
 GEM_API_FAR int nanosleep(const struct timespec *a_req, struct timespec *a_rem);
 GEM_API_FAR char *strptime(const char *s, const char *format, struct tm *tm);
-GEM_API_FAR size_t wlac_strftime(char *strDest, size_t maxsize, const char *format, const struct tm *timeptr);
+GEM_API_FAR size_t wlac_strftime(char* strDest, size_t maxsize, const char* format, const struct tm* timeptr);
 
 __END_C_DECLS
 

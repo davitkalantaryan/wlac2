@@ -14,6 +14,26 @@
 #include <signal.h>
 #include "pthread_private_for_source.h"
 
+#ifdef __cplusplus
+#ifdef localtime
+#undef localtime
+#endif
+GEM_API struct tm* wlac_localtime(const long* a_timep)
+{
+	time_t timeRl = *a_timep;
+#ifdef localtime
+#undef localtime
+#endif
+	return localtime(&timeRl);
+}
+#if ( defined(_WIN64) || defined(_M_ARM64) ) && !defined(_USE_32BIT_TIME_T)
+GEM_API struct tm* wlac_localtime(const time_t* a_timep)
+{
+	return localtime(a_timep);
+}
+#endif
+#endif
+
 __BEGIN_C_DECLS
 
 
@@ -97,6 +117,7 @@ GEM_API int wlac_rename(const char *a_oldname, const char *a_newname)
 
 #define NOT_IMPLEMENTED_FTIME(__format,__index)	\
 					(__format)[(__index)-1] = 'n'; (__format)[(__index)] = 'p'
+
  
 GEM_API size_t wlac_strftime(char *a_strDest, size_t a_maxsize, const char *a_format, const struct tm *a_timeptr)
 {

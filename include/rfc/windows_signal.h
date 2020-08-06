@@ -75,12 +75,13 @@
 
 #endif  // #ifndef UNIX_SIGNALS_DEFINED
 
+#include <bits/siginfo.h>
+
 #ifdef __cplusplus
 extern "C"
 {
 #endif
 
-#include <bits/siginfo.h>
 
 typedef void (__cdecl * win_signal_handler_type)(int);
 typedef void(*signal_handler_simple_type)(int);
