@@ -26,4 +26,43 @@ GEM_API char *dlerror(void)
 }
 
 
+GEM_API void* dlopen(const char* a_filename, int)
+{
+	HMODULE* returnModulePtr = (HMODULE*)malloc(sizeof(HMODULE));
+	if (!returnModulePtr) { return NULL; }
+
+	*returnModulePtr = LoadLibraryA(a_filename);
+	if (!(*returnModulePtr)) {
+		free(returnModulePtr);
+		return NULL;
+	}
+
+	return (void*)returnModulePtr;
+}
+
+
+GEM_API int dlclose(void* a_handle)
+{
+	if (a_handle) {
+		HMODULE* returnModulePtr = (HMODULE*)a_handle;
+		BOOL bRet = FreeLibrary(*returnModulePtr);
+		free(returnModulePtr);
+		return bRet ? 0 : -1;
+	}
+
+	return -1;
+}
+
+
+GEM_API void* dlsym(void* a_handle, const char* a_symbol)
+{
+	if (a_handle) {
+		HMODULE* returnModulePtr = (HMODULE*)a_handle;
+		return GetProcAddress(*returnModulePtr, a_symbol);
+	}
+
+	return NULL;
+}
+
+
 __END_C_DECLS

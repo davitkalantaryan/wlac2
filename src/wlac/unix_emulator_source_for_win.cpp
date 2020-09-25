@@ -221,14 +221,21 @@ GEM_API int close_common(int a_fd)
 
 GEM_API int wlac_poll(struct pollfd *a_fds, nfds_t a_nfds, int a_timeout)
 {
-	int nIsSocket = IsDescriptorASocket((int)a_fds[0].fd);
+	if (a_fds && (a_nfds > 0)) {
+		int nIsSocket = IsDescriptorASocket((int)a_fds[0].fd);
 
-	if (nIsSocket == 1)
-		return poll_sockets(a_fds, a_nfds, a_timeout);
-	else if (nIsSocket == 0)
+		if (nIsSocket == 1)
+			return poll_sockets(a_fds, a_nfds, a_timeout);
+		else if (nIsSocket == 0)
+			return API_NOT_IMPLEMENTED;
+
 		return API_NOT_IMPLEMENTED;
+	}
+	else {
+		SleepEx(a_timeout,TRUE);
+	}
 
-	return API_NOT_IMPLEMENTED;
+	return 0;
 }
 
 //////////////////////////////////////////////////////////////////////////////
