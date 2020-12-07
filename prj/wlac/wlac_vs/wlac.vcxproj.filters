@@ -103,6 +103,15 @@
     <Filter Include="Source Files\dl">
       <UniqueIdentifier>{43a9667a-707a-4caa-a204-e564221f41b9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="include\redesigned\std">
+      <UniqueIdentifier>{1c5af9ae-14fc-482e-8faf-0ccd48aadd04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\redesigned\std\thread">
+      <UniqueIdentifier>{a52c8b02-9d37-4364-8adf-460bd5494eda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\std">
+      <UniqueIdentifier>{c0dbfb87-2310-49d6-bf0f-cc2cf60af062}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\src\wlac\gem_ipc_source.cpp">
@@ -143,6 +152,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\src\dl\lib_dl_functions.cpp">
       <Filter>Source Files\dl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\wlac\std\wlac_thread.cpp">
+      <Filter>Source Files\std</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -662,6 +674,12 @@
     <ClInclude Include="..\..\..\include\first_includes\wlac_compiler_internal.h">
       <Filter>include\first_includes</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\redesigned\std\thread\thread.impl.hpp">
+      <Filter>include\redesigned\std\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\redesigned\std\thread\thread.hpp">
+      <Filter>include\redesigned\std\thread</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\..\src\wlac\README.txt">
@@ -689,6 +707,9 @@
     </None>
     <None Include="..\..\..\include\test\redesigned\ifstream">
       <Filter>include\test\redesigned</Filter>
+    </None>
+    <None Include="..\..\..\include\redesigned\std\thread\wlac_thread">
+      <Filter>include\redesigned\std\thread</Filter>
     </None>
   </ItemGroup>
 </Project>

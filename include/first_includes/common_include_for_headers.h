@@ -94,6 +94,11 @@
 #pragma include_alias( <string.h>, <redesigned/string.h> )
 #pragma include_alias( "string.h", "redesigned/string.h" )
 
+#ifdef std_wlac_thread_used
+#pragma include_alias( <thread>, <redesigned/std/thread/wlac_thread> )
+#pragma include_alias( "thread", "redesigned/std/thread/wlac_thread" )
+#endif
+
 // alloca
 //#include <malloc.h>
 #ifndef alloca

@@ -13,6 +13,7 @@
 void sun_rpc_report(const char*);
 int sun_rpc_init(void);
 int sun_rpc_exit(void);
+void svc_exit(void);
 WSADATA WSAData;
 
 static int init = 0;
@@ -32,6 +33,7 @@ int sun_rpc_init(void)
 
 int sun_rpc_exit(void)
 {
+    svc_exit();
 	return WSACleanup();
 }
 
