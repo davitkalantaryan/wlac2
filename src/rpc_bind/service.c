@@ -6,7 +6,7 @@
 #include "service.h"
 #include <conio.h>
 
-enum APP_TYPE{ ERROR_CASE=-1,WINDOWS_APP,CONSOLE_APP, WINDOWS_SAERVICE };
+enum APP_TYPE{ ERROR_CASE=-1,WINDOWS_APP,CONSOLE_APP, WINDOWS_SAERVICE, RPC_HELP };
 static int AppType(int* argc, char*** argv);
 
 SERVICE_STATUS          ssStatus;
@@ -49,19 +49,22 @@ int main(int a_argc, char **a_argv)
 				CmdInstallService();
 				exit(0);
 			}
-			if (_stricmp("remove", argv[0] + 1) == 0){
+			if (_stricmp("delete", argv[0] + 1) == 0){
 				CmdRemoveService();
 				exit(0);
 			}
 		}
-		printf("%s -install          to install the service\n", SZAPPNAME);
-		printf("%s -remove           to remove the service\n", SZAPPNAME);
 		printf("\nStartServiceCtrlDispatcher being called.\n");
 		printf("This may take several seconds.  Please wait.\n");
         FreeConsole();
 		bService = StartServiceCtrlDispatcher(dispatchTable);
 		return 0;
 		break;
+    case RPC_HELP:
+        printf("usage: %s <mode> [command]\n", a_argv[0]);
+        printf("modes: 'c' (console application), 'h' (shows this help), 's' (windows service), 'w' (windows application without console)\n");
+        printf("command for case of service: '-install' (install service), '-delete' (delete service)\n");
+        break;
 	default:
 		fprintf(stderr,"unknown APP type!\n");
 		break;
@@ -75,7 +78,8 @@ static int AppType(int* argc, char*** argv)
 	switch (((*argv)[0])[0])
 	{
     case 'c': --(*argc); ++(*argv); return CONSOLE_APP;
-	case 's': --(*argc); ++(*argv); return WINDOWS_SAERVICE;
+	case 'h': --(*argc); ++(*argv); return RPC_HELP;
+    case 's': --(*argc); ++(*argv); return WINDOWS_SAERVICE;
     case 'w': --(*argc); ++(*argv); return WINDOWS_APP;
 	default: break;
 	}
@@ -140,8 +144,6 @@ void CmdInstallService(void)
     SC_HANDLE   schService;
     SC_HANDLE   schSCManager;
     TCHAR		szPath[512];
-
-    _getch();
 
     if ( GetModuleFileName( NULL, szPath, 512 ) == 0 ){
         _tprintf(TEXT("Unable to install %s - 0x%x\n"), TEXT(SZSERVICEDISPLAYNAME), GetLastError());
