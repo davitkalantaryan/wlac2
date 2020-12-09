@@ -4,8 +4,9 @@
 #include <process.h>
 #include <tchar.h>
 #include "service.h"
+#include <conio.h>
 
-enum APP_TYPE{ WINDOWS_APP,CONSOLE_APP, WINDOWS_SAERVICE };
+enum APP_TYPE{ ERROR_CASE=-1,WINDOWS_APP,CONSOLE_APP, WINDOWS_SAERVICE };
 static int AppType(int* argc, char*** argv);
 
 SERVICE_STATUS          ssStatus;
@@ -21,7 +22,7 @@ int main(int a_argc, char **a_argv)
 {
 	char** argv = a_argv + 1;
 	int argc = a_argc - 1;
-	int nAppType = AppType(&argc, &argv);
+	int nAppType;
 	BOOL bService;
 	SERVICE_TABLE_ENTRY dispatchTable[] =
 	{
@@ -30,6 +31,8 @@ int main(int a_argc, char **a_argv)
 	};
 
 	printf("rpc_bind.exe, version 2\n");
+
+    nAppType = AppType(&argc, &argv);
 
 	switch (nAppType)
 	{
@@ -55,6 +58,7 @@ int main(int a_argc, char **a_argv)
 		printf("%s -remove           to remove the service\n", SZAPPNAME);
 		printf("\nStartServiceCtrlDispatcher being called.\n");
 		printf("This may take several seconds.  Please wait.\n");
+        FreeConsole();
 		bService = StartServiceCtrlDispatcher(dispatchTable);
 		return 0;
 		break;
@@ -70,12 +74,13 @@ static int AppType(int* argc, char*** argv)
 
 	switch (((*argv)[0])[0])
 	{
-	case 's': --argc; ++argv; return WINDOWS_SAERVICE;
-	case 'c': --argc; ++argv; return CONSOLE_APP;
+    case 'c': --(*argc); ++(*argv); return CONSOLE_APP;
+	case 's': --(*argc); ++(*argv); return WINDOWS_SAERVICE;
+    case 'w': --(*argc); ++(*argv); return WINDOWS_APP;
 	default: break;
 	}
 
-	return WINDOWS_SAERVICE;
+	return ERROR_CASE;
 }
 
 
@@ -128,16 +133,21 @@ VOID WINAPI service_ctrl(DWORD dwCtrlCode)
 	UpdateStatus(-1,-1);
 }
 
+#pragma warning (disable:4996)
+
 void CmdInstallService(void)
 {
     SC_HANDLE   schService;
     SC_HANDLE   schSCManager;
     TCHAR		szPath[512];
 
+    _getch();
+
     if ( GetModuleFileName( NULL, szPath, 512 ) == 0 ){
         _tprintf(TEXT("Unable to install %s - 0x%x\n"), TEXT(SZSERVICEDISPLAYNAME), GetLastError());
         return;
     }
+    _tcscat(szPath, TEXT(" s"));
     schSCManager = OpenSCManager( NULL, NULL, SC_MANAGER_ALL_ACCESS );
     if ( schSCManager ){
         schService = CreateService(
