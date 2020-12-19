@@ -64,11 +64,11 @@ static common::HashTbl<pthread_s_new*>  s_hashByIds2;     // key is DWORD
 static struct pthread_s_new*			s_pFirstThreadData;
 static HANDLE	s_mutexForThreadContainers = NULL;
 static DWORD	s_tlsPthreadDataKey = 0;
-static int		s_nRunDebuggerThread = 0;
 static HANDLE	s_handleDebggerHandlerThread = NEWNULLPTR2;
 
 __BEGIN_C_DECLS
 
+int				g_nRunDebuggerThread = 0;
 
 static DWORD WINAPI Thread_Start_Routine_Static(LPVOID arg);
 static DWORD WINAPI ThreadDebuggerHandling(LPVOID arg);
@@ -561,8 +561,8 @@ static DWORD WINAPI ThreadDebuggerHandling(LPVOID)
 	DWORD thisThreadId = GetCurrentThreadId();
 	BOOL bDebuggerPresent,bDebuggerPresentOld = IsDebuggerPresent();
 
-	//while (s_nRunDebuggerThread&&(!g_nLibraryCleanupStarted)){
-	while (s_nRunDebuggerThread&&(!gh_bLibraryCleanupStarted)){
+	//while (g_nRunDebuggerThread&&(!g_nLibraryCleanupStarted)){
+	while (g_nRunDebuggerThread &&(!gh_bLibraryCleanupStarted)){
 		SleepEx(2000, TRUE);
 		bDebuggerPresent = IsDebuggerPresent();
 		if(bDebuggerPresent && (!bDebuggerPresentOld)){
@@ -600,7 +600,7 @@ static void ThreadFunctionsCleanup(void)
 	}
 
 	if(s_handleDebggerHandlerThread){
-		s_nRunDebuggerThread = 0;
+		g_nRunDebuggerThread = 0;
 		QueueUserAPC(&DebuggerThreadInterrupter,s_handleDebggerHandlerThread,0);
 		if(!gh_bLibraryCleanupStarted){WaitForSingleObject(s_handleDebggerHandlerThread,INFINITE);}
 		else { SleepEx(1,FALSE); }
@@ -617,7 +617,7 @@ WLAC_INITIALIZER(ThreadFunctionsInit)
 	s_mutexForThreadContainers = CreateMutex(NULL, FALSE, NULL);
 	s_tlsPthreadDataKey = TlsAlloc();
 
-	s_nRunDebuggerThread = 1;
+	//g_nRunDebuggerThread = 1;
 	s_handleDebggerHandlerThread = CreateThread(NEWNULLPTR2,0,&ThreadDebuggerHandling,NEWNULLPTR2,0,NEWNULLPTR2);
 
 	atexit(&ThreadFunctionsCleanup); 

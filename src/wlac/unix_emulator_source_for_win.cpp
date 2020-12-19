@@ -33,6 +33,8 @@ static _inline void* map_and_unmap_private(int a_is_map, void *__addr, uint64_t 
 
 __BEGIN_C_DECLS
 
+extern int				g_nRunDebuggerThread;
+
 GEM_API int sigaction(int a_sig, const struct sigaction *RESTRICT a_act, struct sigaction *RESTRICT a_oact) __THROW;
 //GEM_VAR void* g_pWlacLoadCode = NULL;
 
@@ -599,16 +601,26 @@ static _inline void* map_and_unmap_private(int a_is_map, void *__addr, uint64_t 
 __BEGIN_C_DECLS
 BOOL WINAPI DllMain(HINSTANCE a_hinstDLL, DWORD fdwReason, LPVOID a_lpvReserved)
 {
+	static DWORD sdwIniter = 0;
+	DWORD dwCurThreadId = GetCurrentThreadId();
 	switch (fdwReason)
 	{
 	case DLL_PROCESS_ATTACH:
+		printf("!!!! %s DLL_PROCESS_ATTACH a_lpvReserved=%p \n",__FUNCTION__, a_lpvReserved);
+		sdwIniter = dwCurThreadId;
 		return init_wlac_functions(a_hinstDLL,a_lpvReserved);
 	case DLL_PROCESS_DETACH:
 		destroy_wlac_functions(a_hinstDLL,a_lpvReserved);
 		break;
 	case DLL_THREAD_ATTACH:
+		printf("++++ %s DLL_THREAD_ATTACH  a_lpvReserved=%p \n",__FUNCTION__, a_lpvReserved);
 		break;
 	case DLL_THREAD_DETACH:
+		printf("---- %s DLL_THREAD_DETACH  a_lpvReserved=%p \n",__FUNCTION__, a_lpvReserved);
+		if(sdwIniter &&(dwCurThreadId== sdwIniter)){
+			printf("!!!!!!!!!!!!!!!!!!!!! \n");
+			g_nRunDebuggerThread = 0;
+		}
 		//ProperlyRemoveTlsInCurrentThread(NULL);
 		break;
 	default:

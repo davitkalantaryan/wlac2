@@ -481,6 +481,7 @@
     <ClCompile Include="..\..\..\src\wlac\gem_networking.cpp" />
     <ClCompile Include="..\..\..\src\wlac\gem_timing_functions.cpp" />
     <ClCompile Include="..\..\..\src\wlac\posix_threading_for_vs.cpp" />
+    <ClCompile Include="..\..\..\src\wlac\std\wlac_thread.cpp" />
     <ClCompile Include="..\..\..\src\wlac\unix_emulator_source_for_win.cpp" />
     <ClCompile Include="..\..\..\src\wlac\unix_emul_source_half_implemet.cpp" />
     <ClCompile Include="..\..\..\src\wlac\unix_emul_source_not_implement_c.c" />
@@ -563,6 +564,8 @@
     <ClInclude Include="..\..\..\include\redesigned\stddef.h" />
     <ClInclude Include="..\..\..\include\redesigned\stdio.h" />
     <ClInclude Include="..\..\..\include\redesigned\stdlib.h" />
+    <ClInclude Include="..\..\..\include\redesigned\std\thread\thread.hpp" />
+    <ClInclude Include="..\..\..\include\redesigned\std\thread\thread.impl.hpp" />
     <ClInclude Include="..\..\..\include\redesigned\std_wlac_fios.hpp" />
     <ClInclude Include="..\..\..\include\redesigned\impl.std_wlac_fios.hpp" />
     <ClInclude Include="..\..\..\include\redesigned\string.h" />
@@ -671,6 +674,7 @@
   <ItemGroup>
     <None Include="..\..\..\include\.old\company_def_file.hin" />
     <None Include="..\..\..\include\redesigned\fstream" />
+    <None Include="..\..\..\include\redesigned\std\thread\wlac_thread" />
     <None Include="..\..\..\include\rpc\rpc.h_2015.12.15" />
     <None Include="..\..\..\include\rpc_mini\RPC\#NETDB.H#" />
     <None Include="..\..\..\include\test\redesigned\fstream" />
