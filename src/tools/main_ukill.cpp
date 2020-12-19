@@ -31,17 +31,28 @@ int main(int argc, char* argv[])
 
 	if (argc < 3 || (strlen(argv[1])<2) || ((argv[1])[0]!='-'))
 	{
-		nReturn = -1;
-		goto returnPoint;
+		fprintf(stderr, "wrong formated call: kill -N pid\n");
+		return 1;
 	}
 
 	nSig = atoi((argv[1]+1));
 	nPid = atoi(argv[2]);
-	nReturn = kill(nPid, nSig);
 
-	goto returnPoint;
+	switch(nSig){
+	case SIGKILL: {
+		HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, (nPid));
+		if(hProcess){
+			nReturn = TerminateProcess(hProcess, 3)?0:1;
+		}
+		else{
+			nReturn = 1;
+		}
+	}break;
+	default:
+		nReturn = kill(nPid, nSig);
+		break;
+	}
 
-returnPoint:
 	if (nReturn)
 	{
 		if (vcErrBuff[0])
