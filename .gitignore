@@ -3,6 +3,9 @@
 *.obj
 *.pro.user*
 .tmp/*
+
+sys
+
 contrib/sys/*/*/*/*
 contrib/sys/*/lib/*
 contrib/sys/*/dll/*

@@ -14,6 +14,7 @@
 #include "remote_function_caller_base.h"
 #include "windows_signal.h"
 #include "remote_function_caller_private.h"
+#include <exception>
 
 
 #ifdef __cplusplus
@@ -32,6 +33,7 @@ REMOTE_FNC_LINKAGE __int64 freopen_std_new_on_remote(_uint64_ttt a_pArg)
 
 REMOTE_FNC_LINKAGE __int64 raise_on_remote(_uint64_ttt a_pArg)
 {
+	static int snForcedKillCounter = 0;
 	win_signal_handler_type		pInitialHandler;
 	struct SWinSignal* pSignal = (struct SWinSignal*)((void*)((size_t)a_pArg));
 	int nSigNumNorm = pSignal->m_sig_num % _NSIG;
@@ -39,7 +41,14 @@ REMOTE_FNC_LINKAGE __int64 raise_on_remote(_uint64_ttt a_pArg)
 	switch (pSignal->m_sig_num)
 	{
 	case 0: return 0;
-	case SIGKILL: ExitProcess(3);
+	//case SIGKILL: ExitProcess(3);
+	case SIGKILL:
+		if(!(snForcedKillCounter++)){
+			::std::terminate();
+		}
+		else {
+			ExitProcess(3);
+		}
 	default:break;
 	}
 
@@ -80,7 +89,13 @@ REMOTE_FNC_LINKAGE __int64 raise_on_remote(_uint64_ttt a_pArg)
 			}
 			break;
 		default:
-			ExitProcess(3);
+			//ExitProcess(3);
+			//::std::terminate();
+			if (!(snForcedKillCounter++)) {
+				::std::terminate();
+			} else {
+				ExitProcess(3);
+			}
 			break;
 		}
 	}  // else{ of if (g_bLocalSignalsInitState==LSIS_INITED)
