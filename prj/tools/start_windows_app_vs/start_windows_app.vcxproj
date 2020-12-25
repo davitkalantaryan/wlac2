@@ -180,7 +180,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalDependencies>rfc2.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -201,7 +201,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalDependencies>rfc2.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -222,7 +222,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalDependencies>rfc2.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -243,7 +243,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalDependencies>rfc2.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -268,7 +268,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalDependencies>rfc2.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -293,7 +293,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalDependencies>rfc2.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -318,7 +318,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalDependencies>rfc2.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -343,7 +343,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalDependencies>rfc2.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>

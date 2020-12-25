@@ -103,59 +103,27 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\common\common_vs\sys_common_base.props" />
-    <Import Project="..\..\common\common_vs\win32\sys.props" />
-    <Import Project="..\..\common\common_vs\sys_common.props" />
-    <Import Project="..\..\common\common_vs\bin_common.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\common\common_vs\sys_common_base.props" />
-    <Import Project="..\..\common\common_vs\win32\sys.props" />
-    <Import Project="..\..\common\common_vs\sys_common.props" />
-    <Import Project="..\..\common\common_vs\bin_common.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\common\common_vs\sys_common_base.props" />
-    <Import Project="..\..\common\common_vs\x64\sys.props" />
-    <Import Project="..\..\common\common_vs\sys_common.props" />
-    <Import Project="..\..\common\common_vs\bin_common.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\common\common_vs\sys_common_base.props" />
-    <Import Project="..\..\common\common_vs\arm\sys.props" />
-    <Import Project="..\..\common\common_vs\sys_common.props" />
-    <Import Project="..\..\common\common_vs\bin_common.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\common\common_vs\sys_common_base.props" />
-    <Import Project="..\..\common\common_vs\arm\sys.props" />
-    <Import Project="..\..\common\common_vs\sys_common.props" />
-    <Import Project="..\..\common\common_vs\bin_common.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\common\common_vs\sys_common_base.props" />
-    <Import Project="..\..\common\common_vs\x64\sys.props" />
-    <Import Project="..\..\common\common_vs\sys_common.props" />
-    <Import Project="..\..\common\common_vs\bin_common.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\common\common_vs\sys_common_base.props" />
-    <Import Project="..\..\common\common_vs\arm\sys.props" />
-    <Import Project="..\..\common\common_vs\sys_common.props" />
-    <Import Project="..\..\common\common_vs\bin_common.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\common\common_vs\sys_common_base.props" />
-    <Import Project="..\..\common\common_vs\arm\sys.props" />
-    <Import Project="..\..\common\common_vs\sys_common.props" />
-    <Import Project="..\..\common\common_vs\bin_common.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -211,7 +179,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalDependencies>rfc2.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy /Y $(TargetPath) $(OutDir)kill.exe</Command>
@@ -230,7 +198,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalDependencies>rfc2.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy /Y $(TargetPath) $(OutDir)kill.exe</Command>
@@ -249,7 +217,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalDependencies>rfc2.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy /Y $(TargetPath) $(OutDir)kill.exe</Command>
@@ -268,7 +236,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalDependencies>rfc2.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy /Y $(TargetPath) $(OutDir)kill.exe</Command>
@@ -291,7 +259,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalDependencies>rfc2.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy /Y $(TargetPath) $(OutDir)kill.exe</Command>
@@ -314,7 +282,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalDependencies>rfc2.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy /Y $(TargetPath) $(OutDir)kill.exe</Command>
@@ -337,7 +305,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalDependencies>rfc2.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy /Y $(TargetPath) $(OutDir)kill.exe</Command>
@@ -360,7 +328,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>rfc.lib</AdditionalDependencies>
+      <AdditionalDependencies>rfc2.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy /Y $(TargetPath) $(OutDir)kill.exe</Command>
