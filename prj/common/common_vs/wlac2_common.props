@@ -2,13 +2,16 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
-    <WlacLibraryVersion>5.0.0.3</WlacLibraryVersion>
-    <FalseLibraryBaseName>remote_function_call_false_without_lib</FalseLibraryBaseName>
+    <WlacLibraryVersion>5.0.0.2</WlacLibraryVersion>
+    <FalseLibraryBaseName>remote_function_call_false_without_lib2</FalseLibraryBaseName>
+    <WlacConfigurationExtension Condition="'$(Configuration)'=='Debug'">d</WlacConfigurationExtension>
+    <WlacConfigurationExtension Condition="'$(Configuration)'=='Release'">r</WlacConfigurationExtension>
+    <WlacFullVersion>$(WlacLibraryVersion)-$(PlatformTarget)-e$(WlacConfigurationExtension)</WlacFullVersion>
   </PropertyGroup>
   <PropertyGroup />
   <ItemDefinitionGroup>
     <ClCompile>
-      <PreprocessorDefinitions>WLAC_LIBRARY_VERSION="$(WlacLibraryVersion)"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WLAC2_LIBRARY_VERSION_BASE="$(WlacLibraryVersion)";WLAC2_LIBRARY_VERSION="$(WlacFullVersion)"</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>

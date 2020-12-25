@@ -17,7 +17,7 @@
 #include "windows_signal.h"
 #include <tchar.h>
 
-#define		LIBRARY_NAME_TO_LOAD_ASCII	LIBRARY_NAME_TO_LOAD_BASE "." WLAC_LIBRARY_VERSION ".dll"
+#define		LIBRARY_NAME_TO_LOAD_ASCII	LIBRARY_NAME_TO_LOAD_BASE "." WLAC2_LIBRARY_VERSION ".dll"
 
 #if !defined(_USRDLL) & !defined(__cplusplus)
 #error No method to initialize the library
