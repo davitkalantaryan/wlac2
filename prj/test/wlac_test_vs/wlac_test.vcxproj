@@ -125,43 +125,43 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\bin\</OutDir>
-    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\bin\</OutDir>
-    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\bin\</OutDir>
-    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\bin\</OutDir>
-    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\bin\</OutDir>
-    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\bin\</OutDir>
-    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\bin\</OutDir>
-    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\bin\</OutDir>
-    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\.objects\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -176,7 +176,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>wlac.lib</AdditionalDependencies>
+      <AdditionalDependencies>wlac2.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -192,7 +192,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>wlac.lib</AdditionalDependencies>
+      <AdditionalDependencies>wlac2.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
@@ -208,7 +208,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>wlac.lib</AdditionalDependencies>
+      <AdditionalDependencies>wlac2.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
@@ -224,7 +224,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>wlac.lib</AdditionalDependencies>
+      <AdditionalDependencies>wlac2.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -244,7 +244,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>wlac.lib</AdditionalDependencies>
+      <AdditionalDependencies>wlac2.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -264,7 +264,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>wlac.lib</AdditionalDependencies>
+      <AdditionalDependencies>wlac2.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
@@ -284,7 +284,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>wlac.lib</AdditionalDependencies>
+      <AdditionalDependencies>wlac2.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
@@ -304,7 +304,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>wlac.lib</AdditionalDependencies>
+      <AdditionalDependencies>wlac2.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

@@ -20,11 +20,11 @@ set  pltSetterExe=%scriptDirectory%set_windows_target_platform.exe
 set  prjDir=%scriptDirectory%..\prj
 
 :: Example :: %cur_dir%set_windows_target_platform.exe %cur_dir%..\prj\server\watchdog_server_vs15\watchdog_server.vcxproj %1
-%pltSetterExe% %prjDir%\rfc\remote_function_call_false_without_lib_vs\remote_function_call_false_without_lib.vcxproj %1
-%pltSetterExe% %prjDir%\rfc\rfc_vs\rfc.vcxproj %1
-%pltSetterExe% %prjDir%\rfc\rfc2_vs\rfc2.vcxproj %1
-%pltSetterExe% %prjDir%\wlac\wlac_vs\wlac.vcxproj %1
-%pltSetterExe% %prjDir%\wlac\win_signaling_vs\win_signaling.vcxproj %1
+%pltSetterExe% %prjDir%\rfc2\remote_function_call_false_without_lib2_vs\remote_function_call_false_without_lib2.vcxproj %1
+%pltSetterExe% %prjDir%\rfc2\rfc2_vs\rfc2.vcxproj %1
+%pltSetterExe% %prjDir%\rfc2\rfc3_tests_for_next_vs\rfc3_tests_for_next.vcxproj %1
+%pltSetterExe% %prjDir%\wlac2\wlac2_vs\wlac2.vcxproj %1
+%pltSetterExe% %prjDir%\wlac2\win_signaling2_vs\win_signaling2.vcxproj %1
 
 %pltSetterExe% %prjDir%\tools\grep_vs\grep.vcxproj %1
 %pltSetterExe% %prjDir%\tools\ldd_vs\ldd.vcxproj %1

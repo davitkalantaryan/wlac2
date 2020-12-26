@@ -100,84 +100,84 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\common\common_vs\wlac_common.props" />
+    <Import Project="..\..\common\common_vs\wlac2_common.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\common\common_vs\wlac_common.props" />
+    <Import Project="..\..\common\common_vs\wlac2_common.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\common\common_vs\wlac_common.props" />
+    <Import Project="..\..\common\common_vs\wlac2_common.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\common\common_vs\wlac_common.props" />
+    <Import Project="..\..\common\common_vs\wlac2_common.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\common\common_vs\wlac_common.props" />
+    <Import Project="..\..\common\common_vs\wlac2_common.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\common\common_vs\wlac_common.props" />
+    <Import Project="..\..\common\common_vs\wlac2_common.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\common\common_vs\wlac_common.props" />
+    <Import Project="..\..\common\common_vs\wlac2_common.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\common\common_vs\wlac_common.props" />
+    <Import Project="..\..\common\common_vs\wlac2_common.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\dll\</OutDir>
-    <IntDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\.objects\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName).$(WlacFullVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\dll\</OutDir>
+    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\dll\</OutDir>
-    <IntDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\.objects\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName).$(WlacFullVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\dll\</OutDir>
+    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\dll\</OutDir>
-    <IntDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\.objects\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName).$(WlacFullVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\dll\</OutDir>
+    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\dll\</OutDir>
-    <IntDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\.objects\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName).$(WlacFullVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\dll\</OutDir>
+    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\dll\</OutDir>
-    <IntDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\.objects\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName).$(WlacFullVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\dll\</OutDir>
+    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\dll\</OutDir>
-    <IntDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\.objects\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName).$(WlacFullVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\dll\</OutDir>
+    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\dll\</OutDir>
-    <IntDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\.objects\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName).$(WlacFullVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\dll\</OutDir>
+    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>$(ProjectName).$(WlacLibraryVersion)</TargetName>
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\dll\</OutDir>
-    <IntDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\.objects\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName).$(WlacFullVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\dll\</OutDir>
+    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -193,7 +193,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
+      <AdditionalDependencies>wlac2.lib;Advapi32.lib;Ws2_32.lib</AdditionalDependencies>
       <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
       <ImportLibrary>$(OutDir)..\lib\$(ProjectName).lib</ImportLibrary>
@@ -217,7 +217,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
+      <AdditionalDependencies>wlac2.lib;Advapi32.lib;Ws2_32.lib</AdditionalDependencies>
       <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
       <ImportLibrary>$(OutDir)..\lib\$(ProjectName).lib</ImportLibrary>
@@ -241,7 +241,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
+      <AdditionalDependencies>wlac2.lib;Advapi32.lib;Ws2_32.lib</AdditionalDependencies>
       <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
       <ImportLibrary>$(OutDir)..\lib\$(ProjectName).lib</ImportLibrary>
@@ -265,7 +265,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
+      <AdditionalDependencies>wlac2.lib;Advapi32.lib;Ws2_32.lib</AdditionalDependencies>
       <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
       <ImportLibrary>$(OutDir)..\lib\$(ProjectName).lib</ImportLibrary>
@@ -293,7 +293,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
+      <AdditionalDependencies>wlac2.lib;Advapi32.lib;Ws2_32.lib</AdditionalDependencies>
       <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
       <ImportLibrary>$(OutDir)..\lib\$(ProjectName).lib</ImportLibrary>
@@ -321,7 +321,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
+      <AdditionalDependencies>wlac2.lib;Advapi32.lib;Ws2_32.lib</AdditionalDependencies>
       <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
       <ImportLibrary>$(OutDir)..\lib\$(ProjectName).lib</ImportLibrary>
@@ -349,7 +349,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
+      <AdditionalDependencies>wlac2.lib;Advapi32.lib;Ws2_32.lib</AdditionalDependencies>
       <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
       <ImportLibrary>$(OutDir)..\lib\$(ProjectName).lib</ImportLibrary>
@@ -377,7 +377,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>wlac.lib;Advapi32.lib;wsock32.lib</AdditionalDependencies>
+      <AdditionalDependencies>wlac2.lib;Advapi32.lib;Ws2_32.lib</AdditionalDependencies>
       <ModuleDefinitionFile>../../../src/mini_xdr_rpc/mini_xdr_rpc.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>$(OutDir)..\lib</AdditionalLibraryDirectories>
       <ImportLibrary>$(OutDir)..\lib\$(ProjectName).lib</ImportLibrary>

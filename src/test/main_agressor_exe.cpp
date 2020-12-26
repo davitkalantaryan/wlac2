@@ -1,7 +1,7 @@
 
 // 2017 Dec 15
 
-#pragma comment(lib,"win_signaling.lib")
+#pragma comment(lib,"win_signaling2.lib")
 
 #include <rfc/win_signaling.h>
 
