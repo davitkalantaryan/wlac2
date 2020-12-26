@@ -8,7 +8,10 @@
     <WlacConfigurationExtension Condition="'$(Configuration)'=='Release'">r</WlacConfigurationExtension>
     <WlacFullVersion>$(WlacLibraryVersion)-$(PlatformTarget)-e$(WlacConfigurationExtension)</WlacFullVersion>
   </PropertyGroup>
-  <PropertyGroup />
+  <PropertyGroup>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\dll\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\.objects\$(ProjectName)\</IntDir>
+  </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
       <PreprocessorDefinitions>WLAC2_LIBRARY_VERSION_BASE="$(WlacLibraryVersion)";WLAC2_LIBRARY_VERSION="$(WlacFullVersion)"</PreprocessorDefinitions>
