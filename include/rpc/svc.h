@@ -37,6 +37,7 @@
 #ifndef __SVC_HEADER__
 #define __SVC_HEADER__
 
+#include <rpc/wrpc_first_com_include.h>
 #include <rpc/types.h>
 #include <sys/cdefs.h>
 #include <rpc/rpc_msg.h>

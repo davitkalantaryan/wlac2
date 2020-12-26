@@ -43,10 +43,8 @@ extern "C"
 		case DLL_THREAD_ATTACH:
 			break;
 		case DLL_THREAD_DETACH:
-			//printf("!!!!%s: DLL_THREAD_DETACH\n", __FUNCTION__);
 			break;
 		case DLL_PROCESS_DETACH:
-			//printf("!!!!%s: DLL_PROCESS_DETACH\n", __FUNCTION__);
 			sun_rpc_exit();
 			break;
 		}

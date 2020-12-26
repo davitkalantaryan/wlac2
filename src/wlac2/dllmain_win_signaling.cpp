@@ -38,7 +38,6 @@ WIN_SIG_API_FAR void* WinSigFunctionIsCalledOnRemote(void* a_pData, int a_nDataL
 	struct SharedStruct* pData = (struct SharedStruct*)a_pData;
 	char* pcBufferWillBePrinted = BUFFER_FOR_PRINT(pData);
 	
-	//printf("data:%p, len:%d\n", a_pData, a_nDataLen);
 	switch(pData->type){
 	case remCallReqPrint:
 		printf("%s", pcBufferWillBePrinted);
