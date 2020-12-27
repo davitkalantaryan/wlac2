@@ -14,7 +14,54 @@
 #include <signal.h>
 #include "pthread_private_for_source.h"
 
+#ifdef localtime
+#undef localtime
+#endif
+
+#ifdef localtime_r
+#undef localtime_r
+#endif
+
+#ifdef __cplusplus
+
+GEM_API struct tm* localtime_cpp(const long* a_timep)
+{
+	return wlac_localtime(a_timep);
+}
+
+GEM_API struct tm* localtime_cpp(const time_t* a_timep)
+{
+	return localtime(a_timep);
+}
+
+GEM_API struct tm* localtime_r_cpp(const long* a_timep, struct tm* result)
+{
+	return wlac_localtime_r(a_timep, result);
+}
+
+GEM_API struct tm* localtime_r_cpp(const time_t* a_timep, struct tm* result)
+{
+	return localtime_s(result,a_timep)?NULL:result;
+}
+
+#endif
+
 __BEGIN_C_DECLS
+
+
+GEM_API struct tm* wlac_localtime_r(const long* a_timep, struct tm* result)
+{
+	time_t timeRl = *a_timep;
+	errno_t err = localtime_s(result, &timeRl);
+	return err?NULL:result;
+}
+
+
+GEM_API struct tm* wlac_localtime(const long* a_timep)
+{
+	time_t timeRl = *a_timep;
+	return localtime(&timeRl);
+}
 
 
 GEM_API int* wlac_errno(void)
@@ -97,6 +144,7 @@ GEM_API int wlac_rename(const char *a_oldname, const char *a_newname)
 
 #define NOT_IMPLEMENTED_FTIME(__format,__index)	\
 					(__format)[(__index)-1] = 'n'; (__format)[(__index)] = 'p'
+
  
 GEM_API size_t wlac_strftime(char *a_strDest, size_t a_maxsize, const char *a_format, const struct tm *a_timeptr)
 {

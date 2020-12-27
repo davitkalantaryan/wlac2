@@ -18,6 +18,7 @@
 #pragma include_alias( "signal.h", "signal.h" )
 
 #include <signal.h>
+#include <bits/siginfo.h>
 
 #ifndef UNIX_SIGNALS_DEFINED
 #define UNIX_SIGNALS_DEFINED
@@ -75,12 +76,12 @@
 
 #endif  // #ifndef UNIX_SIGNALS_DEFINED
 
+
 #ifdef __cplusplus
 extern "C"
 {
 #endif
 
-#include <bits/siginfo.h>
 
 typedef void (__cdecl * win_signal_handler_type)(int);
 typedef void(*signal_handler_simple_type)(int);

@@ -20,6 +20,53 @@
 #pragma include_alias( "time.h", "time.h" )
 #include <time.h>
 
+//#ifdef __cplusplus
+//GEM_API_FAR struct tm* wlac_localtime(const long* timep);
+//#if ( defined(_WIN64) || defined(_M_ARM64) ) && !defined(_USE_32BIT_TIME_T)
+//GEM_API_FAR struct tm* wlac_localtime(const time_t* a_timep);
+//#endif
+//#endif
+
+#ifndef wlac_localtime_not_needed
+#ifdef localtime
+#undef localtime
+#endif
+#if !defined(_USE_32BIT_TIME_T) // sizeof(time_t) != sizeof(long) , in some unix codes this isassumption, so please fix
+#ifdef __cplusplus
+// in the case of c++ let tis be in parrallel to usual defination
+#define localtime	localtime_cpp
+GEM_API_FAR struct tm* localtime_cpp(const long* a_timep);
+GEM_API_FAR struct tm* localtime_cpp(const time_t* a_timep);
+#else
+#define localtime	wlac_localtime
+#endif
+#endif
+#endif
+
+
+#ifndef wlac_localtime_r_not_needed
+#ifdef localtime_r
+#undef localtime_r
+#endif
+#if !defined(_USE_32BIT_TIME_T) // sizeof(time_t) != sizeof(long) , in some unix codes this isassumption, so please fix
+#ifdef __cplusplus
+// in the case of c++ let tis be in parrallel to usual defination
+#define localtime_r		localtime_r_cpp
+GEM_API_FAR struct tm* localtime_r_cpp(const long* a_timep, struct tm* result);
+GEM_API_FAR struct tm* localtime_r_cpp(const time_t* a_timep, struct tm* result);
+#else
+#define localtime_r		wlac_localtime_r
+#endif
+#else // #if !defined(_USE_32BIT_TIME_T)
+#ifdef localtime_r
+#undef localtime_r
+#endif
+//#define	localtime_r(_timep_,_result_)	(localtime(_timep_) ? ((struct tm*)memcpy((_result_),localtime(_timep_),sizeof(struct tm))) : NULL)
+#define	localtime_r(_timep_,_result_)	( localtime_s((_result_),(_timep_)) ? (_result_) : NULL )
+#endif
+#endif
+
+
 #ifdef strftime
 #undef strftime
 #endif
@@ -47,16 +94,13 @@ struct timespec {
 #define ctime_r(_a_timep, _a_buf)	(ctime((_a_timep)) ? strcpy((_a_buf),ctime((_a_timep))) : NULL)
 #endif  // #if !defined(ctime_r) & !defined(ctime_r_defined)
 
-#ifdef localtime_r
-#undef localtime_r
-#endif
-#define	localtime_r(_timep_,_result_)	(localtime(_timep_) ? ((struct tm*)memcpy((_result_),localtime(_timep_),sizeof(struct tm))) : NULL)
-
 __BEGIN_C_DECLS
 
 GEM_API_FAR int nanosleep(const struct timespec *a_req, struct timespec *a_rem);
 GEM_API_FAR char *strptime(const char *s, const char *format, struct tm *tm);
-GEM_API_FAR size_t wlac_strftime(char *strDest, size_t maxsize, const char *format, const struct tm *timeptr);
+GEM_API_FAR size_t wlac_strftime(char* strDest, size_t maxsize, const char* format, const struct tm* timeptr);
+GEM_API_FAR struct tm* wlac_localtime(const long* timep);
+GEM_API_FAR struct tm* wlac_localtime_r(const long* a_timep, struct tm* result);
 
 __END_C_DECLS
 
