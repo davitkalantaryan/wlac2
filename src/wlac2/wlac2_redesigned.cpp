@@ -23,6 +23,7 @@
 #endif
 
 #ifdef __cplusplus
+#if !defined(_USE_32BIT_TIME_T) // sizeof(time_t) != sizeof(long) , in some unix codes this isassumption, so please fix
 
 GEM_API struct tm* localtime_cpp(const long* a_timep)
 {
@@ -43,8 +44,8 @@ GEM_API struct tm* localtime_r_cpp(const time_t* a_timep, struct tm* result)
 {
 	return localtime_s(result,a_timep)?NULL:result;
 }
-
-#endif
+#endif // #if !defined(_USE_32BIT_TIME_T) // sizeof(time_t) != sizeof(long) , in some unix codes this isassumption, so please fix
+#endif  // #ifdef __cplusplus
 
 __BEGIN_C_DECLS
 
