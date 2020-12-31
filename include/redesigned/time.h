@@ -55,12 +55,13 @@ GEM_API_FAR struct tm* localtime_cpp(const time_t* a_timep);
 GEM_API_FAR struct tm* localtime_r_cpp(const long* a_timep, struct tm* result);
 GEM_API_FAR struct tm* localtime_r_cpp(const time_t* a_timep, struct tm* result);
 #else
+#ifdef localtime_r_not_change_type
+#define	localtime_r(_timep_,_result_)	( localtime_s((_result_),(_timep_)) ? (_result_) : NULL )
+#else
 #define localtime_r		wlac_localtime_r
 #endif
-#else // #if !defined(_USE_32BIT_TIME_T)
-#ifdef localtime_r
-#undef localtime_r
 #endif
+#else // #if !defined(_USE_32BIT_TIME_T)
 //#define	localtime_r(_timep_,_result_)	(localtime(_timep_) ? ((struct tm*)memcpy((_result_),localtime(_timep_),sizeof(struct tm))) : NULL)
 #define	localtime_r(_timep_,_result_)	( localtime_s((_result_),(_timep_)) ? (_result_) : NULL )
 #endif

@@ -31,7 +31,7 @@ typedef const char* TypeConstCharPtr;
 
 static const size_t s_cunMLcommentEndLen = strlen(MLcommentEnd);
 static const size_t s_cunDefineStringLen = strlen(DefineString);
-static int AddStringToTheLine(FILE* a_fpInp, FILE* a_fpOut, const TypeConstCharPtr* a_vcpcSymbols, size_t a_unCount, const char* a_cpcStrToAdd);
+static int CommentLineWithSymbol(FILE* a_fpInp, FILE* a_fpOut, const TypeConstCharPtr* a_vcpcSymbols, size_t a_unCount);
 
 int main(int argc, char* argv[])
 {
@@ -39,7 +39,7 @@ int main(int argc, char* argv[])
 	int i2,nReturn(0), nNumber(0);
 	TypeConstCharPtr* vcpcSymbolsNames;
 
-	if(argc<5){
+	if(argc<4){
 		fprintf(stderr,"Provide input and output file names, key to be added and the names of functions or variables!\n");
 		goto returnPoint;
 	}
@@ -79,16 +79,16 @@ int main(int argc, char* argv[])
 		
 	}  // if(!fpOut){
 
-	vcpcSymbolsNames = (TypeConstCharPtr*)_alloca(sizeof(TypeConstCharPtr)*(argc - 4));
+	vcpcSymbolsNames = (TypeConstCharPtr*)_alloca(sizeof(TypeConstCharPtr)*(argc - 3));
 
-	for (i2 = 4; i2<argc; ++i2) {
-		vcpcSymbolsNames[i2 - 4] = argv[i2];
+	for (i2 = 3; i2<argc; ++i2) {
+		vcpcSymbolsNames[i2 - 3] = argv[i2];
 	}
 
-	nNumber = AddStringToTheLine(fpIn, fpOut, vcpcSymbolsNames, i2 - 4, argv[3]);
+	nNumber = CommentLineWithSymbol(fpIn, fpOut, vcpcSymbolsNames, i2 - 3);
 
 	nReturn = 0;
-	printf("File:%s, NumberOfExports=%d\n", FILE_FROM_PATH(argv[1]), nNumber);
+	printf("File:%s, NumberOfCommentedLines=%d\n", FILE_FROM_PATH(argv[1]), nNumber);
 returnPoint:
 	if(fpOut){
 		fclose(fpOut);
@@ -105,10 +105,10 @@ returnPoint:
 }
 
 
-static int AddStringToTheLine(FILE* a_fpInp, FILE* a_fpOut, const TypeConstCharPtr* a_vcpcSymbols, size_t a_unCount, const char* a_cpcStrToAdd)
+static int CommentLineWithSymbol(FILE* a_fpInp, FILE* a_fpOut, const TypeConstCharPtr* a_vcpcSymbols, size_t a_unCount)
 {
 	char *cpStrStart,*pcTemp,*pcSingleLineComment,*pcMLcommentStart,*pcCommentStart;
-	const size_t unExpSymLen = strlen(a_cpcStrToAdd);
+	const size_t unExpSymLen = 3; // strlen("// ");
 	size_t i,unOffset;
 	int nNumber(0), nPackCount(0);
 #ifdef _DEBUG
@@ -223,7 +223,7 @@ static int AddStringToTheLine(FILE* a_fpInp, FILE* a_fpOut, const TypeConstCharP
 		for(i=0;(pcTemp==NULL)&&(i<a_unCount);++i){if(!strstr(cpStrStart, "using")){pcTemp=strstr(cpStrStart,a_vcpcSymbols[i]);}}
 
 		if(pcTemp) {
-			fwrite(a_cpcStrToAdd, 1, unExpSymLen, a_fpOut);
+			fwrite("// ", 1, unExpSymLen, a_fpOut);
 			fwrite(" ", 1, 1, a_fpOut);
 			++nNumber;
 		}

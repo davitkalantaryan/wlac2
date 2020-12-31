@@ -28,6 +28,9 @@ prj/*/*/*
 !prj/*/*_vs/*.vcxproj.filters
 !prj/*/*_vs/*.vdproj
 
+#!prj/util/*_vs/*.vcxproj.user
+!prj/util/comment_lines_with_symbols_vs/comment_lines_with_symbols.vcxproj.user
+
 !prj/*/*/*.pro
 !prj/*/*/*.cmake
 !prj/*/*_mkfl/Makefile
@@ -57,7 +60,7 @@ contrib/doocs/*
 *.idb
 *.DLL
 #*.dll
-*.user
+#*.user
 *.log
 *.tlog
 !../RadIconDemo64/Debug64/eleye716_x64.dll
