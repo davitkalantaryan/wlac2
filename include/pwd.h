@@ -17,6 +17,7 @@
 #include <sdef_gem_windows.h>
 
 /* The passwd structure.  */
+#ifndef struct_passwd_is_not_needed
 struct passwd
 {
 	char *pw_name;		/* Username.  */
@@ -27,6 +28,7 @@ struct passwd
 	char *pw_dir;			/* Home directory.  */
 	char *pw_shell;		/* Shell program.  */
 };
+#endif
 
 __BEGIN_C_DECLS
 

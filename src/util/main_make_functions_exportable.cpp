@@ -10,6 +10,7 @@
 #include <malloc.h>
 #include <stdlib.h>
 #include <direct.h>
+#include <ctype.h>
 
 #define NUMBER_OF_BRACES_TO_EXPORT	-1  // <0 exports in any case
 
@@ -109,7 +110,7 @@ static int AddStringToTheLine(FILE* a_fpInp, FILE* a_fpOut, const TypeConstCharP
 {
 	char *cpStrStart,*pcTemp,*pcSingleLineComment,*pcMLcommentStart,*pcCommentStart;
 	const size_t unExpSymLen = strlen(a_cpcStrToAdd);
-	size_t i,unOffset;
+	size_t i,unOffset, unSymbolLen;
 	int nNumber(0), nPackCount(0);
 #ifdef _DEBUG
 	int nLine(0);
@@ -220,7 +221,17 @@ static int AddStringToTheLine(FILE* a_fpInp, FILE* a_fpOut, const TypeConstCharP
 
 		fwrite(data, 1, unOffset, a_fpOut);
 		pcTemp = NULL;
-		for(i=0;(pcTemp==NULL)&&(i<a_unCount);++i){if(!strstr(cpStrStart, "using")){pcTemp=strstr(cpStrStart,a_vcpcSymbols[i]);}}
+		for(i=0;i<a_unCount;++i){
+			if(!strstr(cpStrStart, "using")){pcTemp=strstr(cpStrStart,a_vcpcSymbols[i]);}
+			if(pcTemp){
+				unSymbolLen = strlen(a_vcpcSymbols[i]);
+				if( (pcTemp[unSymbolLen]==';')||(pcTemp[unSymbolLen]=='(')||
+					(pcTemp[unSymbolLen]=='[')|| (pcTemp[unSymbolLen] == '{')||
+					(!pcTemp[unSymbolLen])||isspace(pcTemp[unSymbolLen]))
+				{break;}
+			}
+			pcTemp = NULL;
+		}
 
 		if(pcTemp) {
 			fwrite(a_cpcStrToAdd, 1, unExpSymLen, a_fpOut);

@@ -180,11 +180,15 @@ GEM_API_FAR int IsAllowedWaitForSignal(void);
 GEM_API_FAR void SetIsAllowedWaitForSignal(void* a_dllMainArg);
 GEM_API_FAR void FinalizingCalculateThreadsNumbers(void);
 
+#ifndef geteuid_is_not_needed
 #ifndef geteuid
 #define geteuid getuid
 #endif
+#endif // #ifndef geteuid_is_not_needed
+#ifndef getegid_is_not_needed
 #ifndef getegid
 #define getegid getgid
+#endif
 #endif
 
 #ifndef readfile

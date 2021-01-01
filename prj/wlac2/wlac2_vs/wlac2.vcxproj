@@ -633,6 +633,7 @@
     <ClInclude Include="..\..\..\include\sys\mman.h" />
     <ClInclude Include="..\..\..\include\sys\param.h" />
     <ClInclude Include="..\..\..\include\sys\resource.h" />
+    <ClInclude Include="..\..\..\include\sys\select.h" />
     <ClInclude Include="..\..\..\include\sys\sem.h" />
     <ClInclude Include="..\..\..\include\sys\shm.h" />
     <ClInclude Include="..\..\..\include\sys\signal.h" />

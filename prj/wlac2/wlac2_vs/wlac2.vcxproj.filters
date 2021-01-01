@@ -677,6 +677,9 @@
     <ClInclude Include="..\..\..\include\redesigned\std\thread.impl.hpp">
       <Filter>include\redesigned\std</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\sys\select.h">
+      <Filter>include\sys</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\..\src\wlac2\README.txt">
