@@ -73,6 +73,13 @@ GEM_API_FAR struct tm* localtime_r_cpp(const time_t* a_timep, struct tm* result)
 #endif
 #define strftime wlac_strftime
 
+#ifndef wlac_localtime_not_needed
+#ifdef localtime
+#undef localtime
+#endif
+#define localtime wlac_localtime
+#endif  // #ifndef wlac_localtime_not_needed
+
 
 #if defined(_MSC_VER) && (_MSC_VER>=1900) && defined(_INC_TIME)
 #define TIMESPEC_NOT_NEEDED
