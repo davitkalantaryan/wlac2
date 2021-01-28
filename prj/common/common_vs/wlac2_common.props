@@ -6,11 +6,12 @@
     <FalseLibraryBaseName>remote_function_call_false_without_lib2</FalseLibraryBaseName>
     <WlacConfigurationExtension Condition="'$(Configuration)'=='Debug'">d</WlacConfigurationExtension>
     <WlacConfigurationExtension Condition="'$(Configuration)'=='Release'">r</WlacConfigurationExtension>
-    <WlacFullVersion>$(WlacNameExtra)$(WlacLibraryVersion)-$(PlatformTarget)-e$(WlacConfigurationExtension)</WlacFullVersion>
+    <WlacFullVersion>$(WlacLibraryVersion)-$(PlatformTarget)-e$(WlacConfigurationExtension)</WlacFullVersion>
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\dll\</OutDir>
     <IntDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\.objects\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)$(WlacNameExtra).$(WlacFullVersion)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>

@@ -19,12 +19,13 @@ set Configuration=Debug,Release
 set ActionConfirm=Build
 
 set scriptName=%0
+set driveName=%~d0
 set scriptDirectory=%~dp0
 set currentDirectory=%cd%
 rem cd %scriptDirectory%..
 cd %scriptDirectory%
+%driveName%
 set repositoryRoot=%cd%\
-echo repositoryRoot=%repositoryRoot%
 
 
 :: handling arguments
