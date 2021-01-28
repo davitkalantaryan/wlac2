@@ -24,9 +24,11 @@
 #include <redesigned/sys/types.h>
 #include <malloc.h>
 #include <sched.h>
+#ifndef usergroupid_lib_not_needed
 #include <unix_like_user_group_header.h>
+#endif
 #include <getopt.h>
-#include <.tmp/wlac_temporary.h>
+//#include <.tmp/wlac_temporary.h>
 
 #ifndef pipe									// https://linux.die.net/man/2/pipe
 #define pipe(_fds)	_pipe(_fds, 512, O_BINARY)	// https://msdn.microsoft.com/en-us/library/edze9h7e.aspx
