@@ -133,6 +133,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "files", "files", "{36B69E04
 	ProjectSection(SolutionItems) = preProject
 		..\..\.gitignore = ..\..\.gitignore
 		..\..\util\batch_set_windows_target_platform.bat = ..\..\util\batch_set_windows_target_platform.bat
+		..\..\msbuild_all.bat = ..\..\msbuild_all.bat
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ukill", "..\..\prj\tools\ukill_vs\ukill.vcxproj", "{B6891AD2-71C2-44B7-9403-DD3BB839B126}"

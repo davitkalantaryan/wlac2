@@ -6,7 +6,7 @@
     <FalseLibraryBaseName>remote_function_call_false_without_lib2</FalseLibraryBaseName>
     <WlacConfigurationExtension Condition="'$(Configuration)'=='Debug'">d</WlacConfigurationExtension>
     <WlacConfigurationExtension Condition="'$(Configuration)'=='Release'">r</WlacConfigurationExtension>
-    <WlacFullVersion>$(WlacLibraryVersion)-$(PlatformTarget)-e$(WlacConfigurationExtension)</WlacFullVersion>
+    <WlacFullVersion>$(WlacNameExtra)$(WlacLibraryVersion)-$(PlatformTarget)-e$(WlacConfigurationExtension)</WlacFullVersion>
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(ProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\dll\</OutDir>
@@ -16,6 +16,9 @@
     <ClCompile>
       <PreprocessorDefinitions>WLAC2_LIBRARY_VERSION_BASE="$(WlacLibraryVersion)";WLAC2_LIBRARY_VERSION="$(WlacFullVersion)"</PreprocessorDefinitions>
     </ClCompile>
+    <Link>
+      <ImportLibrary>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\lib\$(ProjectName)$(WlacNameExtra).lib</ImportLibrary>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <BuildMacro Include="WlacLibraryVersion">
@@ -24,6 +27,10 @@
     </BuildMacro>
     <BuildMacro Include="FalseLibraryBaseName">
       <Value>$(FalseLibraryBaseName)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="WlacFullVersion">
+      <Value>$(WlacFullVersion)</Value>
       <EnvironmentVariable>true</EnvironmentVariable>
     </BuildMacro>
   </ItemGroup>

@@ -1,26 +1,31 @@
 ::
 :: File:			msbuild_all.bat
-:: Created on:		2020 Jul 24
-:: Autor:			Davit Kalantaryan (davit.kalantaryan@desy.de)
+:: Created on:		2020 Dec 09
+:: Autor:			
 ::
 :: Purpose:	
 ::
 :: Argumets: 
 ::
 
-@ECHO off
-SETLOCAL EnableDelayedExpansion
+@echo off
+setlocal EnableDelayedExpansion
 
 :: here we define default platformtarget to build, platforms are following
 :: other platforms should be provided as first argument
 :: ARM, ARM64, x86, x64
-set PlatformTarget=x64
-set Configuration=Debug
+set PlatformTarget=ARM,ARM64,x86,x64
+set Configuration=Debug,Release
 set ActionConfirm=Build
 
 set scriptName=%0
-SET scriptDirectory=%~dp0
+set scriptDirectory=%~dp0
 set currentDirectory=%cd%
+rem cd %scriptDirectory%..
+cd %scriptDirectory%
+set repositoryRoot=%cd%\
+echo repositoryRoot=%repositoryRoot%
+
 
 :: handling arguments
 ::set argC=0
@@ -32,29 +37,42 @@ for %%x in (%*) do (
 		exit /b 0
 	)
 	set nextArg=%%x
+	set possibleQuote=!nextArg:~0,1!
+	set possibleQuote|find """" >nul && set quote_found=yes||set quote_found=no
+	if "!quote_found:~0,3!"=="yes" ( 
+		set nextArg=!nextArg:~1,-1! 
+		echo fixed arg: !nextArg!
+	)
 	call :parse_argument
 	if not "!ERRORLEVEL!"=="0" (exit /b %ERRORLEVEL%)
 )
 
-echo action=%ActionConfirm%,platform=%PlatformTarget%,configuration=%Configuration%
+echo action=%ActionConfirm%,PlatformTarget=!PlatformTarget!,configuration=%Configuration%
 
 
-msbuild %scriptDirectory%prj\rfc\remote_function_call_false_without_lib_vs\remote_function_call_false_without_lib.sln /t:!ActionConfirm! /p:Configuration=!Configuration! /p:Platform=!PlatformTarget!
-msbuild %scriptDirectory%prj\rfc\rfc_vs\rfc.sln /t:!ActionConfirm! /p:Configuration=!Configuration! /p:Platform=!PlatformTarget!
-msbuild %scriptDirectory%prj\wlac\wlac_vs\wlac.sln /t:!ActionConfirm! /p:Configuration=!Configuration! /p:Platform=!PlatformTarget!
-msbuild %scriptDirectory%prj\usergroupid\usergroupid_vs\usergroupid.sln /t:!ActionConfirm! /p:Configuration=!Configuration! /p:Platform=!PlatformTarget!
+for %%p in (%PlatformTarget%) do (
+	echo "!!!!!!!!!!!! platform %%p"
+	for %%c in (%Configuration%) do (
+		echo "!!!!!!!!!!!! !!!!!!!!!!!! compiling for configuration %%c"
+		call msbuild "%repositoryRoot%workspaces\wlac2-all_vs\wlac2-all.sln" /t:!ActionConfirm! /p:Configuration=%%c /p:Platform=%%p
+		if not "!ERRORLEVEL!"=="0" (exit /b !ERRORLEVEL!)
+	)
+)
 
-exit /b 0
+
+exit /b %ERRORLEVEL%
+
 
 :parse_argument
 	set isNextArgPlatform=true
-	if /i not "!nextArg!"=="ARM" if /i not "!nextArg!"=="ARM64" if /i not "!nextArg!"=="x86" if /i not "!nextArg!"=="x64" (set isNextArgPlatform=false)
+	if /i not "!nextArg:~0,3!"=="ARM" if /i not "!nextArg:0,5!"=="ARM64" if /i not "!nextArg:~0,3!"=="x86" if /i not "!nextArg:~0,3!"=="x64" (set isNextArgPlatform=false)
 	if "!isNextArgPlatform!"=="true" (set PlatformTarget=!nextArg!) else (
 		set isNextArgAction=true
 		if /i not "!nextArg!"=="Build" if /i not "!nextArg!"=="Rebuild" if /i not "!nextArg!"=="Clean" (set isNextArgAction=false)
 		if "!isNextArgAction!"=="true" (set ActionConfirm=!nextArg!) else (
 			set isNextArgConfiguration=true
-			if /i not "!nextArg!"=="Debug" if /i not "!nextArg!"=="Release" (set isNextArgConfiguration=false)
+			rem if /i not "!nextArg!"=="Debug" if /i not "!nextArg!"=="Release" (set isNextArgConfiguration=false)
+			if /i not "!nextArg:~0,5!"=="Debug" if /i not "!nextArg:~0,7!"=="Release" (set isNextArgConfiguration=false)
 			if "!isNextArgConfiguration!"=="true" (set Configuration=!nextArg!) else (
 				echo Unknown argument !nextArg!.
 				call :call_help
@@ -72,4 +90,5 @@ exit /b 0
 	echo Call !scriptName! help to displaye help message
 	exit /b 0
 
-ENDLOCAL
+endlocal
+
