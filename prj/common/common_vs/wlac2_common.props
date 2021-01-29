@@ -3,7 +3,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
     <WlacLibraryVersion>5.0.0.2</WlacLibraryVersion>
-    <FalseLibraryBaseName>remote_function_call_false_without_lib2</FalseLibraryBaseName>
+    <FalseLibraryBaseName>rfcl_false_without_lib2</FalseLibraryBaseName>
     <WlacConfigurationExtension Condition="'$(Configuration)'=='Debug'">d</WlacConfigurationExtension>
     <WlacConfigurationExtension Condition="'$(Configuration)'=='Release'">r</WlacConfigurationExtension>
     <WlacFullVersion>$(WlacLibraryVersion)-$(PlatformTarget)-e$(WlacConfigurationExtension)</WlacFullVersion>
