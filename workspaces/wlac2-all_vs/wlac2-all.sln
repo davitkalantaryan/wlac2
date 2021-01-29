@@ -124,7 +124,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wlac2", "..\..\prj\wlac2\wl
 		{5B6B6F2A-5F3B-4496-99E8-E1F55BC370E9} = {5B6B6F2A-5F3B-4496-99E8-E1F55BC370E9}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "remote_function_call_false_without_lib2", "..\..\prj\rfc2\remote_function_call_false_without_lib2_vs\remote_function_call_false_without_lib2.vcxproj", "{6C7E06B5-78D4-4231-B46F-D6A754DE118A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rfc_false_without_lib2", "..\..\prj\rfc2\rfc_false_without_lib2_vs\rfc_false_without_lib2.vcxproj", "{6C7E06B5-78D4-4231-B46F-D6A754DE118A}"
 	ProjectSection(ProjectDependencies) = postProject
 		{87A276DE-CC6F-4B06-830B-93CC6B4607ED} = {87A276DE-CC6F-4B06-830B-93CC6B4607ED}
 	EndProjectSection

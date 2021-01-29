@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\src\rfc2\dllmain_remote_function_call_false_without_lib2.cpp">
+    <ClCompile Include="..\..\..\src\rfc2\dllmain_rfc_false_without_lib2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\src\rfc2\namedpipebase.cpp">
