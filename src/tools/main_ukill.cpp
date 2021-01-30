@@ -39,12 +39,26 @@ int main(int argc, char* argv[])
 	nPid = atoi(argv[2]);
 
 	switch(nSig){
+	case SIGNULL: {
+		HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, (nPid));
+		if (!hProcess) {
+			nReturn = 1;
+		}
+		DWORD exitCode = 0;
+		GetExitCodeProcess(hProcess, &exitCode);
+		if (exitCode == STILL_ACTIVE) {
+			nReturn = 0;
+		}
+		else {
+			nReturn = 1;
+		}
+	}break;
 	case SIGKILL: {
 		HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, (nPid));
-		if(hProcess){
-			nReturn = TerminateProcess(hProcess, 3)?0:1;
+		if (hProcess) {
+			nReturn = TerminateProcess(hProcess, 3) ? 0 : 1;
 		}
-		else{
+		else {
 			nReturn = 1;
 		}
 	}break;
