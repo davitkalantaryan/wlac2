@@ -32,6 +32,7 @@
 #define SA_RESETHAND	0x80000000	/* Reset to SIG_DFL on entry to handler.  */
 
 /* Signals.  */
+#define SIGNULL		0	/* for check if proc is alive*/
 #define	SIGHUP		1	/* Hangup (POSIX).  */
 //#define	SIGINT		2	/* Interrupt (ANSI).  */
 #define	SIGQUIT		3	/* Quit (POSIX).  */
