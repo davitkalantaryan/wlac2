@@ -35,6 +35,13 @@ prj/*/*/*
 !prj/*/*/*.pro
 !prj/*/*/*.cmake
 !prj/*/*_mkfl/Makefile
+
+!prj/*/*_mult/*.sln
+!prj/*/*_mult/*.vcxproj
+!prj/*/*_mult/*.vcxproj.filters
+!prj/*/*_mult/packages.config
+!prj/*/*_mult/*Makefile*
+
 !prj/common/*
 !prj/common/*/*
 !prj/common/*/*/*
