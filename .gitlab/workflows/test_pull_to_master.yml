@@ -61,7 +61,7 @@ test pull to master unit tests:
         - release
         - prebuild
     tags:
-        - build
+        - win-doocs01
     before_script:
         - echo "preventing git pull"
     script:
