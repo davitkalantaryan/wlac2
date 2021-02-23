@@ -24,7 +24,8 @@
 
 /* Structure crudely representing a timezone.
 This is obsolete and should never be used.  */
-#ifndef timezone_not_needed
+#if !defined(timezone_defined) && !defined(timezone_not_needed)
+#define timezone_defined
 #ifdef timezone
 #undef timezone
 #endif
