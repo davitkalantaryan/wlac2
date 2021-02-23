@@ -186,7 +186,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\include\rpc.locked;$(ProjectDir)..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
@@ -210,7 +210,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\include\rpc.locked;$(ProjectDir)..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
@@ -234,7 +234,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_USE_32BIT_TIME_T;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\include\rpc.locked;$(ProjectDir)..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
@@ -258,7 +258,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\include\rpc.locked;$(ProjectDir)..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
@@ -284,7 +284,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\include\rpc.locked;$(ProjectDir)..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
@@ -312,7 +312,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\include\rpc.locked;$(ProjectDir)..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
@@ -340,7 +340,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\include\rpc.locked;$(ProjectDir)..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
@@ -368,7 +368,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>__WRPC_LIB_CREATION__;DISABLE_SOME_WARNINGS;_PPC_;_WINDOWS;_USRDLL;MINI_XDR_RPC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\include\rpc.locked;$(ProjectDir)..\..\..\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>..\..\src\mini_xdr_rpc\cpp_addition_for_win\first_include_xdr_rpc.h</ForcedIncludeFiles>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
@@ -465,12 +465,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\netdb.h" />
-    <ClInclude Include="..\..\..\include\rpc\auth_unix.h" />
-    <ClInclude Include="..\..\..\include\rpc\pmap_clnt.h" />
-    <ClInclude Include="..\..\..\include\rpc\pmap_prot.h" />
-    <ClInclude Include="..\..\..\include\rpc\rpcb_prot.h" />
-    <ClInclude Include="..\..\..\include\rpc\wrpc_first_com_include.h" />
-    <ClInclude Include="..\..\..\include\rpc\xdr.h" />
+    <ClInclude Include="..\..\..\include\rpc.locked\rpc\auth_unix.h" />
+    <ClInclude Include="..\..\..\include\rpc.locked\rpc\pmap_clnt.h" />
+    <ClInclude Include="..\..\..\include\rpc.locked\rpc\pmap_prot.h" />
+    <ClInclude Include="..\..\..\include\rpc.locked\rpc\rpcb_prot.h" />
+    <ClInclude Include="..\..\..\include\rpc.locked\rpc\wrpc_first_com_include.h" />
+    <ClInclude Include="..\..\..\include\rpc.locked\rpc\xdr.h" />
     <ClInclude Include="..\..\..\include\rpc_mini\RPC\.old\RPC.H" />
     <ClInclude Include="..\..\..\include\rpc_mini\RPC\.old\XDR.H" />
     <ClInclude Include="..\..\..\include\rpc_mini\RPC\NETDB.H" />

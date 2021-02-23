@@ -169,22 +169,22 @@
     <ClInclude Include="..\..\..\include\netdb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\rpc\auth_unix.h">
+    <ClInclude Include="..\..\..\include\rpc.locked\rpc\auth_unix.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\rpc\pmap_clnt.h">
+    <ClInclude Include="..\..\..\include\rpc.locked\rpc\pmap_clnt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\rpc\pmap_prot.h">
+    <ClInclude Include="..\..\..\include\rpc.locked\rpc\pmap_prot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\rpc\rpcb_prot.h">
+    <ClInclude Include="..\..\..\include\rpc.locked\rpc\rpcb_prot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\rpc\wrpc_first_com_include.h">
+    <ClInclude Include="..\..\..\include\rpc.locked\rpc\wrpc_first_com_include.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\rpc\xdr.h">
+    <ClInclude Include="..\..\..\include\rpc.locked\rpc\xdr.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\include\rpc_mini\RPC\.old\RPC.H">
