@@ -38,7 +38,6 @@
     <ProjectGuid>{0FFBECB4-FAF1-456D-9304-4A7A13AEADB5}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>make_functions_exportable</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

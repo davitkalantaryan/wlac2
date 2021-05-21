@@ -38,7 +38,6 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{35D67842-A951-4EEE-97BF-551924A66D4E}</ProjectGuid>
     <RootNamespace>makeclassesexportable</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

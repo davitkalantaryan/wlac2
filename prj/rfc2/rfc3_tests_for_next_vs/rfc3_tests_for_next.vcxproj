@@ -45,7 +45,6 @@
     <ProjectGuid>{6E274A04-4DE2-4D7B-86AF-8512E89C338E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>rfc3_tests_for_next</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

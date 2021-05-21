@@ -38,7 +38,6 @@
     <ProjectGuid>{6C7E06B5-78D4-4231-B46F-D6A754DE118A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>rfc_false_without_lib2</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

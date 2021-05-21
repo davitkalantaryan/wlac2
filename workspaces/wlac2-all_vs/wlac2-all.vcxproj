@@ -38,7 +38,6 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{87A276DE-CC6F-4B06-830B-93CC6B4607ED}</ProjectGuid>
     <RootNamespace>doocsall</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -163,7 +162,7 @@
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <PreBuildEvent>
-      <Command>call $(SolutionDir)..\..\util\batch_set_windows_target_platform.bat $(TargetPlatformVersion)</Command>
+      <Command>rem call $(SolutionDir)..\..\util\batch_set_windows_target_platform.bat $(TargetPlatformVersion)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -178,7 +177,7 @@
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <PreBuildEvent>
-      <Command>call $(SolutionDir)..\..\util\batch_set_windows_target_platform.bat $(TargetPlatformVersion)</Command>
+      <Command>rem call $(SolutionDir)..\..\util\batch_set_windows_target_platform.bat $(TargetPlatformVersion)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -193,7 +192,7 @@
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <PreBuildEvent>
-      <Command>call $(SolutionDir)..\..\util\batch_set_windows_target_platform.bat $(TargetPlatformVersion)</Command>
+      <Command>rem call $(SolutionDir)..\..\util\batch_set_windows_target_platform.bat $(TargetPlatformVersion)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -208,7 +207,7 @@
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <PreBuildEvent>
-      <Command>call $(SolutionDir)..\..\util\batch_set_windows_target_platform.bat $(TargetPlatformVersion)</Command>
+      <Command>rem call $(SolutionDir)..\..\util\batch_set_windows_target_platform.bat $(TargetPlatformVersion)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -229,7 +228,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PreBuildEvent>
-      <Command>call $(SolutionDir)..\..\util\batch_set_windows_target_platform.bat $(TargetPlatformVersion)</Command>
+      <Command>rem call $(SolutionDir)..\..\util\batch_set_windows_target_platform.bat $(TargetPlatformVersion)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -250,7 +249,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PreBuildEvent>
-      <Command>call $(SolutionDir)..\..\util\batch_set_windows_target_platform.bat $(TargetPlatformVersion)</Command>
+      <Command>rem call $(SolutionDir)..\..\util\batch_set_windows_target_platform.bat $(TargetPlatformVersion)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -271,7 +270,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PreBuildEvent>
-      <Command>call $(SolutionDir)..\..\util\batch_set_windows_target_platform.bat $(TargetPlatformVersion)</Command>
+      <Command>rem call $(SolutionDir)..\..\util\batch_set_windows_target_platform.bat $(TargetPlatformVersion)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -292,7 +291,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PreBuildEvent>
-      <Command>call $(SolutionDir)..\..\util\batch_set_windows_target_platform.bat $(TargetPlatformVersion)</Command>
+      <Command>rem call $(SolutionDir)..\..\util\batch_set_windows_target_platform.bat $(TargetPlatformVersion)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>

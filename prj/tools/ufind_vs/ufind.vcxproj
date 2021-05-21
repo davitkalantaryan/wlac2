@@ -38,7 +38,6 @@
     <ProjectGuid>{667742F0-9DE5-46A7-B9CD-07776617E3D4}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>ufind</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
