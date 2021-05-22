@@ -38,7 +38,6 @@
     <ProjectGuid>{1C779CA8-8077-43AD-83A5-8908042467C6}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>wlac_test</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
