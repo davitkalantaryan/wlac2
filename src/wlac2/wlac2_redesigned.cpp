@@ -12,6 +12,8 @@
 #include <alloca.h>
 #include <string.h>
 #include <signal.h>
+#include <malloc.h>
+#include <time.h>
 #include "pthread_private_for_source.h"
 
 #ifdef localtime
@@ -151,6 +153,14 @@ GEM_API size_t wlac_strftime(char *a_strDest, size_t a_maxsize, const char *a_fo
 {
 	int i, nFormatStrLenMin1 = (int)strlen(a_format)-1;
 	char* pcNewFormat = (char*)alloca(nFormatStrLenMin1 + 2);
+
+	if (!a_timeptr) {
+		time_t tmEpoch;
+		struct tm* pTmp = (struct tm*)_alloca(sizeof(struct tm));
+		tmEpoch = time(&tmEpoch);
+		localtime_s(pTmp, &tmEpoch);
+		a_timeptr = (const struct tm*)pTmp;
+	}
 
 	if (CHECK_FTIME_RANGE(a_timeptr->tm_mday, 1, 31))  /// To be more correct all filds should be checked
 	{
