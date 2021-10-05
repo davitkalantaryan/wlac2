@@ -29,29 +29,27 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\include\wlac\test\redesigned\stdio.h">
-      <Filter>include\test\redesigned</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\wlac\test\common_macroses.h">
+    <ClInclude Include="..\..\..\include\test\common_include_for_headers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\wlac\test\common_include_for_headers.h">
+    <ClInclude Include="..\..\..\include\test\common_macroses.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\wlac\test\redesigned\process.h">
-      <Filter>include\test\redesigned</Filter>
+    <ClInclude Include="..\..\..\include\test\redesigned\fstream" />
+    <ClInclude Include="..\..\..\include\test\redesigned\process.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\wlac\test\redesigned\stdlib.h">
-      <Filter>include\test\redesigned</Filter>
+    <ClInclude Include="..\..\..\include\test\redesigned\stdio.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\wlac\test\redesigned\std_wlac_fios.hpp">
-      <Filter>include\test\redesigned</Filter>
+    <ClInclude Include="..\..\..\include\test\redesigned\stdlib.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\wlac\test\redesigned\std_wlac_fios.impl.hpp">
-      <Filter>include\test\redesigned</Filter>
+    <ClInclude Include="..\..\..\include\test\redesigned\std_wlac_fios.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\wlac\test\redesigned\fstream">
-      <Filter>include\test\redesigned</Filter>
+    <ClInclude Include="..\..\..\include\test\redesigned\std_wlac_fios.impl.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
