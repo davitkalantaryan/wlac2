@@ -158,6 +158,17 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "comment_lines_with_symbols"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "getaddrinfo_test", "..\..\prj\test\getaddrinfo_test_vs\getaddrinfo_test.vcxproj", "{347513B8-B26A-445A-BACB-073EBB290A9E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{81000C75-63FB-48E3-9C3B-AD7649ECE8BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".gitlab", ".gitlab", "{7A37B711-74FA-41DC-8997-28CED81340BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{FCABA223-3903-4BD0-9A0B-B1D8B202991A}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\.github\workflows\check-merge-to-master.yml = ..\..\.github\workflows\check-merge-to-master.yml
+		..\..\.github\workflows\prebuild-libs.yml = ..\..\.github\workflows\prebuild-libs.yml
+		..\..\.github\workflows\release-deploy.yml = ..\..\.github\workflows\release-deploy.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -613,6 +624,9 @@ Global
 		{C51923CD-B052-48F6-A9E2-FFC2E4CC1C00} = {40D5A6B8-BACB-4802-BC77-BDD6E9F40B67}
 		{045AE70B-B118-4B10-8BEC-BEB102B489D5} = {40D5A6B8-BACB-4802-BC77-BDD6E9F40B67}
 		{347513B8-B26A-445A-BACB-073EBB290A9E} = {C9EAD422-9C7A-41B4-8871-0A9024AA231A}
+		{81000C75-63FB-48E3-9C3B-AD7649ECE8BB} = {36B69E04-2A90-4C24-8B45-1716B6B47F07}
+		{7A37B711-74FA-41DC-8997-28CED81340BA} = {36B69E04-2A90-4C24-8B45-1716B6B47F07}
+		{FCABA223-3903-4BD0-9A0B-B1D8B202991A} = {7A37B711-74FA-41DC-8997-28CED81340BA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EA4BEA5C-16F6-46D1-92B9-5BBFAC374DF4}
