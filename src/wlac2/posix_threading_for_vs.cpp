@@ -390,7 +390,7 @@ static void FreeThreadDataAndRemoveFromList(struct pthread_s_new* a_threadData)
 static DWORD WINAPI Thread_Start_Routine_Static(LPVOID a_pArg)
 {
 	struct pthread_s_new* pThreadData = STATIC_CAST2(struct pthread_s_new* ,a_pArg);
-	DWORD unReturn;
+	DWORD unReturn=0;
 	
 	gh_bIsAllowedToWaitForSignal = TRUE;
 	pThreadData->existOnThreadLocalStorage = 1;
@@ -400,6 +400,7 @@ static DWORD WINAPI Thread_Start_Routine_Static(LPVOID a_pArg)
 		unReturn = STATIC_CAST2(DWORD,REINTERPRET_CAST2(size_t,(*pThreadData->func)(pThreadData->arg)));
 	}
 	catch(...){
+		unReturn = -1;
 	}
 
 	pThreadData->isAlive = 0;

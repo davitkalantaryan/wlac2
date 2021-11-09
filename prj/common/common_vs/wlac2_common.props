@@ -2,12 +2,13 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
-    <WlacLibraryVersion>5.0.0.2</WlacLibraryVersion>
+    <WlacLibraryVersion>5.0.0.3</WlacLibraryVersion>
     <FalseLibraryBaseName>rfcl_false_without_lib2</FalseLibraryBaseName>
     <WlacConfigurationExtension Condition="'$(Configuration)'=='Debug'">d</WlacConfigurationExtension>
     <WlacConfigurationExtension Condition="'$(Configuration)'=='Release'">r</WlacConfigurationExtension>
-	<WlacConfigurationExtension2 Condition="'$(Configuration)'=='Debug'">d</WlacConfigurationExtension2>
-    <WlacConfigurationExtension2 Condition="'$(Configuration)'=='Release'"></WlacConfigurationExtension2>
+    <WlacConfigurationExtension2 Condition="'$(Configuration)'=='Debug'">d</WlacConfigurationExtension2>
+    <WlacConfigurationExtension2 Condition="'$(Configuration)'=='Release'">
+    </WlacConfigurationExtension2>
     <WlacFullVersion>$(WlacLibraryVersion)-$(PlatformTarget)-e$(WlacConfigurationExtension)</WlacFullVersion>
   </PropertyGroup>
   <PropertyGroup>
