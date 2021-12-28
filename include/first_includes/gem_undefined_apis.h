@@ -71,19 +71,10 @@ struct partition_stat
 };
 
 
-//static void* s_pVoidDumper___ = NULL;
-static int s_nIntDumper___ = 0;
-
-//static _inline void warning_dumper( ... ){}
-static _inline void warning_dumper(int __first,...) { s_nIntDumper___ = __first; }
-
-
-
-//static struct disk_stat s_disk_stat;
-
 static _inline int statfs(__const char *__file, struct statfs *__buf)
 {
-        warning_dumper(0,__file,__buf);
+	static_cast<void>(__file);
+	static_cast<void>(__buf);
 	return 0;
 }
 
