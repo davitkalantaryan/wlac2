@@ -16,6 +16,7 @@
 #ifndef __gem_undefined_apis_h__
 #define __gem_undefined_apis_h__
 
+#include <wlac2_internal_header.h>
 #include <first_includes/common_definations_wul.h>
 #include <first_includes/gem_first_common_include.h>
 #include <malloc.h>
@@ -73,8 +74,8 @@ struct partition_stat
 
 static _inline int statfs(__const char *__file, struct statfs *__buf)
 {
-	static_cast<void>(__file);
-	static_cast<void>(__buf);
+	WLAC2_STATIC_CAST(void,__file);
+	WLAC2_STATIC_CAST(void,__buf);
 	return 0;
 }
 

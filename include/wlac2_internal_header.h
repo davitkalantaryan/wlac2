@@ -191,22 +191,22 @@
 #endif
 #endif
 
+#ifdef __cplusplus
+#define WLAC2_STATIC_CAST(_type,_val)    static_cast<_type>(_val)
+#else
+#define WLAC2_STATIC_CAST(_type,_val)    ( (_type)(_val) )
+#endif
+
+
 #ifdef NDEBUG
 //#define MAKE_VOID(_val)                 static_cast<void>(_val)
 #define DO_DEBUG_EXP(_exp)
-#define WLAC2_SAFE_CAST(_type,_val)	static_cast<_type>(_val)
+#define WLAC2_SAFE_CAST(_type,_val)		WLAC2_STATIC_CAST(_type,_val)
 #else
 //#define MAKE_VOID(_var)                 do{}while(0)
 //#define MAKE_VOID(_var)
 #define DO_DEBUG_EXP(_exp)              _exp ;
 #define WLAC2_SAFE_CAST(_type,_val)	dynamic_cast<_type>(_val)
-#endif
-
-
-#ifdef __cplusplus
-#define WLAC2_STATIC_CAST(_type,_val)    static_cast<_type>(_val)
-#else
-#define WLAC2_STATIC_CAST(_type,_val)    ( (_type)(_val) )
 #endif
 
 
