@@ -8,6 +8,7 @@
 #ifndef  __std_wlac_fios_hpp__
 #define  __std_wlac_fios_hpp__
 
+#include <wlac2_internal_header.h>
 #include <ios>
 #include <string>
 
@@ -25,6 +26,9 @@ public:
 	virtual ~wlac_fios() {}
 	//virtual void open(const char* filename,ios_base::openmode mode = ios_base::in|ios_base::out);
 	virtual void open(const std::string& filename, ios_base::openmode mode = ios_base::in | ios_base::out);
+
+	WLAC2_DELETE(wlac_fios(const wlac_fios&))
+	WLAC2_DELETE(wlac_fios& operator=(const wlac_fios&))
 };
 
 }

@@ -16,6 +16,7 @@
 #ifndef __gem_undefined_apis_h__
 #define __gem_undefined_apis_h__
 
+#include <wlac2_internal_header.h>
 #include <first_includes/common_definations_wul.h>
 #include <first_includes/gem_first_common_include.h>
 #include <malloc.h>
@@ -71,19 +72,10 @@ struct partition_stat
 };
 
 
-//static void* s_pVoidDumper___ = NULL;
-static int s_nIntDumper___ = 0;
-
-//static _inline void warning_dumper( ... ){}
-static _inline void warning_dumper(int __first,...) { s_nIntDumper___ = __first; }
-
-
-
-//static struct disk_stat s_disk_stat;
-
 static _inline int statfs(__const char *__file, struct statfs *__buf)
 {
-        warning_dumper(0,__file,__buf);
+	WLAC2_STATIC_CAST(void,__file);
+	WLAC2_STATIC_CAST(void,__buf);
 	return 0;
 }
 
