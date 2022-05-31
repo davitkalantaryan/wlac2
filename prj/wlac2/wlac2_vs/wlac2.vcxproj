@@ -447,6 +447,7 @@
     <ClCompile Include="..\..\..\src\wlac2\gem_ipc_source.cpp" />
     <ClCompile Include="..\..\..\src\wlac2\gem_networking.cpp" />
     <ClCompile Include="..\..\..\src\wlac2\gem_timing_functions.cpp" />
+    <ClCompile Include="..\..\..\src\wlac2\new_winldap.cpp" />
     <ClCompile Include="..\..\..\src\wlac2\posix_threading_for_vs.cpp" />
     <ClCompile Include="..\..\..\src\wlac2\std\wlac2_thread.cpp" />
     <ClCompile Include="..\..\..\src\wlac2\unix_emulator_source_for_win.cpp" />
