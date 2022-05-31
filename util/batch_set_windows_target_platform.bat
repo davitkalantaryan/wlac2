@@ -34,11 +34,6 @@ set  prjDir=%scriptDirectory%..\prj
 %pltSetterExe% %prjDir%\tools\ukill_vs\ukill.vcxproj %1
 %pltSetterExe% %prjDir%\tools\set_environment_vs\set_environment.vcxproj %1
 
-%pltSetterExe% %prjDir%\xdrrpc\mini_xdr_rpc_vs\mini_xdr_rpc.vcxproj %1
-%pltSetterExe% %prjDir%\winldap\newwinldap_vs\newwinldap.vcxproj %1
-%pltSetterExe% %prjDir%\usergroupid\usergroupid_vs\usergroupid.vcxproj %1
-
-
 %pltSetterExe% %prjDir%\util\make_functions_exportable_vs\make_functions_exportable.vcxproj %1
 %pltSetterExe% %prjDir%\util\make_symbols_exportable_vs\make_symbols_exportable.vcxproj %1
 %pltSetterExe% %prjDir%\util\set_windows_target_platform_vs\set_windows_target_platform.vcxproj %1
