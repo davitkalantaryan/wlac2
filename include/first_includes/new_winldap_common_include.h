@@ -14,15 +14,12 @@
 #define __new_winldap_new_winldap_common_include_h__
 
 #include <first_includes/common_definations_wul.h>
-#include <windows.h>
-#include <winldap.h>
+#include <WinSock2.h>
+#include <WS2tcpip.h>
+#include <Windows.h>
+#include <Winldap.h>
+#include <WinBer.h>
 
-
-#if !defined(NWLDAP_LIB_NOT_INCLUDE)
-#ifdef _MSC_VER
-#pragma comment(lib, "newwinldap.lib")
-#endif
-#endif  // #if !defined(NWLDAP_LIB_NOT_INCLUDE)
 
 
 #ifndef NWLDAP_FAR_API
@@ -65,12 +62,6 @@
 #endif 
 
 #endif // #if(_MSC_VER < 1400)
-
-__BEGIN_C_DECLS
-
-WINLDAPAPI VOID LDAPAPI ber_free(BerElement *ber, int freebuf);
-
-__END_C_DECLS
 
 #ifdef ldap_first_attribute
 #undef ldap_first_attribute

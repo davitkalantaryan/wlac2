@@ -153,6 +153,9 @@
     <ClCompile Include="..\..\..\src\wlac2\std\wlac2_thread.cpp">
       <Filter>Source Files\std</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\src\wlac2\new_winldap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\src\wlac2\stdafx_gem.h">
