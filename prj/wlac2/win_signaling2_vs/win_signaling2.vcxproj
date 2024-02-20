@@ -43,52 +43,52 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>$(PlatformToolsetVar)</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>$(PlatformToolsetVar)</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>$(PlatformToolsetVar)</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>$(PlatformToolsetVar)</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>$(PlatformToolsetVar)</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>$(PlatformToolsetVar)</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>$(PlatformToolsetVar)</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>$(PlatformToolsetVar)</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -131,36 +131,36 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
-    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
+    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <IntDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
-    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
+    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <IntDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
-    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
+    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <IntDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
-    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
+    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <IntDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
-    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
+    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <IntDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
-    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
+    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <IntDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
-    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
+    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <IntDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
-    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
-    <IntDir>$(OutDir)..\.objects\$(ProjectName)\</IntDir>
+    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <IntDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\.objects\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
