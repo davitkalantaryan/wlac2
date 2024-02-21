@@ -139,49 +139,49 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\test\</OutDir>
     <IntDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\.objects\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName).$(WlacFullVersion)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\test\</OutDir>
     <IntDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\.objects\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName).$(WlacFullVersion)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\test\</OutDir>
     <IntDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\.objects\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName).$(WlacFullVersion)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\test\</OutDir>
     <IntDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\.objects\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName).$(WlacFullVersion)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\test\</OutDir>
     <IntDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\.objects\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName).$(WlacFullVersion)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\test\</OutDir>
     <IntDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\.objects\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName).$(WlacFullVersion)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\test\</OutDir>
     <IntDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\.objects\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName).$(WlacFullVersion)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\tests\</OutDir>
+    <OutDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\test\</OutDir>
     <IntDir>$(Wlac2VirtProjectDir)..\..\..\sys\win_$(PlatformTarget)\$(Configuration)\.objects\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName).$(WlacFullVersion)</TargetName>
   </PropertyGroup>
