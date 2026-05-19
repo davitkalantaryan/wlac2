@@ -155,6 +155,16 @@ GEM_API in_addr_t inet_netof(struct in_addr a_in) __THROW
 }
 
 
+GEM_API_FAR int inet_aton(const char* cp, struct in_addr* inp)
+{
+    if (cp == NULL || inp == NULL) {
+        return 0;
+    }
+
+    return inet_pton(AF_INET, cp, inp) == 1;
+}
+
+
 /* Return the position of the first bit set in I, or 0 if none are set.
 The least-significant bit is position 1, the most-significant 32.  */
 //extern int ffs(int __i) __THROW __attribute__((__const__));
