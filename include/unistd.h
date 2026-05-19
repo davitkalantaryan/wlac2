@@ -707,4 +707,9 @@ enum
 #define _SC_THREAD_ROBUST_PRIO_PROTECT	_SC_THREAD_ROBUST_PRIO_PROTECT
 };
 
+
+#ifndef MAXHOSTNAMELEN
+#define MAXHOSTNAMELEN 256
+#endif
+
 #endif  /* #ifndef __win_unistd_h__ */
