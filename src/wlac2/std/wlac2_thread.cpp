@@ -11,7 +11,7 @@
 #define DONT_USE_STD_THREAD
 #endif
 
-#include <redesigned/std/thread.hpp>
+#include <other/redesigned/std/thread.hpp>
 #include <new>
 #include <stdlib.h>
 #include <string.h>

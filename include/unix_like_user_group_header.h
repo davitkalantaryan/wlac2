@@ -10,7 +10,7 @@
 #define __unix_like_user_group_header_h__
 
 #include <first_includes/common_include_for_headers.h>
-#include <redesigned/sys/types.h>
+#include <other/redesigned/sys/types.h>
 #include <stddef.h>
 
 #define	MAX_NUMBER_OF_GROUPS	32

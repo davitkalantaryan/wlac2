@@ -3,7 +3,7 @@
 //
 
 /*
- *	File: <redesigned/sys/stat.h> For WINDOWS MFC
+ *	File: <other/redesigned/sys/stat.h> For WINDOWS MFC
  *
  *	Created on: Aug 14, 2016
  *	Author    : Davit Kalantaryan (Email: davit.kalantaryan@desy.de)

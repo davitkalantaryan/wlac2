@@ -15,7 +15,7 @@
 
 
 #include <first_includes/common_include_for_headers.h>
-#include <redesigned/sys/types.h>
+#include <other/redesigned/sys/types.h>
 
 __BEGIN_C_DECLS
 

@@ -14,7 +14,7 @@
 #define __win_sys_cdef_h___
 
 #include <first_includes/common_include_for_headers.h>
-#include <redesigned/sys/types.h>
+#include <other/redesigned/sys/types.h>
 
 #ifndef bool_t
 #define	bool_t	int

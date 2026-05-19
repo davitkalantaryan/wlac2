@@ -4,18 +4,7 @@
 *.pro.user*
 .tmp/*
 
-sys
-
-contrib/sys/*/*/*/*
-contrib/sys/*/lib/*
-contrib/sys/*/dll/*
-contrib/sys/*/bin/*
-!contrib/sys/*/*/*.udoc
-!contrib/sys/*/*.udoc
-!contrib/sys/*.udoc
-!contrib/sys/*/doocs64_install/server/*.bat
-
-sys
+/sys
 
 
 prj/*/*/*

@@ -94,8 +94,8 @@
 #endif  // #ifdef _MSC_VER
 
 #ifdef _MSC_VER
-#define SET_WLAC_ALIAS(_file_)		__pragma (include_alias(<##_file_>, <redesigned/##_file_>)) \
-									__pragma (include_alias("##_file_", "redesigned/##_file_"))
+#define SET_WLAC_ALIAS(_file_)		__pragma (include_alias(<##_file_>, <other/redesigned/##_file_>)) \
+									__pragma (include_alias("##_file_", "other/redesigned/##_file_"))
 #define RESET_WLAC_ALIAS(_file_)	__pragma (include_alias("##_file_", "##_file_")); \
 									__pragma (include_alias(<##_file_>, <##_file_>))
 #endif // #ifdef _MSC_VER
@@ -154,5 +154,9 @@
 
 #ifdef _TEST_PRINTF_USED_
 #endif  // #ifdef _TEST_PRINTF_USED_
+
+#ifndef WLAC_API_FOR_USER_GRP
+#define WLAC_API_FOR_USER_GRP 
+#endif
 
 #endif  /* #ifndef __common_definations_wul_h__ */

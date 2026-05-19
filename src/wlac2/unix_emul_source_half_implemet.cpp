@@ -22,7 +22,7 @@
 #include <stdarg.h>
 #include <string.h>
 #include <stdlib.h>
-#include <redesigned/signal.h>
+#include <other/redesigned/signal.h>
 
 #ifdef _MSC_VER
 #if(_MSC_VER >= 1400)

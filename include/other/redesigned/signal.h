@@ -92,7 +92,7 @@ __END_C_DECLS
 #include <bits/signum.h>
 #include <bits/siginfo.h>
 #include <sdef_gem_windows.h>
-#include <redesigned/sys/types.h>
+#include <other/redesigned/sys/types.h>
 #include <windows.h>
 // from remote_function_call project
 #include <rfc/windows_signal.h> 

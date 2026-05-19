@@ -178,6 +178,8 @@ GEM_API int pthread_kill(pthread_t thread, int sig)
 }
 
 
+#ifdef WLAC2_USER_GROUP_RELATED_NEEDED
+
 static char svcName[] = "doocsadm";
 static char svcPassw[] = "doocsadm";
 static char svcGecos[] = "doocsadm";
@@ -220,6 +222,8 @@ GEM_API struct passwd *getpwuid(uid_t a_uid)
 	getpwuid_r(a_uid,&aPasswd,(char*)&aPasswd,sizeof(struct passwd),&pReturn);
 	return pReturn;
 }
+
+#endif  //  #ifdef WLAC2_USER_GROUP_RELATED_NEEDED
 
 
 GEM_API int fsync(int fildes)

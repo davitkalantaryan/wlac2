@@ -7,7 +7,7 @@
 //#pragma include_alias( <stdio.h>, <stdio.h> )
 
 #ifdef _MSC_VER
-#define SET_WLAC_ALIAS(_file_)	__pragma (include_alias(#_file_, "redesigned/##_file_"))
+#define SET_WLAC_ALIAS(_file_)	__pragma (include_alias(#_file_, "other/redesigned/##_file_"))
 #define RESET_WLAC_ALIAS(_file_)	__pragma (include_alias(#_file_, #_file_))
 #endif // #ifdef _MSC_VER
 
