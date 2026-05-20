@@ -178,17 +178,30 @@ GEM_API int pthread_kill(pthread_t thread, int sig)
 }
 
 
+static char svcName[] = "doocsadm";
+static char svcPassw[] = "doocsadm";
+static char svcGecos[] = "doocsadm";
+static char svcHome[] = "/home/doocsadm";
+static char svcShell[] = "/bin/bash";
+static struct passwd stempRes = { svcName ,svcPassw,406,406, svcGecos, svcHome ,svcShell };
+
+// TODO: improve this
 GEM_API int getpwnam_r(const char *name, struct passwd *pwd,
 	char *buf, size_t buflen, struct passwd **result)
 {
+	(void)name;
+	(void)pwd;
+	(void)buf;
+	(void)buflen;
+	*result = &stempRes;
 	return 0;
 }
 
 
 GEM_API struct passwd *getpwnam(const char *name)
 {
-	static struct passwd aPasswd;
-	return &aPasswd;
+	//static struct passwd aPasswd;
+	return &stempRes;
 }
 
 
