@@ -35,13 +35,13 @@ struct passwd
 
 __BEGIN_C_DECLS
 
-GEM_API_FAR int getpwnam_r(const char *name, struct passwd *pwd,
+WLAC_API_FOR_USER_GRP int getpwnam_r(const char *name, struct passwd *pwd,
 	char *buf, size_t buflen, struct passwd **result);
-GEM_API_FAR struct passwd *getpwnam(const char *name);
+WLAC_API_FOR_USER_GRP struct passwd *getpwnam(const char *name);
 #ifndef getpwuid_not_needed
-GEM_API_FAR struct passwd *getpwuid(uid_t uid);
+WLAC_API_FOR_USER_GRP struct passwd *getpwuid(uid_t uid);
 #endif
-GEM_API_FAR int getpwuid_r(uid_t uid, struct passwd *pwd,char *buf, size_t buflen, struct passwd **result);
+WLAC_API_FOR_USER_GRP int getpwuid_r(uid_t uid, struct passwd *pwd,char *buf, size_t buflen, struct passwd **result);
 
 __END_C_DECLS
 

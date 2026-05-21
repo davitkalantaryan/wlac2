@@ -21,9 +21,6 @@
 #include <errno.h>
 #include <stddef.h>
 #include <stdlib.h>
-//#pragma include_alias( <stdlib.h>, <redesigned/stdlib.h> )
-//#pragma include_alias( <stddef.h>, <redesigned/stddef.h> )
-//#pragma include_alias( <errno.h>, <redesigned/errno.h> )
 
 __BEGIN_C_DECLS
 

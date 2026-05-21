@@ -7,7 +7,7 @@
 
 #pragma include_alias( <stdlib.h>, <stdlib.h> )
 #include <stdlib.h>
-#pragma include_alias( <stdlib.h>, <redesigned/stdlib.h> )
+#pragma include_alias( <stdlib.h>, <other/redesigned/stdlib.h> )
 
 #ifdef __cplusplus
 extern "C" {

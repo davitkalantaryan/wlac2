@@ -22,6 +22,7 @@ __BEGIN_C_DECLS
 
 /* Return network number part of the Internet address IN.  */
 GEM_API_FAR in_addr_t inet_netof(struct in_addr __in) __THROW;
+GEM_API_FAR int inet_aton(const char* cp, struct in_addr* inp);
 
 __END_C_DECLS
 

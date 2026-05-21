@@ -21,13 +21,13 @@
 #ifdef _MSC_VER
 
 #if _MSC_VER == 1900
-#include <redesigned/.original/msc1900/winsock2.h>
+#include <other/redesigned/.original/msc1900/winsock2.h>
 #else
-#include <redesigned/.original/other/winsock2.h>
+#include <other/redesigned/.original/other/winsock2.h>
 #endif
 
 #else   // #ifdef _MSC_VER
-#include <redesigned/.original/other/winsock2.h>
+#include <other/redesigned/.original/other/winsock2.h>
 #endif  // #ifdef _MSC_VER
 
 #ifdef u_long_defined_before_winsock2

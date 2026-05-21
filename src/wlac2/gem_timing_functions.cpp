@@ -18,7 +18,7 @@
 #include <sys/time.h>
 #include <io.h>
 #include <stdlib.h>
-#include <redesigned/errno.h>
+#include <other/redesigned/errno.h>
 #include <sdef_gem_windows.h>
 #include <sys/types.h>
 

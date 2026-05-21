@@ -221,6 +221,19 @@ GEM_API int close_common(int a_fd)
 }
 
 
+GEM_API int wlac_close(int a_fd)
+{
+    int nIsSocket = IsDescriptorASocket(a_fd);
+
+    if (nIsSocket == 1)
+        return closesocket((SOCKET)a_fd);
+    else if (nIsSocket == 0)
+        return _close(a_fd);
+
+    return 0;
+}
+
+
 GEM_API int wlac_poll(struct pollfd *a_fds, nfds_t a_nfds, int a_timeout)
 {
 	if (a_fds && (a_nfds > 0)) {

@@ -16,8 +16,8 @@
 #include "stdafx.h"
 #include <first_includes/wlac_compiler_internal.h>
 #include "common_include_for_wlac_sources.h"
-#include "pthread.h"
-#include "redesigned/process.h"
+#include <pthread.h>
+#include <other/redesigned/process.h>
 #include <malloc.h>
 #include "pthread_private_for_source.h"
 #include <common/hashtbl.hpp>

@@ -15,7 +15,7 @@
 
 #include <first_includes/common_include_for_headers.h>
 #include <sys/cdefs.h>
-#include <redesigned/sys/types.h>
+#include <other/redesigned/sys/types.h>
 #include <unix_like_user_group_header.h>
 
 

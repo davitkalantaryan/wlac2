@@ -17,10 +17,6 @@
 #include <first_includes/common_include_for_headers.h>
 #include <.privatei/header_for_resolving_errno.h>
 
-//#pragma include_alias( <errno.h>, <errno.h> )
-//#include <errno.h>
-//#pragma include_alias( <errno.h>, <redesigned/errno.h> )
-
 
 #define	API_NOT_IMPLEMENTED	-1
 

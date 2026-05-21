@@ -21,7 +21,7 @@
 #include <windows.h>
 #include <sys/stat.h>
 #include <direct.h>
-#include <redesigned/sys/types.h>
+#include <other/redesigned/sys/types.h>
 #include <malloc.h>
 #include <sched.h>
 #ifndef usergroupid_lib_not_needed
@@ -706,5 +706,10 @@ enum
 	_SC_THREAD_ROBUST_PRIO_PROTECT
 #define _SC_THREAD_ROBUST_PRIO_PROTECT	_SC_THREAD_ROBUST_PRIO_PROTECT
 };
+
+
+#ifndef MAXHOSTNAMELEN
+#define MAXHOSTNAMELEN 256
+#endif
 
 #endif  /* #ifndef __win_unistd_h__ */

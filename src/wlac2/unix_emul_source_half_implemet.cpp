@@ -22,7 +22,7 @@
 #include <stdarg.h>
 #include <string.h>
 #include <stdlib.h>
-#include <redesigned/signal.h>
+#include <other/redesigned/signal.h>
 
 #ifdef _MSC_VER
 #if(_MSC_VER >= 1400)
@@ -152,6 +152,16 @@ GEM_API in_addr_t inet_netof(struct in_addr a_in) __THROW
 {
 	const char* cpcIP = inet_ntoa(a_in);
 	return inet_addr(cpcIP);
+}
+
+
+GEM_API_FAR int inet_aton(const char* cp, struct in_addr* inp)
+{
+    if (cp == NULL || inp == NULL) {
+        return 0;
+    }
+
+    return inet_pton(AF_INET, cp, inp) == 1;
 }
 
 

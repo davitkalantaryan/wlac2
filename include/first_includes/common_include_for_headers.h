@@ -36,67 +36,67 @@
 
 #include <first_includes/common_definations_wul.h>
 
-#pragma include_alias( <sys/stat.h>, <redesigned/sys/stat.h> )
-#pragma include_alias( "sys/stat.h", "redesigned/sys/stat.h" )
+#pragma include_alias( <sys/stat.h>, <other/redesigned/sys/stat.h> )
+#pragma include_alias( "sys/stat.h", "other/redesigned/sys/stat.h" )
 
-#pragma include_alias( <sys/types.h>, <redesigned/sys/types.h> )
-#pragma include_alias( "sys/types.h", "redesigned/sys/types.h" )
+#pragma include_alias( <sys/types.h>, <other/redesigned/sys/types.h> )
+#pragma include_alias( "sys/types.h", "other/redesigned/sys/types.h" )
 
-#pragma include_alias( <errno.h>, <redesigned/errno.h> )
-#pragma include_alias( "errno.h", "redesigned/errno.h" )
+#pragma include_alias( <errno.h>, <other/redesigned/errno.h> )
+#pragma include_alias( "errno.h", "other/redesigned/errno.h" )
 
-#pragma include_alias( <fcntl.h>, <redesigned/fcntl.h> )
-#pragma include_alias( "fcntl.h", "redesigned/fcntl.h" )
+#pragma include_alias( <fcntl.h>, <other/redesigned/fcntl.h> )
+#pragma include_alias( "fcntl.h", "other/redesigned/fcntl.h" )
 
-#pragma include_alias( <io.h>, <redesigned/io.h> )
-#pragma include_alias( "io.h", "redesigned/io.h" )
+#pragma include_alias( <io.h>, <other/redesigned/io.h> )
+#pragma include_alias( "io.h", "other/redesigned/io.h" )
 
-#pragma include_alias( <process.h>, <redesigned/process.h> )
-#pragma include_alias( "process.h", "redesigned/process.h" )
+#pragma include_alias( <process.h>, <other/redesigned/process.h> )
+#pragma include_alias( "process.h", "other/redesigned/process.h" )
 
-#pragma include_alias( <signal.h>, <redesigned/signal.h> )
-#pragma include_alias( "signal.h", "redesigned/signal.h" )
+#pragma include_alias( <signal.h>, <other/redesigned/signal.h> )
+#pragma include_alias( "signal.h", "other/redesigned/signal.h" )
 
-#pragma include_alias( <stdio.h>, <redesigned/stdio.h> )
-#pragma include_alias( "stdio.h", "redesigned/stdio.h" )
+#pragma include_alias( <stdio.h>, <other/redesigned/stdio.h> )
+#pragma include_alias( "stdio.h", "other/redesigned/stdio.h" )
 
-#pragma include_alias( <stdlib.h>, <redesigned/stdlib.h> )
-#pragma include_alias( "stdlib.h", "redesigned/stdlib.h" )
+#pragma include_alias( <stdlib.h>, <other/redesigned/stdlib.h> )
+#pragma include_alias( "stdlib.h", "other/redesigned/stdlib.h" )
 
-#pragma include_alias( <time.h>, <redesigned/time.h> )
-#pragma include_alias( "time.h", "redesigned/time.h" )
+#pragma include_alias( <time.h>, <other/redesigned/time.h> )
+#pragma include_alias( "time.h", "other/redesigned/time.h" )
 
-#pragma include_alias( <wchar.h>, <redesigned/wchar.h> )
-#pragma include_alias( "wchar.h", "redesigned/wchar.h" )
+#pragma include_alias( <wchar.h>, <other/redesigned/wchar.h> )
+#pragma include_alias( "wchar.h", "other/redesigned/wchar.h" )
 
-#pragma include_alias( <direct.h>, <redesigned/direct.h> )
-#pragma include_alias( "direct.h", "redesigned/direct.h" )
+#pragma include_alias( <direct.h>, <other/redesigned/direct.h> )
+#pragma include_alias( "direct.h", "other/redesigned/direct.h" )
 
-#pragma include_alias( <rpc.h>, <redesigned/rpc.h> )
-#pragma include_alias( "rpc.h", "redesigned/rpc.h" )
+#pragma include_alias( <rpc.h>, <other/redesigned/rpc.h> )
+#pragma include_alias( "rpc.h", "other/redesigned/rpc.h" )
 
-#pragma include_alias( <fstream>, <redesigned/fstream> )
-#pragma include_alias( "fstream", "redesigned/fstream" )
+#pragma include_alias( <fstream>, <other/redesigned/fstream> )
+#pragma include_alias( "fstream", "other/redesigned/fstream" )
 
-#pragma include_alias( <windows.h>, <redesigned/windows.h> )
-#pragma include_alias( "windows.h", "redesigned/windows.h" )
+#pragma include_alias( <windows.h>, <other/redesigned/windows.h> )
+#pragma include_alias( "windows.h", "other/redesigned/windows.h" )
 
-#pragma include_alias( <WinSock2.h>, <redesigned/WinSock2.h> )
-#pragma include_alias( "WinSock2.h", "redesigned/WinSock2.h" )
+#pragma include_alias( <WinSock2.h>, <other/redesigned/WinSock2.h> )
+#pragma include_alias( "WinSock2.h", "other/redesigned/WinSock2.h" )
 
 
-#pragma include_alias( <WS2tcpip.h>, <redesigned/WS2tcpip.h> )
-#pragma include_alias( "WS2tcpip.h", "redesigned/WS2tcpip.h" )
+#pragma include_alias( <WS2tcpip.h>, <other/redesigned/WS2tcpip.h> )
+#pragma include_alias( "WS2tcpip.h", "other/redesigned/WS2tcpip.h" )
 
-#pragma include_alias( <stddef.h>, <redesigned/stddef.h> )
-#pragma include_alias( "stddef.h", "redesigned/stddef.h" )
+#pragma include_alias( <stddef.h>, <other/redesigned/stddef.h> )
+#pragma include_alias( "stddef.h", "other/redesigned/stddef.h" )
 
-#pragma include_alias( <string.h>, <redesigned/string.h> )
-#pragma include_alias( "string.h", "redesigned/string.h" )
+#pragma include_alias( <string.h>, <other/redesigned/string.h> )
+#pragma include_alias( "string.h", "other/redesigned/string.h" )
 
 #ifdef std_wlac_thread_used
-#pragma include_alias( <thread>, <redesigned/std/thread/wlac_thread> )
-#pragma include_alias( "thread", "redesigned/std/thread/wlac_thread" )
+#pragma include_alias( <thread>, <other/redesigned/std/thread/wlac_thread> )
+#pragma include_alias( "thread", "other/redesigned/std/thread/wlac_thread" )
 #endif
 
 // alloca

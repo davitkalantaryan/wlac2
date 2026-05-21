@@ -17,7 +17,7 @@
 #include <sys/cdefs.h>
 #include <unistd.h>
 #include <win_socket_common.h>
-#include <redesigned/signal.h>
+#include <other/redesigned/signal.h>
 
 __BEGIN_C_DECLS 
 

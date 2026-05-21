@@ -3,7 +3,7 @@
 //
 
 // wlac/redesigned/stddef.h
-// to incude #include <redesigned/stddef.h>
+// to incude #include <other/redesigned/stddef.h>
 // 2017 Dec 29
 
 

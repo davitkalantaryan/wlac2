@@ -46,12 +46,6 @@
     <Filter Include="include\proc">
       <UniqueIdentifier>{3380498b-3489-4456-a08b-08444811d9a1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="include\redesigned">
-      <UniqueIdentifier>{787fc4dd-dcc2-4458-978b-6680705b2829}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="include\redesigned\sys">
-      <UniqueIdentifier>{6a3b34b6-b9ee-4eb2-b58b-ac26f757cd14}</UniqueIdentifier>
-    </Filter>
     <Filter Include="include\rpc">
       <UniqueIdentifier>{0d2c325a-bd0c-4369-8fd4-c7d2f30772e1}</UniqueIdentifier>
     </Filter>
@@ -69,15 +63,6 @@
     </Filter>
     <Filter Include="Source Files\include">
       <UniqueIdentifier>{c30e0f8f-41dc-4df0-897a-5b2a286c8153}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="include\redesigned\.original">
-      <UniqueIdentifier>{1ee48235-3fa8-4160-b570-f4b0ef04f55f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="include\redesigned\.original\other">
-      <UniqueIdentifier>{3d882bab-c532-4a4e-9a25-495ee66c8db4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="include\redesigned\.original\msc1900">
-      <UniqueIdentifier>{3678e92d-1733-4282-a6d9-f52528db67da}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\.privatei">
       <UniqueIdentifier>{45fc0765-2993-4980-83ca-738be6a2677e}</UniqueIdentifier>
@@ -103,11 +88,29 @@
     <Filter Include="Source Files\dl">
       <UniqueIdentifier>{43a9667a-707a-4caa-a204-e564221f41b9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="include\redesigned\std">
-      <UniqueIdentifier>{1c5af9ae-14fc-482e-8faf-0ccd48aadd04}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\std">
       <UniqueIdentifier>{c0dbfb87-2310-49d6-bf0f-cc2cf60af062}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\other">
+      <UniqueIdentifier>{07fa5d84-47cc-4932-a9ff-663a2b2f9370}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\other\redesigned">
+      <UniqueIdentifier>{8f1e1592-8f66-4afa-981b-a60505d058f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\other\redesigned\.original">
+      <UniqueIdentifier>{6ef29aee-f7e2-4543-8304-91d0071f17cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\other\redesigned\std">
+      <UniqueIdentifier>{4cfefb9c-99c3-4c4b-9640-183e18095571}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\other\redesigned\sys">
+      <UniqueIdentifier>{0e87d25e-3244-428f-add9-633a2bc0ff7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\other\redesigned\.original\msc1900">
+      <UniqueIdentifier>{b1967c58-5fb8-4a2c-85a8-bb6fe57950b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\other\redesigned\.original\other">
+      <UniqueIdentifier>{78644db9-7251-4454-a220-32cf85dc1486}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -271,60 +274,6 @@
     </ClInclude>
     <ClInclude Include="..\..\..\include\proc\sysinfo.h">
       <Filter>include\proc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\.original\msc1900\winsock2_locked.h">
-      <Filter>include\redesigned\.original\msc1900</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\sys\stat.h">
-      <Filter>include\redesigned\sys</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\sys\types.h">
-      <Filter>include\redesigned\sys</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\direct.h">
-      <Filter>include\redesigned</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\errno.h">
-      <Filter>include\redesigned</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\fcntl.h">
-      <Filter>include\redesigned</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\io.h">
-      <Filter>include\redesigned</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\process.h">
-      <Filter>include\redesigned</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\rpc.h">
-      <Filter>include\redesigned</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\signal.h">
-      <Filter>include\redesigned</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\std_wlac2_fios.hpp">
-      <Filter>include\redesigned</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\stddef.h">
-      <Filter>include\redesigned</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\stdio.h">
-      <Filter>include\redesigned</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\stdlib.h">
-      <Filter>include\redesigned</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\string.h">
-      <Filter>include\redesigned</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\time.h">
-      <Filter>include\redesigned</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\wchar.h">
-      <Filter>include\redesigned</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\windows.h">
-      <Filter>include\redesigned</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\include\rfc\functions_libgui_hacker.h">
       <Filter>include\rfc</Filter>
@@ -647,20 +596,8 @@
     <ClInclude Include="..\..\..\include\wlac2_vector_old_2017.12.24.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\.original\other\winsock2_locked.h">
-      <Filter>include\redesigned\.original\other</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\ws2tcpip.h">
-      <Filter>include\redesigned</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\winsock2.h">
-      <Filter>include\redesigned</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\include\.privatei\windows_and_socket_headers.h">
       <Filter>include\.privatei</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\impl.std_wlac2_fios.hpp">
-      <Filter>include\redesigned</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\src\include\common\hashtbl.hpp">
       <Filter>Header Files</Filter>
@@ -674,14 +611,80 @@
     <ClInclude Include="..\..\..\include\first_includes\wlac2_compiler_internal.h">
       <Filter>include\first_includes</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\std\thread.hpp">
-      <Filter>include\redesigned\std</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\redesigned\std\thread.impl.hpp">
-      <Filter>include\redesigned\std</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\include\sys\select.h">
       <Filter>include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\direct.h">
+      <Filter>include\other\redesigned</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\errno.h">
+      <Filter>include\other\redesigned</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\fcntl.h">
+      <Filter>include\other\redesigned</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\impl.std_wlac_fios.hpp">
+      <Filter>include\other\redesigned</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\io.h">
+      <Filter>include\other\redesigned</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\process.h">
+      <Filter>include\other\redesigned</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\rpc.h">
+      <Filter>include\other\redesigned</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\signal.h">
+      <Filter>include\other\redesigned</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\std_wlac_fios.hpp">
+      <Filter>include\other\redesigned</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\stddef.h">
+      <Filter>include\other\redesigned</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\stdio.h">
+      <Filter>include\other\redesigned</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\stdlib.h">
+      <Filter>include\other\redesigned</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\string.h">
+      <Filter>include\other\redesigned</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\time.h">
+      <Filter>include\other\redesigned</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\wchar.h">
+      <Filter>include\other\redesigned</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\windows.h">
+      <Filter>include\other\redesigned</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\winsock2.h">
+      <Filter>include\other\redesigned</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\ws2tcpip.h">
+      <Filter>include\other\redesigned</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\.original\msc1900\winsock2_locked.h">
+      <Filter>include\other\redesigned\.original\msc1900</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\.original\other\winsock2_locked.h">
+      <Filter>include\other\redesigned\.original\other</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\sys\stat.h">
+      <Filter>include\other\redesigned\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\sys\types.h">
+      <Filter>include\other\redesigned\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\std\thread.hpp">
+      <Filter>include\other\redesigned\std</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\other\redesigned\std\thread.impl.hpp">
+      <Filter>include\other\redesigned\std</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -696,9 +699,6 @@
     <None Include="..\..\..\include\.old\company_def_file.hin">
       <Filter>include\.comp_files</Filter>
     </None>
-    <None Include="..\..\..\include\redesigned\fstream">
-      <Filter>include\redesigned</Filter>
-    </None>
     <None Include="..\..\..\include\rpc\rpc.h_2015.12.15">
       <Filter>include\rpc</Filter>
     </None>
@@ -710,6 +710,9 @@
     </None>
     <None Include="..\..\..\include\test\redesigned\ifstream">
       <Filter>include\test\redesigned</Filter>
+    </None>
+    <None Include="..\..\..\include\other\redesigned\fstream">
+      <Filter>include\other\redesigned</Filter>
     </None>
   </ItemGroup>
 </Project>

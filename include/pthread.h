@@ -22,8 +22,8 @@
 #include <sys/cdefs.h>
 #include <stdlib.h>
 #include <strings.h>
-#include <redesigned/errno.h>
-#include <redesigned/time.h>
+#include <other/redesigned/errno.h>
+#include <other/redesigned/time.h>
 
 __BEGIN_C_DECLS
 

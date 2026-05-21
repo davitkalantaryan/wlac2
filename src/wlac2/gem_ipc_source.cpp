@@ -15,12 +15,12 @@
 #include <sys/time.h>
 #include <io.h>
 #include <malloc.h>
-#include "redesigned/errno.h"
+#include <other/redesigned/errno.h>
 #include <ctype.h>
 #include "sys/ioctl.h"
 #include <net/if.h>
 #include <pthread.h>
-#include <redesigned/sys/types.h>
+#include <other/redesigned/sys/types.h>
 #include <sys/ipc.h>
 
 __BEGIN_C_DECLS
